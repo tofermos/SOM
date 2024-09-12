@@ -6,15 +6,15 @@ subtitle: |
 author: "Tomàs Ferrandis Moscardó"
 date: "2024-08-29"
 output:
+  pdf_document: 
+    toc: true
+    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
-  pdf_document: 
-    toc: true
-    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
