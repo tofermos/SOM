@@ -37,7 +37,7 @@ Aquest sistema està compost per 3 tipus d'elements:
 
 * Software (programari)
 
-* Usuaris
+* s
 
 ![](png/treselementsFuturista.jpg){width=50%}
 
