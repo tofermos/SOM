@@ -6,15 +6,15 @@ subtitle: |
 author: "Tomàs Ferrandis Moscardó"
 date: "2024-08-29"
 output:
+  pdf_document: 
+    toc: true
+    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
-  pdf_document: 
-    toc: true
-    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -504,7 +504,7 @@ Veiem 5 exemples de RGB en hexadecimal, decimals i el binari
 
 Quan introduim o llegim el valor no fem ús del binari però és com es guarda.
 
-![](recursos/RGB.png)
+![](png/RGB.png)
 
 
 > **Resumint:**
@@ -598,7 +598,7 @@ Descarreguem un fitxer de dades de tipus CSV (Comma Separated Values) del INE (I
 
 El Libreoffice està interpretant-lo amb com si haguera estat codificat en **UTF-8**:
 
-![](recursos/csv1.png){width=75%}
+![](png/csv1.png){width=75%}
 
 
 *Com ho solucionem?*
@@ -615,11 +615,11 @@ Preguntem a ChatGPT per alguna eina per convertir textos (o fitxers de text) d'u
 
 Usem l'ordre amb l'ajuda de ChatGPT per converti un fitxer (-f) de text pla com són els CSV que venia codificat en Latin-1 a UTF8 
 
-![](recursos/iconv.png){width=75%}
+![](png/iconv.png){width=75%}
 
 Comprovem que ara sí es pot obrir com fitxer codificat en UTF8
 
-![](recursos/csv3.png){width=75%}
+![](png/csv3.png){width=75%}
 
 *Presta més atenció, sigues curiós...*
 
@@ -632,7 +632,9 @@ Com a detall, si observem el tamany dels fitxers, aquest es un poc diferent.
 
 També ho podem vore des del GUI
 
-![](recursos/ls2.png)
+![](png/ls2.png)
+
+
 
 
 **A què creus que pot deure's?**
@@ -676,7 +678,7 @@ int main() {
 ```
 El resultat, després de compilar i executar el programa .exe resultant serà:
 
-![](recursos/numeros.exe.png){width=50%}
+![](png/numeros.exe.png){width=50%}
 
 # 8. Dades complexes. La gràfica de la informació
 
@@ -731,3 +733,8 @@ En el cas de les imatges ja existeixen formats de fitxers comprimits:
 - **JPEG:** Format amb compressió amb pèrdua.
 - **PNG:** Format amb compressió sense pèrdua.
 
+# 8. Avís legal
+
+*By @tofermos*
+
+![](../recursos/cc-by-nc-sa.png){width=30%}

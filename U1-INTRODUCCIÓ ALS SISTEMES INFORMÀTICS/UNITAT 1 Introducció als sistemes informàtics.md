@@ -39,7 +39,7 @@ Aquest sistema està compost per 3 tipus d'elements:
 
 * Usuaris
 
-![](recursos/treselementsFuturista.jpg){width=50%}
+![](png/treselementsFuturista.jpg){width=50%}
 
 ## 1.1 Tipus de sistemes informàtics
 
@@ -173,7 +173,7 @@ Un bus és una línia o conjunt que pot tenir dos estats (0/1).
 - **De dades**. Serveiexen per llegir les dades de les posicions on hem accedit o per enviar les dades a escriure.
 - **De control**. Envien senyal com ara Read/Write
 
-![](recursos/esquema.png){width=80%}
+![](png/esquema.png){width=80%}
 
 ## 2.4 Elements auxiliars
 
@@ -262,7 +262,7 @@ Les llicències Creative Commons es basen en quatre condicions bàsiques que es 
 3. **Sense Obres Derivades (ND)**: Prohibeix la creació d'obres derivades.
 4. **Compartir Igual (SA)**: Les obres derivades han de ser licenciades sota els mateixos termes que l'original.
 
-![](recursos/cc-icons.jpg){width=80%}
+![](../recursos/cc-icons.jpg){width=75%}
 
 Amb aquestes condicions es poden crear les següents sis llicències:
 
@@ -287,10 +287,14 @@ Com ja hem dit adés, a banda del software i el hardware existeix un tercer elem
 
 * Els **usuaris finals** del sistema. Realitzaran les tasques específiques que l'organització necessites amb el software d'aplicació (factures, informes, edició de vídeo, maquetació, càlculs estadístics, tractament de dades... )
 
-  
 
 [^1]: Molts autors usen el terme *Dispositius d'entrada/eixida* en un sentit genèric abarcant a tots els *Perifèrics* donat que la Unitat Funcional que abarca tots els perifèrics és la Unitat d'E/S. 
 
+# 5 Avís legal
+
+*By @tofermos*
+
+![](../recursos/cc-by-nc-sa.png){width=30%}
 
 
 
