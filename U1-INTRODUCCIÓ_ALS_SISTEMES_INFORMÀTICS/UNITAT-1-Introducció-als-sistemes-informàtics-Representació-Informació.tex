@@ -121,6 +121,20 @@
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
+% Cargar el paquete unicode-math
+\usepackage[utf8]{inputenc}
+
+% Opcional: Configurar una fuente para las matemáticas
+\setmathfont{Latin Modern Math} % Esta es una fuente común, puedes cambiarla si lo deseas.
+
+% Otras fuentes que puedes usar incluyen:
+% \setmathfont{STIX Two Math}
+% \setmathfont{XITS Math}
+% \setmathfont{Libertinus Math}
+
+% Opcional: Configurar la fuente general del documento si lo deseas
+% \setmainfont{Times New Roman}  % Para texto normal
+
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -1172,7 +1186,7 @@ Com intuim que l'idioma deu ser un idioma europeu, provem canviant el
 conjunt de caràcters a \textbf{Latin-1} que deu ser el conjunt usat en
 la codificació:
 
-\includegraphics[width=0.75\textwidth,height=\textheight]{recursos/csv2.png}
+\includegraphics[width=0.75\textwidth,height=\textheight]{png/csv2.png}
 
 \emph{Seguim investigant}
 
@@ -1204,7 +1218,7 @@ diferent.
   El fitxer recodificat a UTF8 mesura 8420 bytes.
 \end{itemize}
 
-\includegraphics{recursos/ls.png}
+\includegraphics{png/ls.png}
 
 També ho podem vore des del GUI
 
@@ -1373,11 +1387,5 @@ En el cas de les imatges ja existeixen formats de fitxers comprimits:
 \item
   \textbf{PNG:} Format amb compressió sense pèrdua.
 \end{itemize}
-
-\section{8. Avís legal}\label{avuxeds-legal}
-
-\emph{By @tofermos}
-
-\includegraphics[width=0.3\textwidth,height=\textheight]{../recursos/cc-by-nc-sa.png}
 
 \end{document}

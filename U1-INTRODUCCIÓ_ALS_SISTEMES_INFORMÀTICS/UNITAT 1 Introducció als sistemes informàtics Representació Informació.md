@@ -9,6 +9,9 @@ output:
   pdf_document: 
     toc: true
     keep_tex: true
+    latex_engine: lualatex
+    includes:
+      in_header: preambul.tex
   html_document:
     toc: true
     toc_float: true
@@ -24,6 +27,7 @@ mainfont: Times New Roman
 papersize: A4
 linestretch: 1.5
 ---
+
 
 # 1. La informació
 
@@ -605,7 +609,7 @@ El Libreoffice està interpretant-lo amb com si haguera estat codificat en **UTF
 
 Com intuim que l'idioma deu ser un idioma europeu, provem canviant el conjunt de caràcters a **Latin-1** que deu ser el conjunt usat en la codificació:
 
-![](recursos/csv2.png){width=75%}
+![](png/csv2.png){width=75%}
 
 *Seguim investigant* 
 
@@ -628,13 +632,11 @@ Com a detall, si observem el tamany dels fitxers, aquest es un poc diferent.
 * El fitxer codificat en Latin-1 mesura 8250 bytes 
 * El fitxer recodificat a UTF8 mesura 8420 bytes. 
 
-![](recursos/ls.png)
+![](png/ls.png)
 
 També ho podem vore des del GUI
 
 ![](png/ls2.png)
-
-
 
 
 **A què creus que pot deure's?**
@@ -733,8 +735,3 @@ En el cas de les imatges ja existeixen formats de fitxers comprimits:
 - **JPEG:** Format amb compressió amb pèrdua.
 - **PNG:** Format amb compressió sense pèrdua.
 
-# 8. Avís legal
-
-*By @tofermos*
-
-![](../recursos/cc-by-nc-sa.png){width=30%}
