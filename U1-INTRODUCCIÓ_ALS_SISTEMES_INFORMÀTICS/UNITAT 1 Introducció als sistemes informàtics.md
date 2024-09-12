@@ -6,15 +6,15 @@ subtitle: |
 author: "Tomàs Ferrandis Moscardó"
 date: "2024-08-29"
 output:
-  pdf_document: 
-    toc: true
-    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: true
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -37,7 +37,7 @@ Aquest sistema està compost per 3 tipus d'elements:
 
 * Software (programari)
 
-* s
+* Usuaris
 
 ![](png/treselementsFuturista.jpg){width=50%}
 
@@ -275,17 +275,28 @@ Amb aquestes condicions es poden crear les següents sis llicències:
 
 
 ## 3.4 Normativa legal
+
 Inclou les lleis i regulacions que afecten l'ús i distribució de programari, com la propietat intel·lectual, els drets d'autor i les polítiques de privacitat.
 
 # 4 L'element humà del sistema informàtic
 
 Com ja hem dit adés, a banda del software i el hardware existeix un tercer element en tot sistema informàtic: l'element humà. Les persones podem qualificar-les, grosso modo, en 3 grups:
 
-* Els responsables de la **crear software** (programadors, dissenyadors, analistes...). Més familiaritzats am el software ded desenvolupament.
+* Els responsables de la **crear software** (programadors, dissenyadors, analistes...). Més familiaritzats amb el software de desenvolupament.
 
 * Els responsables de la **instal·lació, configuració i manteniment** del sistema (administradors de xarxa, tècnics de manteniment...) . Més familiaritzats amb el software de sistema i el hardware.
 
-* Els **usuaris finals** del sistema. Realitzaran les tasques específiques que l'organització necessites amb el software d'aplicació (factures, informes, edició de vídeo, maquetació, càlculs estadístics, tractament de dades... )
+* Els **usuaris finals** del sistema. Realitzaran les tasques específiques que l'organització necessites amb el software d'aplicació (factures, informes, edició de vídeo, maquetació, càlculs estadístics, tractament de dades... ).
+
+
+No hem de confondre el nivell professional o acadèmic o el domini de les eines informàtiques amb el perfil de l'usuari. Un usuari final pot ser un expert en el tractament de dades estadístiques, l'ofimàtica, edició de imatge i so, maquetació, programes de càlcul numèric...
+
+Dins del grup d'usuaris dedicats a sistemes hardware podem tindre des d'experts en xarxes, hackers, analistes de sistemes de gestió de BD fins a un auxiliar d'una botiga encarregat de canviar la font d'alimentació i poc més.
+
+D'igual forma que en els equips de programació podem trobar perfils de diversos nivells i tasques ben distines. Recollir i documentar les necessitats dels clients no necessita, a priori, cap coneixement avançat de programació.
+
+I, evidentement, trobarem perfils mixtes i una gran quantitat d'informàtics "d'empresa" amb un coneixement més horitzontal que profund. Capaças de solventar problemes en una LAN, reparar un PC, intermediar amb uan empresa de programació a mida, mantenir i modificar la web i un ampli domini de l'ofimàtica i altres eines per procesar dades estadístiques de l'organització on treballa. 
+
 
 
 [^1]: Molts autors usen el terme *Dispositius d'entrada/eixida* en un sentit genèric abarcant a tots els *Perifèrics* donat que la Unitat Funcional que abarca tots els perifèrics és la Unitat d'E/S. 
