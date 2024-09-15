@@ -39,5 +39,5 @@ linestretch: 1.5
 
 ||||
 |:----|:--|:--|
-|Ferramentes de virtualització|[![](recursos/iconohtml.png)](U2-FERRAMENTES_DE_VIRTUALITZACIÓ/UNITAT 2-Ferramentes-de-virtualització.html)|[![](recursos/iconopdf.png)](U2-FERRAMENTES_DE_VIRTUALITZACIÓ/UNITAT 2-Ferramentes-de-virtualització.pdf)|
+|Ferramentes de virtualització|[![](recursos/iconohtml.png)](U2-FERRAMENTES_DE_VIRTUALITZACIÓ/UNITAT-2-Ferramentes-de-virtualització.html)|[![](recursos/iconopdf.png)](U2-FERRAMENTES_DE_VIRTUALITZACIÓ/UNITAT-2-Ferramentes-de-virtualització.pdf)|
 |Activitat 2|[![](recursos/iconohtml.png)](U2-FERRAMENTES_DE_VIRTUALITZACIÓ/U2-Activitat2.html)|[![](recursos/iconopdf.png)](U2-FERRAMENTES_DE_VIRTUALITZACIÓ/U2-Activitat2.pdf)|
