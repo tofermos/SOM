@@ -33,3 +33,4 @@ linestretch: 1.5
 |:----|:--|:--|
 |Introducció sistemes informàtics(I)|[![](recursos/iconohtml.png)](U1-INTRODUCCIÓ_ALS_SISTEMES_INFORMÀTICS/UNITAT-1-Introducció-als-sistemes-informàtics.html)|[![](recursos/iconopdf.png)](U1-INTRODUCCIÓ_ALS_SISTEMES_INFORMÀTICS/UNITAT-1-Introducció-als-sistemes-informàtics.pdf)|
 |Introducció sistemes informàtics(II)|[![](recursos/iconohtml.png)](U1-INTRODUCCIÓ_ALS_SISTEMES_INFORMÀTICS/UNITAT-1-Introducció-als-sistemes-informàtics-Representació-Informació.html)|[![](recursos/iconopdf.png)](U1-INTRODUCCIÓ_ALS_SISTEMES_INFORMÀTICS/UNITAT-1-Introducció-als-sistemes-informàtics-Representació-Informació.pdf)|
+|Exercicis|[![](recursos/iconohtml.png)](U1-INTRODUCCIÓ_ALS_SISTEMES_INFORMÀTICS/U1-Exercicis.html)|[![](recursos/iconopdf.png)](U1-INTRODUCCIÓ_ALS_SISTEMES_INFORMÀTICS/U1-Exercicis.pdf)|

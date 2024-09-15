@@ -1,0 +1,145 @@
+::1. Què és un sistema informàtic? ::
+Un sistema informàtic és un conjunt de components tant físics com digitals dissenyats per a què? {
+  =la captura, emmagatzematge, processament i comunicació d'informació
+  ~l'anàlisi de dades
+  ~la reproducció de dades multimèdia
+  ~el control de xarxes informàtiques
+}
+
+::2. Quins elements conformen un sistema informàtic? ::
+El sistema informàtic està compost per {
+  =Hardware, Software i Usuaris
+  ~Maquinari, Processadors i Dades
+  ~Maquinari, Xarxes i Usuaris
+  ~Hardware, Xarxes i Processadors
+}
+
+::3. Quin tipus de sistemes informàtics inclou smartphones i tauletes? ::
+{
+  =Sistemes personals
+  ~Sistemes empresarials
+  ~Sistemes empotrats
+  ~Sistemes quàntics
+}
+
+::4. (V/F) Els mainframes dels anys 50 ocupaven habitacions senceres i costaven milions de dòlars. ::
+{
+  T
+}
+
+::5. Identifica una característica de la Primera Generació de computadors. ::
+{
+  ~Ús de transistors
+  ~Ús de circuits integrats
+  ~Ús de microprocessadors
+  =Ús de vàlvules de buit
+}
+
+::6. Quina tecnologia es preveu que formi part de la cinquena generació de computadors? ::
+{
+  ~Circuits integrats
+  ~Transistors
+  =Intel·ligència Artificial
+  ~Vàlvules de buit
+}
+
+::7. Quin dispositiu de comunicació permet la transmissió de dades entre ordinadors? ::
+{
+  =Mòdem
+  ~Monitor
+  ~Teclat
+  ~Impressora
+}
+
+::8. (V/F) Els dispositius de magatzematge com el pen-drive transformen informació del món real a 0 i 1. ::
+{
+  F
+}
+
+::9. Quina funció té el bus d'adreces en un sistema informàtic? ::
+{
+  =Seleccionar quina posició de memòria volem accedir
+  ~Processar les dades de memòria
+  ~Controlar els dispositius d'entrada i sortida
+  ~Llevar els errors del sistema operatiu
+}
+
+::10. Quins tipus de llicències permeten l'ús gratuït i sense límits de temps del programari, però sense modificació del codi font? ::
+{
+  =Llicències Freeware
+  ~Llicències GPL
+  ~Llicències Comercials
+  ~Llicències Shareware
+}
+
+::11. (V/F) Els usuaris finals són aquelles persones que utilitzen el software d'aplicació per realitzar tasques específiques en una organització. ::
+{
+  T
+}
+
+::12. Què és una pantalla tàctil segons la classificació de dispositius d'entrada i eixida? ::
+{
+  =Dispositiu d'entrada i eixida
+  ~Dispositiu d'eixida
+  ~Dispositiu de comunicació
+  ~Dispositiu de magatzematge
+}
+
+::13. Quin ordinador és un exemple de la segona generació de computadors? ::
+{
+  =IBM 1401
+  ~ENIAC
+  ~Intel 4004
+  ~IBM 360
+}
+
+::14. Quin component executa les instruccions dels programes dins un sistema informàtic? ::
+{
+  =Processador (CPU)
+  ~Memòria RAM
+  ~Disc dur
+  ~Mòdem
+}
+
+::15. (V/F) Un ordinador personal és molt més potent que els mainframes dels anys 50. ::
+{
+  T
+}
+
+::16. Què es necessita per transmetre dades entre ordinadors? ::
+{
+  =Dispositius de comunicació
+  ~Dispositius d'eixida
+  ~Dispositius d'entrada
+  ~Dispositius de magatzematge
+}
+
+::17. Quina és la principal característica dels dispositius de magatzematge? ::
+{
+  =Emmagatzemen dades de forma permanent
+  ~Transformen informació en 0 i 1
+  ~Transmeten dades entre ordinadors
+  ~Mostren informació processada
+}
+
+::18. (V/F) Els busos de control s'utilitzen per llegir les dades d'una posició de memòria o enviar dades a escriure. ::
+{
+  F
+}
+
+::19. Quins són els tipus de llicències que permeten als usuaris modificar i distribuir el programari lliurement? ::
+{
+  =Llicències de Programari Lliure i de Codi Obert
+  ~Llicències Comercials
+  ~Llicències Shareware
+  ~Llicències Freeware
+}
+
+::20. A quina generació pertany l'ordinador ENIAC? ::
+{
+  =Primera Generació
+  ~Segona Generació
+  ~Tercera Generació
+  ~Quarta Generació
+}
+
