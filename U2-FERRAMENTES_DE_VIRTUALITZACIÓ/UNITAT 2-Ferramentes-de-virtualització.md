@@ -131,17 +131,54 @@ Hi ha més tipus de virutalització que podeu investigar però no és objecte de
 
 ## 4.4  Administració de medis virtuals
 
-Podem:
+### 4.4.1 La Unitat de magatzenament 
 
-* Afegir discos durs, crear sistemes de redundància etc...
-
-* Indicar on estan les ISO. 
+Podem indicar on estan les ISO. 
       - del SO a instal·lar
       - del GuestAdditions ( ho vorem)
       - altre software (MS Office, per exemple)
 
+En l'apartat de Sistema indiquem el que emularia al **Boot oder** de la BIOS/UEFI. I ens assegurem que la MV inicie a partir del DVD. 
+
+### 4.4.2 Discos
+
+En **VirtualBox**, quan crees un disc dur virtual, tens tres possibles formats de fitxers.
+
+1. **VDI (VirtualBox Disk Image)**:
+   - Aquest és el format **natiu de VirtualBox**.
+   - Ofereix compatibilitat completa amb totes les funcionalitats de VirtualBox, com la **mida dinàmica o fixa**.
+   - És ideal si només utilitzaràs el disc amb VirtualBox com serà el nostre cas.
+
+2. **VHD (Virtual Hard Disk)**:
+   - Aquest és un format utilitzat principalment per Microsoft i aplicacions com Hyper-V (el virtualitzador integrat en Windows)
+   - És útil si necessites compartir el disc dur virtual amb sistemes Microsoft o altres aplicacions de virtualització que suporten aquest format.
+
+3. **VMDK (Virtual Machine Disk)**:
+   - Aquest format és utilitzat per VMware, un altre software de virtualització.
+   - És adequat si necessites moure màquines virtuals entre VirtualBox i VMware.
+   
+
+**VDI** és el més eficient si només utilitzes **VirtualBox** i serà el que usarem.
+
 ![*Figura 2:Emmagatzematge*](png/4Emmagatzematge.png)
 
+
+### 4.4.3 Boot Order
+
+El **"boot order"** (ordre d'arrencada) es la seqüència en què el sistema (la UEFI o BIO) busca dispositius per arrencar un sistema operatiu quan l'ordinador es reinicia per  carregar un sistema operatiu.
+
+- **Disquetera** (OBSOLET.Desactivar).
+- **Unitats USB** (memòries USB, dispositius externs. NO operativa en VirtualBox).
+- **Unitats CD/DVD** (lectors de CD o DVD. La que usarem en VirtualBox).
+- **Disc dur o SSD** (on normalment està instal·lat el sistema operatiu).
+- **Xarxa** (per arrencar des d'un servidor en una xarxa, utilitzant tècniques com PXE).
+
+La configuració del boot order es fa a través de la configuració del BIOS o UEFI del sistema. Accedeixes a aquesta configuració generalment prem el teclat `F2`, `Delete`, `Esc`
+
+### Usos
+
+- **Instal·lació de Sistemes Operatius:** Per instal·lar el SO des de xarxa, USB o CD/DVD.
+- **Resolució de Problemes:** Si el sistema no arrenca correctament, pot ser útil modificar el boot order per intentar arrencar des d'un dispositiu de recuperació o un live CD.
 
 ## 4.5 Configuració d'una màquina virtual
 
@@ -245,32 +282,3 @@ Exemples pràctics habituals d'ús de les carpetes compartides:
 - **KVM (Kernel-based Virtual Machine):** Solució de virtualització per a Linux basada en el nucli, ofereix un entorn robust per a la creació i gestió de màquines virtuals.
 - **Xen:** Hypervisor de codi obert que permet la virtualització de maquinari per a diversos sistemes operatius i entorns de servidor.
 
-# 6 Avanç Lubuntu 
-
-*(Només llegir)*
-
-Tot i que més avant ho estudiarem més detingudament, farem  un avanç (spoiler) i instal·larem un SO en una màquina no real sinó virtual per poder pràcticar. 
-
-## 5.1 Lubuntu/Ubuntu
-
-Ubuntu i Lubuntu són diferents versions del mateix sistema operatiu base (nucli, repositoris i funcionalitats) . La principal diferència entre **Ubuntu** i **Lubuntu** es troba en l’entorn d’**escriptori** i, conseqüentment, el rendiment.
-, però amb entorns d'escriptori diferents. Aquí és on resideix la diferència:
-
-- **Ubuntu**: Utilitza l’entorn d’escriptori **GNOME**, més complet, modern i visualment atractiu però més exigent pel que fa a l'ús de recursos del sistema (RAM i CPU).
-  
-- **Lubuntu**: Fa servir **LXQt**, un entorn d'escriptori molt més lleuger. Està dissenyat per consumir menys recursos, fent-lo ideal per a ordinadors antics i, més encara si, sobre aquests virtualitzem com serà el nostra cas a l'aula en el curs 2024-2025.
-
-
-## 5.2 Versions
-
-Són actualitzacions del sistema operatiu que es publiquen regularment. Hi ha dues categories principals:
-
-1. **Versions LTS (Long Term Support)**: Versions amb suport a llarg termini (5 anys). Estan dissenyades per ser estables i segures durant més temps.
-2. **Versions regulars**: Tenen un cicle de vida més curt (9 mesos), amb novetats més freqüents però menys estabilitat.
-
-(Els escriptoris també tenen versions)
-
-
-## 5.3 Descàrrega i instal·lació del Lubuntu
-
-![*Figura 8: Sistema instal·lat a la MV*](png/1General.png)

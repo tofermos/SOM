@@ -713,7 +713,7 @@ Es tracta d'uns bits addicionals (no aporten informació) que s'afigen a tot el 
   
 - **Checksum:** Similar al CRC, suma tots els bytes d'un conjunt de dades per produir un valor que es compara per detectar errors simples.
 
-- **Hash (Funcions de hash):** Crea un codi únic per a un conjunt de dades. És útil per a la integritat de fitxers, autenticació i emmagatzematge segur de contrasenyes, però no està pensat per a la correcció d'errors. L'usarem més avant quan descarreguem paquets de software grans com la ISO de Windows 11.
+- **Hash (Funcions de hash):** Crea un codi únic per a un conjunt de dades. És útil per a la integritat de fitxers, autenticació i emmagatzematge segur de contrasenyes, però no està pensat per a la correcció d'errors. L'usarem més avant quan descarreguem paquets de software grans com la ISO de Lubuntu, Windows 11...
 
 - **Hamming Code:** Codi de correcció que pot detectar i corregir errors simples d'un sol bit en la transmissió de dades.
 
