@@ -110,8 +110,8 @@ A partir de 1990 s'estandaritza que el "K", "M"... deu definir 1000, 1 Milió...
 # 3. Tipus de dades simples
 
 ## 3.1 Numèriques
-  * Enters.   0,1,2,3 ...
-  * Naturals. -34,-4,0, 5, 56 ...
+  * Naturals.   0,1,2,3 ...
+  * Enters. -34,-4,0, 5, 56 ...
   * Reals.    3.456; 34.003,897
   
 ## 3.2 Alfanumèriques
@@ -156,12 +156,14 @@ La informàtica es basa en la codificació, magatzematge i tractament de codific
 
 ## 4.1 Els naturals i el Teorema de la numeració
 
-El teorema de la numeració estableix que qualsevol número natural (enter positiu) en un sistema de numeració donat es pot representar de manera única com una suma de múltiples d'una base específica elevada a diferents potències. 
+El **teorema de la numeració** estableix que qualsevol número natural (enter positiu) en un sistema de numeració donat es pot representar de manera única com una suma de múltiples d'una base específica elevada a diferents potències. 
 
 Per exemple, en el sistema decimal (base 10), el nombre 345 es representa com:
 
 \(3 \times 10^2 + 4 \times 10^1 + 5 \times 10^0\).
 
+
+![*Figura 1: El sistema vigesimal dels Maies*](png/SistemaVigesimal.jpg){width=50%}
 
 ### 4.1.1 Sistemes de numeració:
 
@@ -171,10 +173,10 @@ Per exemple, en el sistema decimal (base 10), el nombre 345 es representa com:
 - **Hexadecimal (base 16):** Ús dels dígits del 0 al 9 i les lletres A a F.
 
 
-*Taula d'exemples de codificació en diferents sistemes:*
+*Taula 1: Exemples de codificació en diferents sistemes:*
 
 | Decimal | Binari | Octal | Hexadecimal |
-| :------- | :------ | :----- | :----------- |
+| -------: | ------: | -----: | -----------:|
 | 0       | 0000   | 0     | 0           |
 | 1       | 0001   | 1     | 1           |
 | 2       | 0010   | 2     | 2           |
@@ -188,7 +190,7 @@ Per exemple, en el sistema decimal (base 10), el nombre 345 es representa com:
 | 10      | 1010   | 12    | A           |
 | 15      | 1111   | 17    | F           |
 | 16      | 10000  | 20    | 10          |
-|17|10001|21|11|
+|17       |10001  |21|11|
 | 31      | 11111  | 37    | 1F          |
 
 
@@ -228,23 +230,27 @@ Exemple: 25,76
 - **Binari Resultat:** 11001
 
 ### 2.2 Part fraccionària ( decimal): 0,76
-    0,76 × 2 = 1,52 → 1 (enter), 0,52 queda
-    0,52 × 2 = 1,04 → 1 (enter), 0,04 queda
-    0,04 × 2 = 0,08 → 0 (enter), 0,08 queda
-    0,08 × 2 = 0,16 → 0 (enter), 0,16 queda
-    0,16 × 2 = 0,32 → 0 (enter), 0,32 queda
-    0,32 × 2 = 0,64 → 0 (enter), 0,64 queda
-    0,64 × 2 = 1,28 → 1 (enter), 0,28 queda
-    0,28 × 2 = 0,56 → 0 (enter), 0,56 queda
-    0,56 × 2 = 1,12 → 1 (enter), 0,12 queda
+    
+0,76 × 2 = 1,52 → 1 (enter), 0,52 queda
 
-0,76 en binari és aproximadament 0.110000101.
+0,52 × 2 = 1,04 → 1 (enter), 0,04 queda
 
-### Total
+0,04 × 2 = 0,08 → 0 (enter), 0,08 queda
 
-11001,110000101
+0,08 × 2 = 0,16 → 0 (enter), 0,16 queda
 
-( Veurem més avant la representacio en Coma Flotant que és la forma usada)
+0,16 × 2 = 0,32 → 0 (enter), 0,32 queda
+
+0,32 × 2 = 0,64 → 0 (enter), 0,64 queda
+
+0,64 × 2 = 1,28 → 1 (enter), 0,28 queda
+
+0,28 × 2 = 0,56 → 0 (enter), 0,56 queda
+
+0,56 × 2 = 1,12 → 1 (enter), 0,12 queda
+
+Resultat aproximat: 0,76 en binari és **aproximadament** 0.110000101 (Pot no arribar a ser exacta.)
+
 
 ### 3. Conversió de Hexadecimal a Decimal
 
@@ -252,11 +258,13 @@ Exemple: 25,76
 - **Decimal:**
 
   Convertim cada dígit a decimal i utilitzem la base 16: (A = 10 en decimal)
+
   - `1A3` = \( 1 \times 16^2 + A \times 16^1 + 3 \times 16^0 \)
   - \( = 1 \times 256 + 10 \times 16 + 3 \)
   - \( = 256 + 160 + 3 = 419 \)
 
 - **Decimal Resultat:** 419
+
 
 ### 4. Conversió de Decimal a Hexadecimal
 
@@ -272,8 +280,7 @@ Exemple: 25,76
 - **Hexadecimal Resultat:** FF
 
 
-
-### 5. Conversió entre Hexadecimal i Binari
+### 5. Conversió entre Hexadecimal i Binari ("automàtica" de 1 a 4)
 
 - **Hexadecimal:** `A7`
 - **Binari:**
@@ -286,7 +293,7 @@ Exemple: 25,76
 
 - **Binari Resultat:** 10100111
 
-### 6. Conversió entre Binari i Hexadecimal
+### 6. Conversió entre Binari i Hexadecimal ("automàtica" de 4 a 1)
 
 - **Binari:** `10101100`
 - **Hexadecimal:**
@@ -301,7 +308,7 @@ Exemple: 25,76
 
 Aquí tens exemples de conversió entre el sistema octal i el sistema binari:
 
-### 7. Conversió de Octal a Binari
+### 7. Conversió de Octal a Binari ("Automàtica" de 1 a 3)
 
 - **Octal:** `345`
   
@@ -315,9 +322,8 @@ Aquí tens exemples de conversió entre el sistema octal i el sistema binari:
 
   - `345` en octal es converteix en `011 100 101` en binari.
   
-  **Binari Resultat:** `011100101`
-
-### 8. Conversió de Binari a Octal
+  
+### 8. Conversió de Binari a Octal ("Automàtica" de 3 a 1)
 
 - **Binari:** `100101011`
   
@@ -334,23 +340,30 @@ Aquí tens exemples de conversió entre el sistema octal i el sistema binari:
   
   **Octal Resultat:** `2253`
 
-Observem, com ja hem comentat que les conversions entre octal i hexadecimal i binari són "automàtiques" perquè 8 i1 6 són potències de 2 (8 = 2³; 16 = 2⁴). 
 
-* En la conversió d'octal a binari, cada dígit octal es converteix en un bloc de 3 bits binaris. 
-* En la conversió de binari a octal, agrupeu els dígits binaris en blocs de 3 i converteix-los en dígits octals.
+**CONCLUSIONS:**
 
-* En la conversió d'hexadecimal a binari, cada dígit hexadecimal es converteix en un bloc de 4 bits binaris. 
-* En la conversió de binari a hexadecimal, agrupeu els dígits binaris en blocs de 4 i converteix-los en dígits hexadecimals.
+Les conversions entre octal i hexadecimal i binari són "automàtiques" perquè 8 i 16 són potències de 2 (8 = 2³; 16 = 2⁴). 
+
+* 1 dígit octal <--> 3 dígits binaris
+* 1 dígit hexadecimal <--> 4 dígits binaris
+
+*( A parir d'ací ho heu de llegir, no cal saber l'operativa)*
 
 ## 4.3 Els enters: positius, zero(s) i negatius.
 
 Hi ha diverses formes de representar els valors negatius. Les tres que anem estudiar es caracteritzen per destinar el MSB ( Bit major, el de la dreta) a indicar el signe:
-  1: Negatiu
-  0: Positiu
+
+* 1: Negatiu
+
+* 0: Positiu
+
 Això implica que "perdem" un bit per representar valors.
 
 ### 4.3.1 Bit amb signe
+ 
   Es reserva el primer bit per indicar el signe
+ 
   * **0**0000011 -> 3
   
   * **1**0000011 -> -3
@@ -359,12 +372,12 @@ Això implica que "perdem" un bit per representar valors.
 
 Els negatius es codifiquen fent l'inversa de cada bit. No té ús, el veiem per entendre el Complement a 2.
 
-Exemples dels valors de 0, 1, 2, 3, 4 i -1, -2, -3, -4:
+*Taula 2: Exemples d'enters en Ca1*
 
 | Byte en complement a 1 | Decimal |
-|:------------------------|:---------|
-| 00000000               | 0 (positiu)  |
-| 11111111               | 0 (negatiu)  |
+|:-----------------|-------:|
+| 00000000               | (positiu) 0  |
+| 11111111               | (negatiu) 0  |
 | 00000001               | 1       |
 | 00000010               | 2       |
 | 00000011               | 3       |
@@ -389,26 +402,31 @@ Així doncs, el rang de valors és de -127 a 127, incloent els dos zeros. Per ta
 
 Per solucionar el problema dels 2 zeros i aprofitar millor totes les representacions, el que fem en els negatius és restar un 1 al Ca1.
 Ca1 de -1 -> 0000 0001 -> 1111 1110
+
 Ca1 de -7 -> 0000 0111 -> 1111 1000
+
 Ca1 de 0 -> 0000 0000 -> 1111 
 
 Ca1 de -1 -> 0000 0001 -> 1111 1110 +1 -> 1111 1111
+
 Ca2 de -7 -> 0000 0111 -> 1111 1000 +1 -> 1111 1010
+
 Ca2 de 0 -> 0000 0000 -> 1111 1111 -> 0000 0000 (overflow)
 
-Exemple amb els valors de 0, 1, 2, 3, 4 i -1, -2, -3, -4 representats en complement a 2:
+*Taula 3: Exemples d'enters en Ca2*
 
 | Byte en complement a 2 | Decimal |
-|:------------------------|:---------|
-| 00000000               | 0       |
-| 00000001               | 1       |
-| 00000010               | 2       |
-| 00000011               | 3       |
-| 00000100               | 4       |
-| 11111111               | -1      |
-| 11111110               | -2      |
-| 11111101               | -3      |
-| 11111100               | -4      |
+|:--------------------|---------:|
+| 00000000            | 0       |
+| 00000001            | 1       |
+| 00000010            | 2       |
+| 00000011            | 3       |
+| 00000100            | 4       |
+| 11111111            | -1      |
+| 11111110            | -2      |
+| 11111101            | -3      |
+| 11111100            | -4      |
+
 
 Per obtenir el valor en decimal:
 
@@ -430,16 +448,17 @@ Així doncs, el rang de valors és de -128 a 127. Per tant, les 256 combinacions
 ## 4.4 Els números reals
 
 Exemples de números reals:
-* 3.141592653589793
+* 3,141592653589793
 * 3
 * -3
 * 0
-* 2334335335345346679755334354656757885334343
-* 0,00000000000000000000000000000000000000103
+* 34.354.656.757.885.334.343
+* 0,000000000000000000000000000000000103
 
-Per tant: els reals inclouen als números enters: 4 = 4,000; -34 = -34,000 que inclouen als naturals.
+Per tant: els reals inclouen als números enters (-2 = -2,000; 34 = 34,000) que inclouen als naturals.
 
 ### 4.4.1 Coma flotant. General.
+
 Els formats en FP ens permeten guardar qualsevol número siga quin siga el seu pes (alt o baix)
 
 **Parts:**
@@ -454,6 +473,7 @@ Els formats en FP ens permeten guardar qualsevol número siga quin siga el seu p
 3- Es calcula l'exponent i se li suma a l'excés. Amb l'excés fem que els exponents siguen sempre psoitius i no "perdem" el MSB per a indicar el signe.
 
 ### 4.4.2 Estàndards
+
 Els dos formats estàndard de coma flotant segons l'estàndard IEEE 754 són:
 
 1. **Simple precisió (32 bits)**:
@@ -471,7 +491,7 @@ Els dos formats estàndard de coma flotant segons l'estàndard IEEE 754 són:
 
 Aquests formats permeten representar nombres molt grans o molt petits amb precisió controlada.Independentment de que representen un nombre amb part fraccionària o un enter.
 
-
+*(A partir d'ací cal estudiar)*
 
 # 5 Sobre els usos habituals de cada sistema de numeració
 
@@ -495,7 +515,7 @@ El codi de color es guarda internament en 3 bytes o siga 24 bits però el softwa
 * 3 decimals que val cadascuna del 0 al 255.
 * 1 hexadecimal que val cadascun de 000000 a FFFFFF. Ací observem la comodidat del Hexadecimal
 
-Veiem 5 exemples de RGB en hexadecimal, decimals i el binari
+*Taula 4: Exemples de RGB en hexadecimal, decimals i el binari*
 
   | Color   | Hexadecimal | RGB (Decimal)   | RGB (Binari)                   |
   | :------- | :----------- | :--------------- | :------------------------------ |
@@ -578,7 +598,7 @@ La diferència principal entre **UTF-8** i **Latin1** (també conegut com a **IS
 
 Els primers 128 caràcters en UTF-8 són idèntics als d'ASCII original de 7 bits (anglés) i la resta de pàgines.
 
-Exemples:
+*Taula 5: Exemples de caràctersn en diferents codificacions*
 
 | Caràcter | UTF-8 (Hex)  | UTF-8 (Decimal)   | Latin-1 (Hex) | Latin-1 (Decimal) |
 |----------|--------------|------------------|---------------|-------------------|
@@ -591,6 +611,7 @@ Exemples:
 | *'*    | `27`         | `39`             | `27`          | `39`              |
 
 ### Resum:
+
 - **UTF-8**: Més flexible i versàtil, amb suport per a quasi tots els caràcters possibles.
 - **Latin1**: Més senzill i lleuger, però amb una cobertura de caràcters molt limitada, adequada només per a llengües europees occidentals.
 
@@ -714,6 +735,7 @@ Es tracta d'uns bits addicionals (no aporten informació) que s'afigen a tot el 
 - **Checksum:** Similar al CRC, suma tots els bytes d'un conjunt de dades per produir un valor que es compara per detectar errors simples.
 
 - **Hash (Funcions de hash):** Crea un codi únic per a un conjunt de dades. És útil per a la integritat de fitxers, autenticació i emmagatzematge segur de contrasenyes, però no està pensat per a la correcció d'errors. L'usarem més avant quan descarreguem paquets de software grans com la ISO de Lubuntu, Windows 11...
+En la Unitat 2 provarem una funció Hash.
 
 - **Hamming Code:** Codi de correcció que pot detectar i corregir errors simples d'un sol bit en la transmissió de dades.
 
