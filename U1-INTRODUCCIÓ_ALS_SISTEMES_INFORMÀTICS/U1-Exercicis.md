@@ -127,9 +127,9 @@ El problema és que, en obrir-lo amb Calc de LibreOffice o MS Excel, veu que alg
 
 A partir d'ací...
 
-1. Raona i indica quin creus que pot ser siga el problema.
+1. Raona i indica quin creus que és el problema.
 2. Com ho solucionaries temporalment?
-3  I de forma definitiva per a que, a partir d'ara no tinguera este problema?
-4. Creus que el fitxer, tal com venia, provindria d'una Base de Dades actual?
+3  I de forma definitiva?
+4. Creus que el fitxer prové d'una Base de Dades actualitzada?
 
 
