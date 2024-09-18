@@ -2,15 +2,15 @@
 title: |
   | U1 EXERCICIS. INTRODUCCIÓ ALS SISTEMES INFORMÀTICS
 output:
+  pdf_document: 
+    toc: true
+    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
-  pdf_document: 
-    toc: true
-    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -130,6 +130,6 @@ A partir d'ací...
 1. Raona i indica quin creus que pot ser siga el problema.
 2. Com ho solucionaries temporalment?
 3  I de forma definitiva per a que, a partir d'ara no tinguera este problema?
-4. Creus que el fitxer, tal com venia, tenia un error, era millorable? Per què?
+4. Creus que el fitxer, tal com venia, provindria d'una Base de Dades actual?
 
 
