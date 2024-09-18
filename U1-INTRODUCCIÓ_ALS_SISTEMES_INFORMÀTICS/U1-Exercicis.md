@@ -57,7 +57,6 @@ Exemple de resolució per al cas #FF5733:
 1. **#4A90E2**  
 3. **#7D3F8C**  
 4. **#2ECC71**  
-5. **#E74C3C**  
 
 
 ## 2 Conversió de IPv4
@@ -66,8 +65,6 @@ Una IP4 està composada de 4 bytes (4 * 8 = 32 bits). Però la representem per c
 
 Vegem l'exemple de conversió:
 Per convertir una adreça IP en IPv4 a binari i hexadecimal, segueix aquests passos:
-
-
 
 **Conversió a binari:**
 
@@ -98,7 +95,6 @@ Com passaries a hexadecimal el binari resultant?
 
 **Fes la conversió a binari i decimal de les IPs:**
 
-
 1. **10.2.2.2**
 
 2. **172.217.3.110**
@@ -106,8 +102,6 @@ Com passaries a hexadecimal el binari resultant?
 3. **151.101.1.67**
 
 4. **13.226.32.32**
-
-5. **255.255.255.0**
 
 
 ## 3 Octal
@@ -117,11 +111,7 @@ Representa en octal i decimal els caracters especials i les lletres següents d'
 1. **<	60**
 2. **@	64**
 3. **A	65**
-4. **C	67**
-5. **F	70**
-6. **w	119**
-7. **{	123**
-8. **a  97**
+4. **a  97**
 
 ## 4 Investigació
 
