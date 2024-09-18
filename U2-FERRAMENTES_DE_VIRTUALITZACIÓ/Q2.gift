@@ -1,0 +1,180 @@
+::Pregunta 1::
+La virtualització permet crear entorns virtuals dins de...
+{
+= sistemes físics
+~ màquines virtuals
+~ xarxes
+~ memòries externes
+}
+
+::Pregunta 2::
+Quina de les següents és una avantatge de la virtualització?
+{
+= Reducció de costos
+~ Augment de maquinari físic
+~ Menys flexibilitat
+~ Reducció de proves
+}
+
+::Pregunta 3::
+Què és una màquina virtual?
+{
+= Una emulació d'ordinador dins d'un ordinador físic
+~ Un sistema operatiu que funciona sense maquinari
+~ Un tipus de maquinari
+~ Un component de xarxa
+}
+
+::Pregunta 4::
+Quin tipus de recursos utilitza una màquina virtual?
+{
+= Part dels recursos del maquinari (CPU, RAM, discs...)
+~ Tots els recursos del maquinari
+~ Només els recursos de la xarxa
+~ Cap recurs del maquinari
+}
+
+::Pregunta 5::
+Quina és la funció d'un hipervisor?
+{
+= Permetre l'execució de màquines virtuals
+~ Gestionar discos virtuals
+~ Proporcionar accés a internet a les màquines virtuals
+~ Emmagatzemar dades del sistema
+}
+
+::Pregunta 6::
+Els hipervisors de tipus 1 funcionen directament sobre...
+{
+= el maquinari
+~ el sistema operatiu amfitrió
+~ la màquina virtual
+~ el disc dur
+}
+
+::Pregunta 7::
+Quin exemple és d'un hipervisor de tipus 2?
+{
+= VirtualBox
+~ XenServer
+~ Promox VE
+~ Hyper-V Server
+}
+
+::Pregunta 8::
+Quina és una característica del format VDI?
+{
+= És el format natiu de VirtualBox
+~ És un format utilitzat per VMware
+~ És un format utilitzat per Hyper-V
+~ No ofereix compatibilitat amb cap funcionalitat de VirtualBox
+}
+
+::Pregunta 9::
+Quin format utilitzen principalment les aplicacions de Microsoft com Hyper-V?
+{
+= VHD
+~ VMDK
+~ VDI
+~ ISO
+}
+
+::Pregunta 10::
+Què és el "boot order"?
+{
+= L'ordre en què el sistema busca dispositius per arrancar un sistema operatiu
+~ El procés d'instal·lació d'un sistema operatiu
+~ Un tipus de màquina virtual
+~ Un format de disc dur virtual
+}
+
+::Pregunta 11::
+En quin cas utilitzaríem la configuració de "pont" (bridge) en VirtualBox?
+{
+= Quan volem que la màquina virtual aparega com un PC més de la xarxa local
+~ Quan volem aïllar completament la màquina virtual
+~ Quan no necessitem accés a internet
+~ Quan volem compartir carpetes entre l'amfitrió i la màquina virtual
+}
+
+::Pregunta 12::
+Quina és una opció adequada si només utilitzaràs VirtualBox per gestionar màquines virtuals?
+{
+= VDI
+~ VHD
+~ VMDK
+~ ISO
+}
+
+::Pregunta 13::
+Quin dispositiu normalment s'exclou de l'ordre d'arrencada en VirtualBox?
+{
+= Disquetera
+~ Disc dur
+~ Unitats CD/DVD
+~ Unitats USB
+}
+
+::Pregunta 14::
+Què fa l'opció "Habilita I/O APIC" en la configuració de VirtualBox?
+{
+= Millora la gestió d’interrupcions
+~ Millora l'accés a internet
+~ Redueix el consum de memòria RAM
+~ Augmenta l'espai de disc disponible
+}
+
+::Pregunta 15::
+Què és una carpeta compartida en VirtualBox?
+{
+= Una carpeta que es pot compartir entre l'amfitrió i la màquina virtual
+~ Una carpeta que només és accessible per la màquina virtual
+~ Una carpeta compartida entre diverses màquines virtuals
+~ Una carpeta virtual que no existeix en el sistema físic
+}
+
+::Pregunta 16::
+Quina és una diferència principal entre la configuració NAT i la de Pont (Bridge) en VirtualBox?
+{
+= La configuració NAT no permet la comunicació amb altres màquines virtuals
+~ La configuració NAT ofereix una IP del mateix rang que l'amfitrió
+~ La configuració Pont impedeix l'accés a internet
+~ La configuració Pont ofereix una IP de rang diferent
+}
+
+::Pregunta 17::
+Què permet fer l'opció EFI en VirtualBox?
+{
+= Suportar l'arrencada des de discos GPT
+~ Permetre l'ús de múltiples processadors
+~ Gestionar la xarxa interna
+~ Compartir carpetes entre l'amfitrió i la màquina virtual
+}
+
+::Pregunta 18::
+Quin format de disc virtual s'utilitza principalment per VMware?
+{
+= VMDK
+~ VHD
+~ VDI
+~ ISO
+}
+
+::Pregunta 19::
+Quina de les següents opcions és una característica de la virtualització amb adaptador NAT?
+{
+= Té accés a internet
+~ No pot accedir a la xarxa interna
+~ Es comunica amb altres màquines virtuals
+~ Necessita una configuració especial a l'amfitrió
+}
+
+::Pregunta 20::
+Quina és una de les funcions principals de la barra d'eines en VirtualBox?
+{
+= Iniciar, aturar i suspendre màquines virtuals
+~ Instal·lar sistemes operatius
+~ Configurar el maquinari físic
+~ Gestionar discos durs físics
+}
+

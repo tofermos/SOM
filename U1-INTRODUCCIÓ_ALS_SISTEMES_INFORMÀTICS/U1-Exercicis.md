@@ -126,3 +126,20 @@ Representa en octal i decimal els caracters especials i les lletres següents d'
 ## 4 Investigació
 
 Investiga i documenta molt breument com són les adreces MAC, com estan compostes,  com es guarden, ús...
+
+## 5 Problema real amb taula de codis
+
+Fent la FCT en un Ajuntament, un administratiu que està registrant dades electorals de la comarca ens planteja un problema que té amb el fitxer [resultatsSafor.csv](altres/resultatsSafor.csv) (descarrega-te'l).
+
+El problema és que, en obrir-lo amb Calc de LibreOffice o MS Excel, veu que alguns caràcters no són correctes tal i com mostra la Figura 1 (vocals amb accent gràfic, per exemple)
+
+![*Figura 1: Importació de CSV*](png/resultatsSafor.png)
+
+A partir d'ací...
+
+1. Raona i indica quin creus que pot ser siga el problema.
+2. Com ho solucionaries temporalment?
+3  I de forma definitiva per a que, a partir d'ara no tinguera este problema?
+4. Creus que el fitxer, tal com venia, tenia un error, era millorable? Per què?
+
+

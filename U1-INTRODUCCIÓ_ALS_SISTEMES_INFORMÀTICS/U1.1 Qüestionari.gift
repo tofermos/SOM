@@ -1,0 +1,154 @@
+::Tomàs Ferrandis Moscardó::
+Títol: LA INFORMACIÓ: MESURA, REPRESENTACIÓ I CODIFICACIÓ
+
+// Pregunta 1
+::Definició d'informació en TIC::
+La informació és un recurs essencial en les Tecnologies de la Informació i la Comunicació (TIC). Quina és la definició correcta d'informació?
+{
+=Conjunt de dades processades que tenen significat i utilitat per als usuaris.
+~Conjunt de nombres que es fan servir per processar dades.
+~Dades no processades que no tenen cap significat.
+~Dades que no poden ser utilitzades per a prendre decisions.
+}
+
+// Pregunta 2
+::Relació dades, informació, coneixement::
+Relaciona les següents definicions amb el terme correcte:
+1. Valors o descripcions bàsiques sense significat explícit.
+2. Resultat de processar, organitzar i estructurar les dades.
+3. Ús i interpretació de la informació per a la presa de decisions.
+{
+=1. Dades
+=2. Informació
+=3. Coneixement
+}
+
+// Pregunta 3
+::Tipus de dades:: Quins són els tres tipus de dades segons el punt de vista del processament?
+{
+~Dades d'eixida, dades internes del procés, dades d'entrada
+= Dades d'entrada, dades internes del procés, dades d'eixida
+~Dades alfanumèriques, numèriques, booleanes
+~Dades binàries, decimals, octals
+}
+
+// Pregunta 4
+::Mesura de la informació::
+Quina és la unitat mínima d'informació?
+{
+=Bit
+~Byte
+~Nibble
+~Kilobyte
+}
+
+// Pregunta 5
+::Unitats de mesura de la informació::
+Quin valor representa un Gibibyte (GiB) en bytes?
+{
+~1.000.000.000 bytes
+=1.073.741.824 bytes
+~1.024 bytes
+~1.000 bytes
+}
+
+// Pregunta 6
+::Diferència entre GB i GiB::
+Quina és la diferència entre GB i GiB?
+{
+~GB és una unitat en base 8 i GiB en base 10.
+=GB es mesura en base 10 i GiB en base 2.
+~GB i GiB són unitats equivalents.
+~GB es fa servir per mesurar bits, mentre que GiB es fa servir per bytes.
+}
+
+// Pregunta 7
+::Conversió binari a decimal::
+Quin és el resultat de convertir el binari 1101 a decimal?
+{
+=13
+~12
+~14
+~11
+}
+
+// Pregunta 8
+::Conversió hexadecimal a decimal::
+Quin és el resultat de convertir el hexadecimal 1A3 a decimal?
+{
+=419
+~275
+~500
+~320
+}
+
+// Pregunta 9
+::Tipus numèrics simples::
+Quin tipus de dades s'usa per a representar nombres naturals?
+{
+=Enters
+~Reals
+~Booleans
+~Caràcters
+}
+
+// Pregunta 10
+::Sistema binari::
+Quin és el valor en binari del número decimal 25?
+{
+=11001
+~10101
+~11010
+~10011
+}
+
+// Pregunta 11
+::Codificació de color en binari::
+Com es codifica el color RGB en binari en termes de bits?
+{
+=24 bits
+~32 bits
+~8 bits
+~16 bits
+}
+
+// Pregunta 12
+::Complement a 2::
+Quin és el rang de valors representables en complement a 2 en un byte?
+{
+=-128 a 127
+~0 a 255
+~-127 a 127
+~-128 a 256
+}
+
+// Pregunta 13
+::Sistemes de numeració::
+Quin sistema de numeració utilitza els dígits 0 a 9 i les lletres A a F?
+{
+=Hexadecimal
+~Octal
+~Binari
+~Decimal
+}
+
+// Pregunta 14
+::Representació de caràcters::
+Quin estàndard inicialment es va utilitzar per codificar els caràcters?
+{
+=ASCII
+~UTF-16
+~ISO-8859
+~Unicode
+}
+
+// Pregunta 15
+::Boolean::
+Quins són els dos valors que pot prendre una dada de tipus booleà?
+{
+=TRUE/FALSE
+~0/9
+~Alfabet/A-z
+~Enter/Real
+}
+
