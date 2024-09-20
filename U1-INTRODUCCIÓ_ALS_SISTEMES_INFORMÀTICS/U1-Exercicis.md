@@ -26,9 +26,19 @@ linestretch: 1.5
 
 ## 1 Conversió de RGB
 
-Els codis hexadecimals de colors RGB es representen amb 6 dígits: dos per al component roig (Red), dos per al component verd (Green) i dos per al component blau (Blue). Cada component és un número hexadecimal que pots convertir a binari i també (SEPARANT de 2 en 2 a decimal).
+En RGB poden donar-nos el color de dos formes:
 
-**Instruccions per a cada cas:**
+* Decimal: rgb()
+* Hexadecimal: 
+
+Però sabem que es grava en binari.
+
+![](png/rgbExercici.png){width=70%}
+
+
+**Instruccions per traduir entre sistemes**
+
+De Hexadecimal -> Decimal -> Binari
 
 1. Separar el codi hexadecimal en tres parts: una per al component vermell (R), una per al component verd (G) i una per al component blau (B).
 2. Convertir cada part hexadecimal a decimal.
@@ -42,7 +52,7 @@ Exemple de resolució per al cas #FF5733:
    - B = 33  
 
 **Conversió a decimal:**
-   - R = 16*16$^{1}$ + 15 = 255  
+   - R = 15*16$^{1}$ + 15 = 255  
    - G = 5*16$^{1}$ + 7 = 87  
    - B = 3*16$^{16}$ + 3 =  51
 
@@ -58,7 +68,9 @@ Exemple de resolució per al cas #FF5733:
 3. **#7D3F8C**  
 4. **#2ECC71**  
 
+Per comprovar, pots fer el pas contrari:
 
+binari-> decimal -> hexadecimal
 ## 2 Conversió de IPv4
 
 Una IP4 està composada de 4 bytes (4 * 8 = 32 bits). Però la representem per comoditat en decimal
@@ -72,28 +84,23 @@ Per convertir una adreça IP en IPv4 a binari i hexadecimal, segueix aquests pas
    - Convertir cada octet a binari:
 
 Exemple: **192.168.1.10**
-  **192** en binari:  
-       Decimal: 192  
-       Binari: 11000000
+   
+   Decimal: 192  
+   Binari: 11000000
 
-  **168** en binari:  
-       Decimal: 168  
-       Binari: 10101000
+   Decimal: 168  
+   Binari: 10101000
 
-  **1** en binari:  
-       Decimal: 1  
-       Binari: 00000001
+   Decimal: 1  
+   Binari: 00000001
 
-  **10** en binari:  
-       Decimal: 10  
-       Binari: 00001010
+   Decimal: 10  
+   Binari: 00001010
 
 Per tant, l’adreça IP en binari és:  
      **11000000.10101000.00000001.00001010**
 
-Com passaries a hexadecimal el binari resultant?
-
-**Fes la conversió a binari i decimal de les IPs:**
+**Fes la conversió a binari de les IPs:**
 
 1. **10.2.2.2**
 
@@ -106,12 +113,14 @@ Com passaries a hexadecimal el binari resultant?
 
 ## 3 Octal
 
-Representa en octal i decimal els caracters especials i les lletres següents d' ASCII ( et deixe al costa el seu valor en decimal )
+Representa en octal i binari els caracters especials i les lletres següents d' ASCII ( et deixe al costa el seu valor en decimal )
 
-1. **<	60**
-2. **@	64**
-3. **A	65**
-4. **a  97**
+|Símbol|Codi ASCII|Octal|Binari|
+|:--|--:|---|---|
+|**<**| 60|||
+|**\@**|64|||
+|**A**|65|||
+|**a**| 97|||
 
 ## 4 Investigació
 

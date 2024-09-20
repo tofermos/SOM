@@ -41,6 +41,16 @@
 \makeatother
 \usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -99,12 +109,23 @@
 
 \subsection{1 Conversió de RGB}\label{conversiuxf3-de-rgb}
 
-Els codis hexadecimals de colors RGB es representen amb 6 dígits: dos
-per al component roig (Red), dos per al component verd (Green) i dos per
-al component blau (Blue). Cada component és un número hexadecimal que
-pots convertir a binari i també (SEPARANT de 2 en 2 a decimal).
+En RGB poden donar-nos el color de dos formes:
 
-\textbf{Instruccions per a cada cas:}
+\begin{itemize}
+\tightlist
+\item
+  Decimal: rgb()
+\item
+  Hexadecimal:
+\end{itemize}
+
+Però sabem que es grava en binari.
+
+\includegraphics[width=0.7\textwidth,height=\textheight]{png/rgbExercici.png}
+
+\textbf{Instruccions per traduir entre sistemes}
+
+De Hexadecimal -\textgreater{} Decimal -\textgreater{} Binari
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -127,7 +148,7 @@ Exemple de resolució per al cas \#FF5733:
 - G = 57\\
 - B = 33
 
-\textbf{Conversió a decimal:} - R = 16\emph{16\(^{1}\) + 15 = 255\\
+\textbf{Conversió a decimal:} - R = 15\emph{16\(^{1}\) + 15 = 255\\
 - G = 5}16\(^{1}\) + 7 = 87\\
 - B = 3*16\(^{16}\) + 3 = 51
 
@@ -148,7 +169,10 @@ Exemple de resolució per al cas \#FF5733:
   \textbf{\#2ECC71}
 \end{enumerate}
 
-\subsection{2 Conversió de IPv4}\label{conversiuxf3-de-ipv4}
+Per comprovar, pots fer el pas contrari:
+
+binari-\textgreater{} decimal -\textgreater{} hexadecimal \#\# 2
+Conversió de IPv4
 
 Una IP4 està composada de 4 bytes (4 * 8 = 32 bits). Però la representem
 per comoditat en decimal
@@ -166,28 +190,24 @@ binari i hexadecimal, segueix aquests passos:
   Convertir cada octet a binari:
 \end{itemize}
 
-Exemple: \textbf{192.168.1.10} \textbf{192} en binari:\\
+Exemple: \textbf{192.168.1.10}
+
 Decimal: 192\\
 Binari: 11000000
 
-\textbf{168} en binari:\\
 Decimal: 168\\
 Binari: 10101000
 
-\textbf{1} en binari:\\
 Decimal: 1\\
 Binari: 00000001
 
-\textbf{10} en binari:\\
 Decimal: 10\\
 Binari: 00001010
 
 Per tant, l'adreça IP en binari és:\\
 \textbf{11000000.10101000.00000001.00001010}
 
-Com passaries a hexadecimal el binari resultant?
-
-\textbf{Fes la conversió a binari i decimal de les IPs:}
+\textbf{Fes la conversió a binari de les IPs:}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -203,21 +223,21 @@ Com passaries a hexadecimal el binari resultant?
 
 \subsection{3 Octal}\label{octal}
 
-Representa en octal i decimal els caracters especials i les lletres
+Representa en octal i binari els caracters especials i les lletres
 següents d' ASCII ( et deixe al costa el seu valor en decimal )
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  \textbf{\textless{} 60}
-\item
-  \textbf{@ 64}
-\item
-  \textbf{A 65}
-\item
-  \textbf{a 97}
-\end{enumerate}
+\begin{longtable}[]{@{}lrll@{}}
+\toprule\noalign{}
+Símbol & Codi ASCII & Octal & Binari \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{\textless{}} & 60 & & \\
+\textbf{@} & 64 & & \\
+\textbf{A} & 65 & & \\
+\textbf{a} & 97 & & \\
+\end{longtable}
 
 \subsection{4 Investigació}\label{investigaciuxf3}
 
