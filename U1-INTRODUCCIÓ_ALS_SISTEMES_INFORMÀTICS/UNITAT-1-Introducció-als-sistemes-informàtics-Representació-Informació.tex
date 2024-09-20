@@ -142,7 +142,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdfauthor={Tomàs Ferrandis Moscardó},
+  pdfauthor={@tofermos},
   pdflang={es-ES},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -155,7 +155,7 @@
 }
 \makeatother
 \subtitle{LA INFORMACIÓ: MESURA, REPRESENTACIÓ I CODIFICACIÓ}
-\author{Tomàs Ferrandis Moscardó}
+\author{@tofermos}
 \date{2024-08-29}
 
 \begin{document}
@@ -308,9 +308,9 @@ vs GiB: ¿Cuál es la diferencia entre Gigabytes y Gibibytes?}
 \begin{itemize}
 \tightlist
 \item
-  Enters. 0,1,2,3 \ldots{}
+  Naturals. 0,1,2,3 \ldots{}
 \item
-  Naturals. -34,-4,0, 5, 56 \ldots{}
+  Enters. -34,-4,0, 5, 56 \ldots{}
 \item
   Reals. 3.456; 34.003,897
 \end{itemize}
@@ -397,15 +397,21 @@ ser:
 \subsection{4.1 Els naturals i el Teorema de la
 numeració}\label{els-naturals-i-el-teorema-de-la-numeraciuxf3}
 
-El teorema de la numeració estableix que qualsevol número natural (enter
-positiu) en un sistema de numeració donat es pot representar de manera
-única com una suma de múltiples d'una base específica elevada a
-diferents potències.
+El \textbf{teorema de la numeració} estableix que qualsevol número
+natural (enter positiu) en un sistema de numeració donat es pot
+representar de manera única com una suma de múltiples d'una base
+específica elevada a diferents potències.
 
 Per exemple, en el sistema decimal (base 10), el nombre 345 es
 representa com:
 
 \(3 \times 10^2 + 4 \times 10^1 + 5 \times 10^0\).
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth,height=\textheight]{png/SistemaVigesimal.jpg}
+\caption{\emph{Figura 1: El sistema vigesimal dels Maies}}
+\end{figure}
 
 \subsubsection{4.1.1 Sistemes de
 numeració:}\label{sistemes-de-numeraciuxf3}
@@ -423,9 +429,9 @@ numeració:}\label{sistemes-de-numeraciuxf3}
   lletres A a F.
 \end{itemize}
 
-\emph{Taula d'exemples de codificació en diferents sistemes:}
+\emph{Taula 1: Exemples de codificació en diferents sistemes:}
 
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}rrrr@{}}
 \toprule\noalign{}
 Decimal & Binari & Octal & Hexadecimal \\
 \midrule\noalign{}
@@ -508,26 +514,26 @@ Exemple: 25,76
 \subsubsection{2.2 Part fraccionària ( decimal):
 0,76}\label{part-fraccionuxe0ria-decimal-076}
 
-\begin{verbatim}
 0,76 × 2 = 1,52 → 1 (enter), 0,52 queda
+
 0,52 × 2 = 1,04 → 1 (enter), 0,04 queda
+
 0,04 × 2 = 0,08 → 0 (enter), 0,08 queda
+
 0,08 × 2 = 0,16 → 0 (enter), 0,16 queda
+
 0,16 × 2 = 0,32 → 0 (enter), 0,32 queda
+
 0,32 × 2 = 0,64 → 0 (enter), 0,64 queda
+
 0,64 × 2 = 1,28 → 1 (enter), 0,28 queda
+
 0,28 × 2 = 0,56 → 0 (enter), 0,56 queda
+
 0,56 × 2 = 1,12 → 1 (enter), 0,12 queda
-\end{verbatim}
 
-0,76 en binari és aproximadament 0.110000101.
-
-\subsubsection{Total}\label{total}
-
-11001,110000101
-
-( Veurem més avant la representacio en Coma Flotant que és la forma
-usada)
+Resultat aproximat: 0,76 en binari és \textbf{aproximadament}
+0.110000101 (Pot no arribar a ser exacta.)
 
 \subsubsection{3. Conversió de Hexadecimal a
 Decimal}\label{conversiuxf3-de-hexadecimal-a-decimal}
@@ -578,8 +584,9 @@ Hexadecimal}\label{conversiuxf3-de-decimal-a-hexadecimal}
   \textbf{Hexadecimal Resultat:} FF
 \end{itemize}
 
-\subsubsection{5. Conversió entre Hexadecimal i
-Binari}\label{conversiuxf3-entre-hexadecimal-i-binari}
+\subsubsection{5. Conversió entre Hexadecimal i Binari (``automàtica''
+de 1 a
+4)}\label{conversiuxf3-entre-hexadecimal-i-binari-automuxe0tica-de-1-a-4}
 
 \begin{itemize}
 \item
@@ -603,8 +610,9 @@ Binari}\label{conversiuxf3-entre-hexadecimal-i-binari}
   \textbf{Binari Resultat:} 10100111
 \end{itemize}
 
-\subsubsection{6. Conversió entre Binari i
-Hexadecimal}\label{conversiuxf3-entre-binari-i-hexadecimal}
+\subsubsection{6. Conversió entre Binari i Hexadecimal (``automàtica''
+de 4 a
+1)}\label{conversiuxf3-entre-binari-i-hexadecimal-automuxe0tica-de-4-a-1}
 
 \begin{itemize}
 \item
@@ -631,8 +639,8 @@ Hexadecimal}\label{conversiuxf3-entre-binari-i-hexadecimal}
 Aquí tens exemples de conversió entre el sistema octal i el sistema
 binari:
 
-\subsubsection{7. Conversió de Octal a
-Binari}\label{conversiuxf3-de-octal-a-binari}
+\subsubsection{7. Conversió de Octal a Binari (``Automàtica'' de 1 a
+3)}\label{conversiuxf3-de-octal-a-binari-automuxe0tica-de-1-a-3}
 
 \begin{itemize}
 \item
@@ -659,12 +667,10 @@ Binari}\label{conversiuxf3-de-octal-a-binari}
     \texttt{345} en octal es converteix en \texttt{011\ 100\ 101} en
     binari.
   \end{itemize}
-
-  \textbf{Binari Resultat:} \texttt{011100101}
 \end{itemize}
 
-\subsubsection{8. Conversió de Binari a
-Octal}\label{conversiuxf3-de-binari-a-octal}
+\subsubsection{8. Conversió de Binari a Octal (``Automàtica'' de 3 a
+1)}\label{conversiuxf3-de-binari-a-octal-automuxe0tica-de-3-a-1}
 
 \begin{itemize}
 \item
@@ -695,40 +701,44 @@ Octal}\label{conversiuxf3-de-binari-a-octal}
   \textbf{Octal Resultat:} \texttt{2253}
 \end{itemize}
 
-Observem, com ja hem comentat que les conversions entre octal i
-hexadecimal i binari són ``automàtiques'' perquè 8 i1 6 són potències de
-2 (8 = 2³; 16 = 2⁴).
+\textbf{CONCLUSIONS:}
+
+Les conversions entre octal i hexadecimal i binari són ``automàtiques''
+perquè 8 i 16 són potències de 2 (8 = 2³; 16 = 2⁴).
 
 \begin{itemize}
+\tightlist
 \item
-  En la conversió d'octal a binari, cada dígit octal es converteix en un
-  bloc de 3 bits binaris.
+  1 dígit octal \textless--\textgreater{} 3 dígits binaris
 \item
-  En la conversió de binari a octal, agrupeu els dígits binaris en blocs
-  de 3 i converteix-los en dígits octals.
-\item
-  En la conversió d'hexadecimal a binari, cada dígit hexadecimal es
-  converteix en un bloc de 4 bits binaris.
-\item
-  En la conversió de binari a hexadecimal, agrupeu els dígits binaris en
-  blocs de 4 i converteix-los en dígits hexadecimals.
+  1 dígit hexadecimal \textless--\textgreater{} 4 dígits binaris
 \end{itemize}
+
+\emph{( A parir d'ací ho heu de llegir, no cal saber l'operativa)}
 
 \subsection{4.3 Els enters: positius, zero(s) i
 negatius.}\label{els-enters-positius-zeros-i-negatius.}
 
 Hi ha diverses formes de representar els valors negatius. Les tres que
 anem estudiar es caracteritzen per destinar el MSB ( Bit major, el de la
-dreta) a indicar el signe: 1: Negatiu 0: Positiu Això implica que
-``perdem'' un bit per representar valors.
+dreta) a indicar el signe:
+
+\begin{itemize}
+\item
+  1: Negatiu
+\item
+  0: Positiu
+\end{itemize}
+
+Això implica que ``perdem'' un bit per representar valors.
 
 \subsubsection{4.3.1 Bit amb signe}\label{bit-amb-signe}
 
-Es reserva el primer bit per indicar el signe * \textbf{0}0000011
--\textgreater{} 3
+Es reserva el primer bit per indicar el signe
 
 \begin{itemize}
-\tightlist
+\item
+  \textbf{0}0000011 -\textgreater{} 3
 \item
   \textbf{1}0000011 -\textgreater{} -3
 \end{itemize}
@@ -738,17 +748,17 @@ Es reserva el primer bit per indicar el signe * \textbf{0}0000011
 Els negatius es codifiquen fent l'inversa de cada bit. No té ús, el
 veiem per entendre el Complement a 2.
 
-Exemples dels valors de 0, 1, 2, 3, 4 i -1, -2, -3, -4:
+\emph{Taula 2: Exemples d'enters en Ca1}
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}lr@{}}
 \toprule\noalign{}
 Byte en complement a 1 & Decimal \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-00000000 & 0 (positiu) \\
-11111111 & 0 (negatiu) \\
+00000000 & (positiu) 0 \\
+11111111 & (negatiu) 0 \\
 00000001 & 1 \\
 00000010 & 2 \\
 00000011 & 3 \\
@@ -775,20 +785,24 @@ diferents (perquè dos d'ells són el mateix nombre 0).
 
 Per solucionar el problema dels 2 zeros i aprofitar millor totes les
 representacions, el que fem en els negatius és restar un 1 al Ca1. Ca1
-de -1 -\textgreater{} 0000 0001 -\textgreater{} 1111 1110 Ca1 de -7
--\textgreater{} 0000 0111 -\textgreater{} 1111 1000 Ca1 de 0
--\textgreater{} 0000 0000 -\textgreater{} 1111
+de -1 -\textgreater{} 0000 0001 -\textgreater{} 1111 1110
+
+Ca1 de -7 -\textgreater{} 0000 0111 -\textgreater{} 1111 1000
+
+Ca1 de 0 -\textgreater{} 0000 0000 -\textgreater{} 1111
 
 Ca1 de -1 -\textgreater{} 0000 0001 -\textgreater{} 1111 1110 +1
--\textgreater{} 1111 1111 Ca2 de -7 -\textgreater{} 0000 0111
--\textgreater{} 1111 1000 +1 -\textgreater{} 1111 1010 Ca2 de 0
--\textgreater{} 0000 0000 -\textgreater{} 1111 1111 -\textgreater{} 0000
-0000 (overflow)
+-\textgreater{} 1111 1111
 
-Exemple amb els valors de 0, 1, 2, 3, 4 i -1, -2, -3, -4 representats en
-complement a 2:
+Ca2 de -7 -\textgreater{} 0000 0111 -\textgreater{} 1111 1000 +1
+-\textgreater{} 1111 1010
 
-\begin{longtable}[]{@{}ll@{}}
+Ca2 de 0 -\textgreater{} 0000 0000 -\textgreater{} 1111 1111
+-\textgreater{} 0000 0000 (overflow)
+
+\emph{Taula 3: Exemples d'enters en Ca2}
+
+\begin{longtable}[]{@{}lr@{}}
 \toprule\noalign{}
 Byte en complement a 2 & Decimal \\
 \midrule\noalign{}
@@ -825,12 +839,11 @@ combinacions, representem 256 números diferents-
 
 \subsection{4.4 Els números reals}\label{els-nuxfameros-reals}
 
-Exemples de números reals: * 3.141592653589793 * 3 * -3 * 0 *
-2334335335345346679755334354656757885334343 *
-0,00000000000000000000000000000000000000103
+Exemples de números reals: * 3,141592653589793 * 3 * -3 * 0 *
+34.354.656.757.885.334.343 * 0,000000000000000000000000000000000103
 
-Per tant: els reals inclouen als números enters: 4 = 4,000; -34 =
--34,000 que inclouen als naturals.
+Per tant: els reals inclouen als números enters (-2 = -2,000; 34 =
+34,000) que inclouen als naturals.
 
 \subsubsection{4.4.1 Coma flotant.
 General.}\label{coma-flotant.-general.}
@@ -902,6 +915,8 @@ Aquests formats permeten representar nombres molt grans o molt petits
 amb precisió controlada.Independentment de que representen un nombre amb
 part fraccionària o un enter.
 
+\emph{(A partir d'ací cal estudiar)}
+
 \section{5 Sobre els usos habituals de cada sistema de
 numeració}\label{sobre-els-usos-habituals-de-cada-sistema-de-numeraciuxf3}
 
@@ -949,7 +964,7 @@ software pot mostrar/admetre:
   comodidat del Hexadecimal
 \end{itemize}
 
-Veiem 5 exemples de RGB en hexadecimal, decimals i el binari
+\emph{Taula 4: Exemples de RGB en hexadecimal, decimals i el binari}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1194}}
@@ -1041,6 +1056,8 @@ anglés)
 
 \subsection{6.2 Codificacions UTF}\label{codificacions-utf}
 
+\emph{(Només llegir)}
+
 Les codificacions UTF (Unicode Transformation Format) més comuns són
 UTF-8, UTF-16 i UTF-32.
 
@@ -1116,7 +1133,7 @@ caràcters sent compatible amb els anteriors ASCII.
 Els primers 128 caràcters en UTF-8 són idèntics als d'ASCII original de
 7 bits (anglés) i la resta de pàgines.
 
-Exemples:
+\emph{Taula 5: Exemples de caràctersn en diferents codificacions}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1316}}
@@ -1229,6 +1246,8 @@ També ho podem vore des del GUI
 \section{7. Els diferents tipus en els
 llenguatges}\label{els-diferents-tipus-en-els-llenguatges}
 
+\emph{(Només llegir)}
+
 Quan usem un llenguatge de programació (Python, R, C, Java, Javascript,
 PHP) o també un llenguatge d'scripts, definirem variables on guardarem
 temporalment valors numèrics, alfanumèrics o booleanes tal com les hem
@@ -1330,8 +1349,8 @@ distinta:
 \subsection{7.1 Detecció o correcció
 d'errors}\label{detecciuxf3-o-correcciuxf3-derrors}
 
-Es tracta d'uns bits addicionals (no aporten informació) que s'afigen a
-tot el bloc d'informació (o a cada byte) per a detectar i alguns per
+( Es tracta d'uns bits addicionals (no aporten informació) que s'afigen
+a tot el bloc d'informació (o a cada byte) per a detectar i alguns per
 corregir si hi s'ha produït un error en l'enviament a través de les
 xarxes o magatzematge.
 
@@ -1350,17 +1369,19 @@ xarxes o magatzematge.
   de dades. És útil per a la integritat de fitxers, autenticació i
   emmagatzematge segur de contrasenyes, però no està pensat per a la
   correcció d'errors. L'usarem més avant quan descarreguem paquets de
-  software grans com la ISO de Windows 11.
-\item
-  \textbf{Hamming Code:} Codi de correcció que pot detectar i corregir
-  errors simples d'un sol bit en la transmissió de dades.
+  software grans com la ISO de Lubuntu, Windows 11\ldots{} En la Unitat
+  2 provarem una funció Hash.
 \item
   \textbf{ECC (Error-Correcting Code):} Utilitzat en memòries RAM per
   corregir errors simples o dobles en dades, millorant la fiabilitat del
   sistema.
+\item
+  \textbf{Hamming Code:} Codi de correcció que pot detectar i corregir
+  errors simples d'un sol bit en la transmissió de dades. \#\# 7.2
+  Compressió de dades
 \end{itemize}
 
-\subsection{7.2 Compressió de dades}\label{compressiuxf3-de-dades}
+\emph{(Només cal llegir. Tractarem la compressió més avant)}
 
 Es basen en dos tècniques.
 

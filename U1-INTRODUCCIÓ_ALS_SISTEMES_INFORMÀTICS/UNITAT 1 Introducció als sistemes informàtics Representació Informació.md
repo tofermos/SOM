@@ -3,21 +3,21 @@ title: |
   | UD1: INTRODUCCIÓ ALS SISTEMES INFORMÀTICS (II)
 subtitle: |
   | LA INFORMACIÓ: MESURA, REPRESENTACIÓ I CODIFICACIÓ
-author: "Tomàs Ferrandis Moscardó"
+author: "@tofermos"
 date: "2024-08-29"
 output:
-  html_document:
-    toc: true
-    toc_float: true
-    toc_depth: 2
-    df_print: paged
-    number_sections: false
   pdf_document: 
     toc: true
     keep_tex: true
     latex_engine: lualatex
     includes:
       in_header: preambul.tex
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    df_print: paged
+    number_sections: false
   word_document:
     toc: true
     toc_depth: '3'
@@ -565,6 +565,8 @@ Per exemple ISO 8859-1 per a l'Europa Occidental (Latin-1) o la ISO 8859-5 per a
 
 ## 6.2 Codificacions UTF
 
+*(Només llegir)*
+
 Les codificacions UTF (Unicode Transformation Format) més comuns són UTF-8, UTF-16 i UTF-32.
 
 ### UTF-8 (Unicode Transformation Format de 8 bits)
@@ -665,6 +667,8 @@ També ho podem vore des del GUI
 
 # 7. Els diferents tipus en els llenguatges
 
+*(Només llegir)*
+
 Quan usem un llenguatge de programació (Python, R, C, Java, Javascript, PHP) o també un llenguatge d'scripts, definirem variables on guardarem temporalment valors numèrics, alfanumèrics o booleanes tal com les hem estudiades. 
 
 * El següent codi correspon a un fitxer de C
@@ -726,6 +730,7 @@ Però en guardar la informació -o en enviar-la- els nostres sistemes solen fer 
 
 ## 7.1 Detecció o correcció d'errors
 
+(
 Es tracta d'uns bits addicionals (no aporten informació) que s'afigen a tot el bloc d'informació (o a cada byte) per a detectar i alguns per corregir si hi s'ha produït un error en l'enviament a través de les xarxes o magatzematge.
 
 - **Bits de paritat:** Afegir un bit addicional per fer que el nombre de 1 (o de 0) siga parell.
@@ -737,11 +742,12 @@ Es tracta d'uns bits addicionals (no aporten informació) que s'afigen a tot el 
 - **Hash (Funcions de hash):** Crea un codi únic per a un conjunt de dades. És útil per a la integritat de fitxers, autenticació i emmagatzematge segur de contrasenyes, però no està pensat per a la correcció d'errors. L'usarem més avant quan descarreguem paquets de software grans com la ISO de Lubuntu, Windows 11...
 En la Unitat 2 provarem una funció Hash.
 
-- **Hamming Code:** Codi de correcció que pot detectar i corregir errors simples d'un sol bit en la transmissió de dades.
-
 - **ECC (Error-Correcting Code):** Utilitzat en memòries RAM per corregir errors simples o dobles en dades, millorant la fiabilitat del sistema.
 
-## 7.2 Compressió de dades
+- **Hamming Code:** Codi de correcció que pot detectar i corregir errors simples d'un sol bit en la transmissió de dades.
+## 7.2 Compressió de dades 
+
+*(Només cal llegir. Tractarem la compressió més avant)*
 
 Es basen en dos tècniques.
 

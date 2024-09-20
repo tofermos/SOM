@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.16)  12 SEP 2024 20:59
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2024.3.16)  20 SEP 2024 15:43
  restricted system commands enabled.
 **UNITAT-1-Introducció-als-sistemes-informàtics-Representació-Informació.te
 x
@@ -1299,95 +1299,94 @@ Missing character: There is no ⁴ (U+2074) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
 Missing character: There is no ⁵ (U+2075) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
-] [4] [5]
+] [4]
+<png/SistemaVigesimal.jpg, id=84, 722.7pt x 827.09pt>
+File: png/SistemaVigesimal.jpg Graphic file (type jpg)
+<use png/SistemaVigesimal.jpg>
+Package luatex.def Info: png/SistemaVigesimal.jpg  used on input line 412.
+(luatex.def)             Requested size: 226.48279pt x 259.19696pt.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(2)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 426.
-[6] [7] [8] [9] [10
+(Font)              scaled to size 12.0pt on input line 413.
+[5] [6<./png/SistemaVigesimal.jpg>] [7] [8] [9] [10
 Missing character: There is no ⁴ (U+2074) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
-] [11
+] [11] [12
 Missing character: There is no ⁸ (U+2078) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
 Missing character: There is no ⁷ (U+2077) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
 Missing character: There is no ⁷ (U+2077) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
-]
-Overfull \hbox (97.28844pt too wide) in paragraph at lines 828--831
-\TU/TimesNewRoman(2)/m/n/12 Exem-ples de nú-me-ros reals: * 3.141592653589793 
-* 3 * -3 * 0 * 2334335335345346679755334354656757885334343
- []
-
-[12
+] [13
 Missing character: There is no ⁸ (U+2078) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
 Missing character: There is no ⁷ (U+2077) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
 Missing character: There is no ⁷ (U+2077) in font TimesNewRoman:mode=node;lang
 uage=dflt;+tlig;!
-] [13] [14]
-<png/RGB.png, id=159, 646.415pt x 220.825pt>
+] [14]
+<png/RGB.png, id=157, 646.415pt x 220.825pt>
 File: png/RGB.png Graphic file (type png)
 <use png/RGB.png>
-Package luatex.def Info: png/RGB.png  used on input line 984.
+Package luatex.def Info: png/RGB.png  used on input line 999.
 (luatex.def)             Requested size: 452.97072pt x 154.74153pt.
 [15<./png/RGB.png>] [16] [17]
-<png/csv1.png, id=176, 854.19125pt x 708.6475pt>
+<png/csv1.png, id=174, 854.19125pt x 708.6475pt>
 File: png/csv1.png Graphic file (type png)
 <use png/csv1.png>
-Package luatex.def Info: png/csv1.png  used on input line 1181.
+Package luatex.def Info: png/csv1.png  used on input line 1198.
 (luatex.def)             Requested size: 339.71536pt x 281.83202pt.
-<png/csv2.png, id=177, 800.9925pt x 779.91376pt>
+[18]
+<png/csv2.png, id=181, 800.9925pt x 779.91376pt>
 File: png/csv2.png Graphic file (type png)
 <use png/csv2.png>
-Package luatex.def Info: png/csv2.png  used on input line 1189.
+Package luatex.def Info: png/csv2.png  used on input line 1206.
 (luatex.def)             Requested size: 339.72676pt x 330.78659pt.
-[18<./png/csv1.png>]
-<png/iconv.png, id=183, 1115.16624pt x 171.64125pt>
+[19<./png/csv1.png>]
+<png/iconv.png, id=186, 1115.16624pt x 171.64125pt>
 File: png/iconv.png Graphic file (type png)
 <use png/iconv.png>
-Package luatex.def Info: png/iconv.png  used on input line 1202.
+Package luatex.def Info: png/iconv.png  used on input line 1219.
 (luatex.def)             Requested size: 339.72533pt x 52.28894pt.
-<png/csv3.png, id=184, 721.69624pt x 699.61375pt>
+<png/csv3.png, id=187, 721.69624pt x 699.61375pt>
 File: png/csv3.png Graphic file (type png)
 <use png/csv3.png>
-Package luatex.def Info: png/csv3.png  used on input line 1206.
+Package luatex.def Info: png/csv3.png  used on input line 1223.
 (luatex.def)             Requested size: 339.72586pt x 329.33092pt.
-[19<./png/csv2.png><./png/iconv.png>]
-<png/ls.png, id=189, 695.59875pt x 61.22874pt>
+[20<./png/csv2.png><./png/iconv.png>]
+<png/ls.png, id=192, 695.59875pt x 61.22874pt>
 File: png/ls.png Graphic file (type png)
 <use png/ls.png>
-Package luatex.def Info: png/ls.png  used on input line 1221.
+Package luatex.def Info: png/ls.png  used on input line 1238.
 (luatex.def)             Requested size: 452.96173pt x 39.87106pt.
-<png/ls2.png, id=190, 639.38875pt x 429.605pt>
+<png/ls2.png, id=193, 639.38875pt x 429.605pt>
 File: png/ls2.png Graphic file (type png)
 <use png/ls2.png>
-Package luatex.def Info: png/ls2.png  used on input line 1225.
+Package luatex.def Info: png/ls2.png  used on input line 1242.
 (luatex.def)             Requested size: 452.97404pt x 304.35304pt.
-[20<./png/csv3.png><./png/ls.png>]
+[21<./png/csv3.png><./png/ls.png>]
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1253.
-[21<./png/ls2.png>]
-<png/numeros.exe.png, id=202, 614.295pt x 186.6975pt>
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1272.
+[22<./png/ls2.png>]
+<png/numeros.exe.png, id=205, 614.295pt x 186.6975pt>
 File: png/numeros.exe.png Graphic file (type png)
 <use png/numeros.exe.png>
-Package luatex.def Info: png/numeros.exe.png  used on input line 1282.
+Package luatex.def Info: png/numeros.exe.png  used on input line 1301.
 (luatex.def)             Requested size: 226.47948pt x 68.83199pt.
-[22<./png/numeros.exe.png>] [23] [24]
+[23<./png/numeros.exe.png>] [24] [25]
 (./UNITAT-1-Introducció-als-sistemes-informàtics-Representació-Informació.a
 ux))
 
 Here is how much of LuaTeX's memory you used:
- 22631 strings out of 477805
+ 22641 strings out of 477805
  125086,1144653 words of node,token memory allocated
  661 words of node memory still in use:
    8 hlist, 2 vlist, 2 rule, 1 local_par, 1 dir, 6 glue, 4 kern, 1 penalty, 3 gl
 yph, 23 attribute, 63 glue_spec, 11 attribute_list, 1 write, 1 user_defined node
 s
-   avail lists: 1:3,2:2525,3:429,4:499,5:423,6:117,7:4713,8:86,9:705,10:10,11:52
-9
- 42379 multiletter control sequences out of 65536+600000
- 86 fonts using 24553583 bytes
+   avail lists: 1:3,2:2537,3:429,4:537,5:424,6:117,7:5088,8:86,9:682,10:8,11:543
+ 42383 multiletter control sequences out of 65536+600000
+ 86 fonts using 24553423 bytes
  86i,7n,128p,1244b,552s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmonolt10-bold.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmmono10-italic.otf></usr/share/texmf/fonts/opentype/p
@@ -1397,10 +1396,10 @@ th.otf></usr/share/texmf/fonts/opentype/public/lm-math/latinmodern-math.otf></us
 r/share/fonts/truetype/msttcorefonts/timesbd.ttf></usr/share/fonts/truetype/mstt
 corefonts/times.ttf>
 Output written on UNITAT-1-Introducció-als-sistemes-informàtics-Representaci
-ó-Informació.pdf (24 pages, 534271 bytes).
+ó-Informació.pdf (25 pages, 601315 bytes).
 
 PDF statistics: 360 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
+ 297 compressed objects within 3 object streams
  87 named destinations out of 1000 (max. 131072)
- 233 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 225 words of extra memory for PDF output out of 10000 (max. 100000000)
 
