@@ -5,15 +5,15 @@ subtitle: |
   | Aproximació al VirtualBox (instal·lació mínima)
 author: by tofermos
 output:
-  pdf_document: 
-    toc: true
-    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: true
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -255,12 +255,15 @@ De totes les opcions que ens apareixen anem a centrar-nos en les que més ens in
 ![*Figura 7: Carpetes compartides*](png/9CarpetesCompartides.png)
 
 - **Configuració:** Configurar carpetes compartides entre el sistema host (amfritrió) i les màquines virtuals per facilitar l'intercanvi de fitxers.
+- **L'usuari de Lubuntu** de la MV deu formar part d'un grup d'usuaris que es diu vbox (el tema de grups i usuaris l'estudiarem més avant)
 - **Gestió de permisos:** Assegurar que les carpetes compartides tenen els permisos adequats per accedir i modificar els fitxers des de les màquines virtuals.
+
+![*Figura 8: Carpetes compartides*](png/CarpetesCompartides2.png)
 
 Exemples pràctics habituals d'ús de les carpetes compartides:
 
 1.  Usar programes de Linux i Windows sobre els mateixos fitxers. 
-    Exmeple: El meu portatil té un Ubuntu i, a vegades vull usar el MS Office. Tinc una màquina virutal amb Windows 11 amb el MS Office des d'on accedisc a la carpeta */home/tomas/Documents*
+    Exemple: El meu portatil té un Ubuntu i, a vegades vull usar el MS Office. Tinc una màquina virutal amb Windows 11 amb el MS Office des d'on accedisc a la carpeta */home/tomas/Documents*
     
 2.  Estem treballant a classe o casa en la MV Lubuntu i fem captures de pantalla, documents etc... des de la MV per no anar alternant d'entorn (tampoc té massa compliació), podem guardar directament a la carpeta compartida des de la MV.
 
@@ -277,7 +280,7 @@ Exemples pràctics habituals d'ús de les carpetes compartides:
 - **Parallels Desktop:** Solució de virtualització específica per a macOS, permet executar sistemes operatius Windows i altres sobre Macs.
 - **Hyper-V:** Tecnologia de virtualització de Microsoft integrada en Windows 10 i Windows Server, ofereix funcions avançades per a la creació i gestió de màquines virtuals.
 
-(*No cal estudiar a partir d'ací*)
+*(No cal estudiar a partir d'ací)*
 
 - **KVM (Kernel-based Virtual Machine):** Solució de virtualització per a Linux basada en el nucli, ofereix un entorn robust per a la creació i gestió de màquines virtuals.
 - **Xen:** Hypervisor de codi obert que permet la virtualització de maquinari per a diversos sistemes operatius i entorns de servidor.

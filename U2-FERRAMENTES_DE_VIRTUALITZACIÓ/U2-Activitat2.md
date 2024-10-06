@@ -31,7 +31,7 @@ linestretch: 1.5
 
 # 1 Introducció
 
-Tot i que més avant estudiarem més detingudament la instla·lació i configuració d'Ubuntu, necessitem fer ara un avanç poder vore entendre, de manera práctica. què és la virtualització i altres conceptes teòrics.
+Tot i que més avant estudiarem més detingudament la instal·lació i configuració d'Ubuntu, necessitem fer ara un avanç poder vore entendre, de manera práctica. què és la virtualització i altres conceptes teòrics.
 
 En aquesta activitat vorem conceptes vistos en la **Unitat 1**:
 
