@@ -56,7 +56,7 @@ La interfície d'usuari és el mitjà pel qual els usuaris interaccionen amb el 
 * Algunes accions són més fàcils en un interface que en l'altres.
 * Per a l'administració d'instal·lacions sense GUI (Windows Server Core i Linux Server).*No entra en aquest curs*
 
-![Lectura del contigut de carpeta en GUI i CLI](png/CliGui.png)
+![*Figura 1: Lectura del contigut de carpeta en GUI i CLI*](png/CliGui.png)
 
  
 ### ***...proveu!!***
@@ -76,7 +76,7 @@ En Windows sols el **Windows Explorer** (també conegut com a **File Explorer**)
 
 Les tractarem de forma més pràctica en els temes següents en la MV de Lubuntu i una de Windows 1x. Aquest és un tema introductori i generalista.
 
-![Funcions del SO](png/funcionsCapes.png)
+![*Figura 2: Funcions del SO*](png/funcionsCapes.png)
 
 
 ## 3.1 Gestor de fitxers
@@ -237,7 +237,7 @@ La seqüència d’engegada (o **boot process**) és el conjunt de passos que se
 
    - **Ordre de boot**: El BIOS/UEFI segueix una seqüència definida per comprovar on buscar el sistema operatiu. Aquesta seqüència es pot configurar en la BIOS/UEFI i pot incloure, per exemple, el disc dur principal, una unitat USB o una unitat òptica.
    A VirtuaBox ho emulem. 
-   ![Boot order en VirtualBox](png/bootorderVirtualbox.png)
+   ![*Figura 3: Boot order en VirtualBox*](png/bootorderVirtualbox.png)
    
 ## 6.3. Execució del Bootloader
 
@@ -283,7 +283,10 @@ El bootloader té dues funcions principals:
    - En **Linux**, es pot carregar un entorn d’escriptori com **GNOME**, **KDE**, **LDE**. Poden instal·lar-se'n més d'un, com ja s'ha explicat adés, i escollir en inciar la sessió d'usuari en quin volem treballar.
    
 
-## 6.7. **Sessió d'usuari**
+## 6.7. Sessió d'usuari
 
    Finalment, l’ordinador està a punt per l’inici de sessió de l’usuari. Una vegada l'usuari introdueix les seues credencials, el sistema carrega el perfil de l'usuari (les carpetes on treballa: Documents, Baixades...) i està preparat per utilitzar el sistema operatiu i les aplicacions.
 
+Una vegada iniciada la sessió, en Linux vorem que podem inciar la sessió dins del terminal d'uns altre usuari.
+
+![*Figura 4: Més d'un usuari en el mateix PC*](png/usuarisTerminal.png)
