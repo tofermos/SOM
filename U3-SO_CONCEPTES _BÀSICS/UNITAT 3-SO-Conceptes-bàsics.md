@@ -5,16 +5,16 @@ lang: "ca-ES"
 papersize: A4
 linestretch: 1.5
 output:
-  pdf_document:
-    toc: true
-    keep_tex: true
-    latex_engine: xelatex
   html_document:
     toc: true
     toc_float: true
     toc_depth: 3
     df_print: paged
     number_sections: false
+  pdf_document:
+    toc: true
+    keep_tex: true
+    latex_engine: xelatex
 ---
 
 \newpage
@@ -223,7 +223,7 @@ Els sistemes operatius implementen mecanismes de seguretat per controlar l'accé
 
 La seqüència d’engegada (o **boot process**) és el conjunt de passos que segueix un ordinador des que es prem el botó d'engegada fins que el sistema operatiu està llest per ser utilitzat. És un procés crucial, ja que s’encarrega de comprovar que el maquinari funcioni correctament i de carregar el sistema operatiu. Aquest procés segueix una sèrie d'etapes ben definides:
 
-## 6.1. **Encès i activació del BIOS/UEFI**
+## 6.1. Encès i activació del BIOS/UEFI
 
    Quan l'usuari prem el botó d'encendre l'ordinador, la font d’alimentació subministra energia i el primer programa que s'executa és el **BIOS** (Basic Input/Output System) o el més modern **UEFI** (Unified Extensible Firmware Interface), un programari integrat en la placa base que s'encarrega de realitzar les primeres comprovacions del sistema.
 
@@ -231,7 +231,7 @@ La seqüència d’engegada (o **boot process**) és el conjunt de passos que se
    
    - **Configuració inicial**: Es detecten els dispositius de maquinari instal·lats i es configura el sistema per funcionar amb ells, com ara la memòria, el disc dur, i altres dispositius perifèrics.
 
-## 6.2. **Càrrega del carregador d'arrencada (Bootloader)**
+## 6.2. Càrrega del carregador d'arrencada (Bootloader)
 
    Després del POST, la BIOS/UEFI busca un dispositiu d’emmagatzematge com el disc dur, SSD o dispositiu USB (o per xarxa) segon l'**ordre de boot** (boot order) que tinga un sistema operatiu i busca el **carregador d'arrencada** (bootloader). Aquest és un petit programa que carrega el sistema operatiu en la memòria.
 
@@ -239,7 +239,7 @@ La seqüència d’engegada (o **boot process**) és el conjunt de passos que se
    A VirtuaBox ho emulem. 
    ![Boot order en VirtualBox](png/bootorderVirtualbox.png)
    
-## 6.3. **Execució del Bootloader**
+## 6.3. Execució del Bootloader
 
 Quan el BIOS/UEFI troba el dispositiu amb el sistema operatiu, el **bootloader** es carrega en la memòria RAM. 
    
@@ -253,7 +253,7 @@ El bootloader té dues funcions principals:
 - **Seleccionar el sistema operatiu** si hi ha més d'un instal·lat en l'ordinador, com en configuracions dual boot.
 - **Carregar el nucli (kernel)** del sistema operatiu seleccionat a la memòria RAM.
 
-## 6.4. **Càrrega del nucli (Kernel)**
+## 6.4. Càrrega del nucli (Kernel)
    
    El **nucli del sistema operatiu** és el component central que s’encarrega de gestionar els recursos del maquinari i coordinar la comunicació entre el programari i el maquinari. En aquesta etapa, el nucli s'inicia i comença a detectar i inicialitzar els dispositius de maquinari (com la targeta gràfica, la targeta de xarxa, etc.).
    
@@ -261,7 +261,8 @@ El bootloader té dues funcions principals:
    
    - **Inici de la gestió de memòria i processos**: El nucli també s’encarrega de gestionar la memòria i els processos que s'executen en l’ordinador.
 
-## 6.5. **Inicialització dels serveis i processos del sistema**
+## 6.5. Inicialització dels serveis i processos del sistema
+
    Després de carregar el nucli, s'inicien els **serveis** i **daemons** (processos que s'executen en segon pla) necessaris per al funcionament del sistema operatiu. Això inclou serveis de xarxa, seguretat, gestió d’arxius, etc.
 
    - En **Linux**, s'inicia el sistema d’inicialització com **systemd** o **init**, que llança tots els serveis essencials.
@@ -273,7 +274,7 @@ El bootloader té dues funcions principals:
 >Un servei és un programa que s'exeuta en segon pla (no el veiem). Sense interactuar directament amb l'usuari. Proporciona servicis a altres programes.
 > És, per tant, software de sistema.
 
-## 6.6. **Inici de la interfície gràfica d'usuari (GUI)**
+## 6.6. Inici de la interfície gràfica d'usuari (GUI)
   
    Si el sistema operatiu utilitza una interfície gràfica, aquesta etapa es dedica a carregar la **interfície gràfica d'usuari (GUI)**. Això permet a l'usuari interactuar amb l’ordinador de manera visual i gràfica.
 

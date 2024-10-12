@@ -48,3 +48,9 @@ linestretch: 1.5
 ||||
 |:----|:--|:--|
 |Sistemes Operatius. Conceptes bàsics|[![](recursos/iconohtml.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Conceptes-bàsics.html)|[![](recursos/iconopdf.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Conceptes-bàsics.pdf)|
+
+### [4 Sistemes de fitxers](#U4)
+
+||||
+|:----|:--|:--|
+|Sistemes de fitxers|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-d-arxius-Ubuntu.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-d-arxius-Ubuntu.html)|

@@ -1,0 +1,160 @@
+::P1:: Què és el nucli (Kernel) d'un sistema operatiu?
+{
+=És el component central que gestiona operacions fonamentals com la memòria, la planificació de processos i la seguretat.
+~És la interfície gràfica que permet la interacció entre l'usuari i el sistema.
+~És una part del maquinari que processa les instruccions.
+~És un programa que s'executa en segon pla.
+}
+
+::P2:: Quin tipus de nucli gestiona només funcions bàsiques com processos i memòria, mentre que altres serveis s'executen com processos independents?
+{
+~Nucli monolític
+=Microkernel
+~Nucli híbrid
+~Cap d'anteriors
+}
+
+::P3:: Què permet fer una interfície d'usuari de línia de comandes (CLI)?
+{
+=Interactuar amb el sistema operatiu mitjançant ordres de text.
+~Interactuar amb el sistema operatiu mitjançant icones i finestres.
+~Executar programes sense necessitat de línies de comandes.
+~Utilitzar només el ratolí per executar les ordres.
+}
+
+::P4:: Quina funció realitza el gestor de fitxers d'un sistema operatiu?
+{
+=Gestiona l'emmagatzematge i l'accés als fitxers.
+~Gestiona la memòria i els processos.
+~Controla els dispositius d'entrada i sortida.
+~Assigna permisos a processos.
+}
+
+::P5:: Quin dels següents algorismes de planificació de processos utilitza la tècnica First In, First Out (FIFO)?
+{
+=FIFO
+~SJF (Sort Job First)
+~Round Robin
+~Cap d'anteriors
+}
+
+::P6:: Quina funció té la memòria virtual en un sistema operatiu?
+{
+=Permet utilitzar espai en el disc dur com si fos memòria RAM.
+~Permet executar més processos simultàniament a la CPU.
+~Assigna la memòria física directament a cada procés.
+~Gestiona l'emmagatzematge de fitxers al disc dur.
+}
+
+::P7:: Quin sistema de fitxers és utilitzat principalment en sistemes operatius Windows?
+{
+=NTFS
+~ext4
+~FAT32
+~ReFS
+}
+
+::P8:: Quin dels següents és un exemple d'un sistema operatiu amb nucli monolític?
+{
+=Linux
+~Windows NT
+~MINIX
+~macOS
+}
+
+::P9:: Quin procés s'encarrega de realitzar les primeres comprovacions del sistema quan encenem l'ordinador?
+{
+=BIOS/UEFI
+~Bootloader
+~Kernel
+~Sistema d'inicialització (systemd)
+}
+
+::P10:: Quin element es carrega en memòria després de la càrrega del Bootloader?
+{
+=El nucli (Kernel)
+~Els serveis del sistema operatiu
+~La interfície gràfica d'usuari
+~El sistema de fitxers
+}
+
+::P11:: Quins dels següents sistemes operatius utilitza un nucli híbrid?
+{
+=Windows NT
+~Linux
+~MINIX
+~GNU Hurd
+}
+
+::P12:: Quin tipus de sistema operatiu permet que múltiples usuaris utilitzin el sistema simultàniament compartint recursos?
+{
+=Sistemes de temps compartit
+~Sistemes de temps real
+~Sistemes distribuïts
+~Sistemes embebuts
+}
+
+::P13:: Quin tipus de sistema operatiu respon a esdeveniments externs dins d'un temps determinat, utilitzat en entorns crítics?
+{
+=Sistemes de temps real
+~Sistemes de temps compartit
+~Sistemes distribuïts
+~Sistemes per a xarxa
+}
+
+::P14:: Quin dels següents sistemes de fitxers és més adequat per a servidors Windows?
+{
+=ReFS
+~FAT32
+~NTFS
+~ext4
+}
+
+::P15:: Quina és la principal funció del BIOS/UEFI durant l'engegada de l'ordinador?
+{
+=Realitzar les primeres comprovacions del maquinari i carregar el bootloader.
+~Carregar el sistema operatiu complet en la memòria.
+~Permetre la connexió amb altres dispositius en xarxa.
+~Iniciar la interfície gràfica d'usuari (GUI).
+}
+
+::P16:: Quin sistema operatiu és conegut per la seua utilització en Chromebooks?
+{
+=Chrome OS
+~Android
+~Windows 10
+~Fedora
+}
+
+::P17:: Què és un servei (daemon) en el context d'un sistema operatiu?
+{
+=És un programa que s'executa en segon pla proporcionant serveis al sistema o a altres programes.
+~És un procés que s'executa en el primer pla interactuant amb l'usuari.
+~És un controlador de dispositius d'entrada/sortida.
+~És un protocol de xarxa.
+}
+
+::P18:: Quin tipus d'interfície permet la interacció gràfica amb el sistema operatiu mitjançant icones i finestres?
+{
+=GUI (Graphical User Interface)
+~CLI (Command Line Interface)
+~API (Application Programming Interface)
+~FTP (File Transfer Protocol)
+}
+
+::P19:: Quin exemple de sistema operatiu és utilitzat en dispositius mòbils?
+{
+=Android
+~Windows Server
+~GNU/Linux
+~macOS
+}
+
+::P20:: En què consisteix la paginació en la gestió de memòria d'un sistema operatiu?
+{
+=Divideix la memòria en pàgines per gestionar millor els recursos disponibles.
+~Permet l'accés directe a la memòria física.
+~Assigna espai de disc dur com a memòria addicional.
+~Controla els processos que utilitzen la CPU.
+}
+
