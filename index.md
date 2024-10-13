@@ -55,3 +55,6 @@ linestretch: 1.5
 ||||
 |:----|:--|:--|
 |Sistemes de fitxers|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-de-fitxers-Ubuntu.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-de-fitxers-Ubuntu.pdf)|
+|Exercicis ordres bàsiques sobre fitxers i directoris|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS/U4-Activitat4.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS/U4-Activitat4.pdf)|
+
+

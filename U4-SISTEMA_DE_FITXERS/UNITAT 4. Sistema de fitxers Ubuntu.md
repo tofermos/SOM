@@ -156,6 +156,7 @@ chmod u+rwx nom_directori
 | Eliminar un directori amb contingut | Esborra un directori i tots els seus arxius | `rm -r nom_directori`           |
 | Canviar de directori        | Navegar entre directoris                        | `cd nom_directori`                  |
 | Llistar el contingut        | Llistar el contingut d'un directori             | `ls nom_directori`                  |
+| Saber en quin directori hi estàs|Et diu el directori actual|`pwd`|
 
 ### Exemple 1: Crear un directori
 ```bash
