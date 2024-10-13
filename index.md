@@ -47,7 +47,8 @@ linestretch: 1.5
 
 ||||
 |:----|:--|:--|
-|Sistemes Operatius. Conceptes bàsics|[![](recursos/iconohtml.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Conceptes-bàsics.html)|[![](recursos/iconopdf.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Conceptes-bàsics.pdf)|
+|Els Sistemes Operatius Monolloc|[![](recursos/iconohtml.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Conceptes-bàsics.html)|[![](recursos/iconopdf.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Conceptes-bàsics.pdf)|
+|Informació del sistema|[![](recursos/iconohtml.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Informació-del-sistema.html)|[![](recursos/iconopdf.png)](U3-SO_CONCEPTES _BÀSICS/UNITAT-3-SO-Informació-del-sistema.pdf)|
 
 ### [4 Sistemes de fitxers](#U4)
 

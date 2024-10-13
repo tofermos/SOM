@@ -1,20 +1,20 @@
 ---
-title: U3. SISTEMES OPERATIUS. CONCEPTES BÀSICS
+title: U3. ELS SISTEMES OPERATIUS MONOLLOC
 author: "@tofermos 2024"
 lang: "ca-ES"
 papersize: A4
 linestretch: 1.5
 output:
+  pdf_document:
+    toc: true
+    keep_tex: true
+    latex_engine: xelatex
   html_document:
     toc: true
     toc_float: true
     toc_depth: 3
     df_print: paged
     number_sections: false
-  pdf_document:
-    toc: true
-    keep_tex: true
-    latex_engine: xelatex
 ---
 
 \newpage
@@ -171,7 +171,7 @@ Els sistemes operatius implementen mecanismes de seguretat per controlar l'accé
 
 # 4. Tipus de Sistemes Operatius
 
-## 4.1 SO per la seua estructura
+## 4.1 SO per la seua estructura *No cal estudiar aquest punt*
 
 - **Monolítics**: Totes les funcions del SO es troben en un mateix nucli, facilitant la velocitat però reduint la modularitat.
   - **Exemples**: **Linux**, **MS-DOS**.
@@ -182,7 +182,7 @@ Els sistemes operatius implementen mecanismes de seguretat per controlar l'accé
 - **Nuclis híbrids**: Combinen aspectes de nuclis monolítics i microkernel, oferint un equilibri entre rendiment i modularitat.
   - **Exemples**: **Windows NT** (Windows 10/11), **macOS** (nucli XNU).
 
-## 4.2 SO pels seus serveis
+## 4.2 SO pels seus serveis *No cal estudiar aquest punt* 
 
 - **Sistemes de temps compartit**: Permeten que múltiples usuaris utilitzin el sistema simultàniament compartint els recursos.
   - **Exemples**: **UNIX**, **Linux** (Ubuntu, Debian), **VMS**.
@@ -193,7 +193,7 @@ Els sistemes operatius implementen mecanismes de seguretat per controlar l'accé
 - **Sistemes distribuïts**: Permeten la col·laboració entre ordinadors per compartir recursos i processos.
   - **Exemples**: **Apache Hadoop**, **Google Fuchsia**, **Amoeba**.
 
-## 4.3 SO pels serveis de xarxa
+## 4.3 SO pels serveis de xarxa *No cal estudiar aquest punt*
 
 - **SO amb serveis de xarxa**: Dissenyats per gestionar serveis de xarxa com la compartició de fitxers o la configuració de servidors.
   - **Exemples**: **Windows Server**, **Red Hat Enterprise Linux (RHEL)**, **FreeNAS/TrueNAS**.
@@ -202,18 +202,55 @@ Els sistemes operatius implementen mecanismes de seguretat per controlar l'accé
   - **Exemples**: **Cisco IOS**, **pfSense**, **OpenWRT**.
 
 
-# 5. SO actuals
+# 5. SO Monolloc actuals
 
 ## 5.1 Família Microsoft
 - **Windows 10/11**: Són els SO més utilitzats en ordinadors personals. Windows Server és la seva versió per a servidors.
   
 ## 5.2 GNU/Linux
-- **Distribucions com Ubuntu, Debian, Fedora**: Utilitzats tant en ordinadors personals com en servidors, coneguts per la seva estabilitat i flexibilitat.
+
+Hi ha una gran varietat de distribucions (**distros**) de Linux, cadascuna amb un enfocament diferent. Aquí tens un breu resum de les més populars:
+
+### Ubuntu
+Una de les distros més conegudes i utilitzades. Està basada en **Debian** i és popular per la seua facilitat d'ús i gran comunitat de suport. Té diverses variants com **Lubuntu** (amb LXQt) i **Kubuntu** (amb KDE).
+
+És la que usarem a tots el Cicle Mitjà ( Lliurex està basa en ella).
+
+*La següent informació sobre les distros no cal saber-la*
+
+### Debian
+Una distribució estable i segura, coneguda per la seua fiabilitat i base de moltes altres distros, com Ubuntu. Té versions estables i experimentals.
+
+### Fedora
+Patrocinada per **Red Hat**, és una distro orientada a l'última tecnologia, amb un cicle de llançament ràpid. Sol utilitzar-se GNOME com a escriptori.
+
+### Arch Linux
+Orientada a usuaris avançats, Arch proporciona una experiència personalitzada i minimalista. L'usuari construeix el sistema des de zero i es manté amb el model **rolling release** (actualitzacions constants).
+
+### CentOS
+Basada en **Red Hat Enterprise Linux (RHEL)**, ofereix una opció gratuïta per a servidors amb un enfocament en la seguretat i l'estabilitat a llarg termini.
+
+### Linux Mint
+Basada en Ubuntu, està dissenyada per ser una alternativa fàcil d'utilitzar per als usuaris que vénen de Windows, amb escriptoris com **Cinnamon** i **MATE**.
+
+### OpenSUSE
+Una distro coneguda per la seua eina de configuració central, **YaST**, que facilita la gestió del sistema. Té versions per a usuaris finals i empreses.
+
+### Manjaro
+Basada en Arch Linux, però amb una experiència d'instal·lació i ús més senzilla. Està dirigida a usuaris que volen la potència d'Arch sense la complexitat.
+
+### Red Hat Enterprise Linux (RHEL)
+Una distribució comercial orientada a empreses i servidors, coneguda per la seua estabilitat i suport tècnic professional.
+
+### Kali Linux
+Una distribució basada en Debian dissenyada per a **seguretat informàtica** i **test de penetració**, molt utilitzada en entorns de seguretat i hacking ètic.
+
 
 ## 5.3 Apple
 - **macOS**: El sistema operatiu d'Apple per a ordinadors, conegut per la seva interfície gràfica i integració amb altres dispositius Apple.
 
 ## 5.4 Altres
+
 - **Android**: Un sistema operatiu basat en Linux per a dispositius mòbils.
 - **Chrome OS**: Utilitzat en Chromebooks, basat en el navegador Chrome.
   
@@ -236,7 +273,8 @@ La seqüència d’engegada (o **boot process**) és el conjunt de passos que se
    Després del POST, la BIOS/UEFI busca un dispositiu d’emmagatzematge com el disc dur, SSD o dispositiu USB (o per xarxa) segon l'**ordre de boot** (boot order) que tinga un sistema operatiu i busca el **carregador d'arrencada** (bootloader). Aquest és un petit programa que carrega el sistema operatiu en la memòria.
 
    - **Ordre de boot**: El BIOS/UEFI segueix una seqüència definida per comprovar on buscar el sistema operatiu. Aquesta seqüència es pot configurar en la BIOS/UEFI i pot incloure, per exemple, el disc dur principal, una unitat USB o una unitat òptica.
-   A VirtuaBox ho emulem. 
+   A VirtuaBox ho emulem.
+   
    ![*Figura 3: Boot order en VirtualBox*](png/bootorderVirtualbox.png)
    
 ## 6.3. Execució del Bootloader
