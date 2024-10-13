@@ -1,6 +1,6 @@
 ---
-title: U4. Sistema d'arxius. Ubuntu
-author: by tofermos
+title: U4. Sistema de fitxers. Ubuntu
+author: "@tofermos 2024"
 output:
   pdf_document: 
     toc: true
@@ -23,7 +23,7 @@ linestretch: 1.5
 
 \newpage
 \renewcommand\tablename{Tabla}
----
+
 
 # 1. Introducció
 Un sistema d'arxius és una estructura que un sistema operatiu utilitza per a organitzar i emmagatzemar dades de manera eficient en un dispositiu d'emmagatzematge (disc dur, SSD, etc.). El sistema de fitxers és essencial per a garantir que els arxius es puguen crear, modificar i eliminar de manera segura i controlada.
@@ -74,6 +74,8 @@ file /bin/bash
 ```
 Aquesta ordre indicarà que `/bin/bash` és un executable binari.
 
+
+
 # 3. Els permisos d’arxius
 Cada arxiu o directori en Linux té associats permisos que controlen qui pot llegir, escriure o executar l'arxiu.
 
@@ -89,6 +91,7 @@ Els permisos s’assignen per a tres categories:
 - Altres (o)
 
 Per a veure els permisos:
+
 ```bash
 ls -l
 ```
@@ -102,6 +105,7 @@ Això mostrarà els permisos del fitxer `document.txt`, per exemple:
 -rw-r--r-- 1 usuari grup 1234 oct 13 08:42 document.txt
 ```
 
+
 # 4. Operacions comunes d’arxius
 | Operació               | Descripció                                   | ordre                       |
 |------------------------|----------------------------------------------|-----------------------------------|
@@ -113,6 +117,7 @@ Això mostrarà els permisos del fitxer `document.txt`, per exemple:
 | Consultar el contingut  | Mostra el contingut d'un arxiu de text       | `cat fitxer`, `less fitxer`       |
 
 ### Exemple 1: Copiar un fitxer
+
 ```bash
 cp document.txt /home/usuari/Documentos/
 ```
@@ -126,6 +131,8 @@ rm document.txt
 ```bash
 touch nou_fitxer.txt
 ```
+
+---
 
 # 5. Els directoris
 Els directoris són arxius especials que contenen altres arxius i directoris. Permeten estructurar i organitzar el sistema de fitxers de manera jeràrquica.
@@ -146,7 +153,7 @@ chmod u+rwx nom_directori
 |----------------------------|-------------------------------------------------|-------------------------------------|
 | Crear un directori          | Crea un nou directori                           | `mkdir nom_directori`               |
 | Eliminar un directori buit  | Esborra un directori                            | `rmdir nom_directori`               |
-| Eliminar un directori amb contingut | Esborra un directori i tots els seus arxius | `rm -r nom_directori`               |
+| Eliminar un directori amb contingut | Esborra un directori i tots els seus arxius | `rm -r nom_directori`           |
 | Canviar de directori        | Navegar entre directoris                        | `cd nom_directori`                  |
 | Llistar el contingut        | Llistar el contingut d'un directori             | `ls nom_directori`                  |
 
@@ -159,6 +166,8 @@ mkdir Projecte
 ```bash
 rmdir Projecte
 ```
+
+
 
 # 6. Rutes relatives i absolutes
 
@@ -203,6 +212,8 @@ Per a moure's a un altre directori dins del directori pare:
 cd ../Documents
 ```
 
+
+
 # 7. Tipus de sistemes d’arxius
 
 Linux suporta diferents tipus de sistemes de fitxers, cadascun amb les seues característiques.
@@ -214,21 +225,90 @@ Linux suporta diferents tipus de sistemes de fitxers, cadascun amb les seues car
 | FAT32            | Compatible amb diversos sistemes operatius, limitacions de grandària d'arxiu. |
 | Btrfs            | Suporta snapshots, més adequat per a sistemes avançats. |
 
+
+Altres que no suporta Linux interessants
+
+| Sistema d’arxius | Característiques                                   |
+|------------------|----------------------------------------------------|
+|ReFS | De Microsfot. Utilitza una tècnica de comprovació de la integritat de dades (checksums)|
+|APFS | Apple File System. El més actual d'Apple|
+
+
+
 Per a identificar el sistema de fitxers d'una partició:
+
 ```bash
 df -T
 ```
 
+>Sobre FAT32
+>
+>Recordeu que un dels límits de FAT32 és el de tamany de fitxer de 4 Gb. Les ISOs de Sistemes operatius actuals, per exemple, solen ocupar més:
+>
+> Per tant, els pendrive que solen vindre formatats a FAT32, els haurem de formatar a NTFS 
+
+
 ## 7.1 El sistema de fitxers basat en inodes
 
 En Linux, el sistema de fitxers està basat en **inodes**. Un inode és una estructura de dades que conté informació important sobre un fitxer o directori. Cada fitxer en un sistema de fitxers de Linux té un inode associat que actua com la seua **clau única**. L'inode no emmagatzema el nom del fitxer ni el seu contingut, sinó que guarda informació sobre el fitxer, com ara:
-- El propietari
-- Els permisos
-- La grandària del fitxer
-- La data de creació i modificació
-- Les adreces als blocs de dades on es troba emmagatzemat el contingut del fitxer
+
+1. Tipo de archivo
+2. Tamaño de archivo
+3. ID del propietario
+4. ID del grupo
+5. Permisos de lectura, escritura y ejecución
+6. Último acceso
+7. Último cambio
+8. Última modificación
+
+
+### Veiem un exemple. Obtenim aquesta informació amb l'ordre *stat*
+
+```bash
+tomas@portatil:~$ stat TAK
+  Fitxer: TAK
+       Mida: 41        	Blocs: 8          Bloc d’E/S: 4096   fitxer ordinari
+Dispositiu: 10302h/66306d	Node‐i: 31110068    Enllaços: 1
+Accés: (0664/-rw-rw-r--)  UID: ( 1000/   tomas)   GID: ( 1000/   tomas)
+Accés: 2024-10-12 10:41:05.321763136 +0200
+Modificació: 2024-10-12 10:41:02.695832661 +0200
+      Canvi: 2024-10-12 10:41:02.695832661 +0200
+  Naixement: 2024-04-12 01:11:05.742263329 +0200
+```
+
+* Mida: 41. Indica la mida del fitxer en bytes. En aquest cas, el fitxer té una mida de 41 bytes.
+
+* Blocs: 8. Quants blocs de disc ocupa el fitxer. Un bloc és la unitat mínima d'emmagatzematge al sistema de fitxers. Encara que el fitxer només ocupe 41 bytes, probablement el sistema de fitxers utilitza blocs més grans (per exemple, de 4 KB), i aquest fitxer ocupa 8 blocs.
+
+* Bloc d’E/S: 4096. És la mida del bloc d'entrada/sortida (E/S) en bytes. Això indica la mida de les operacions mínimes de lectura o escriptura que el sistema de fitxers utilitza. En aquest cas, són 4096 bytes (4 KB).
+
+* Tipus de fitxer. Aquí indica que és un fitxer ordinari (nidirectoris, enllaços simbòlics, dispositius, etc.).
+
+* Dispositiu: 10302h/66306d. Identifica al dispositiu (disc) en format hexadecimal (10302h) i decimal (66306d). Aquest valor identifica el dispositiu d’emmagatzematge en què es troba el fitxer. 
+
+* Node‐i: 31110068. El número d'inode del fitxer (directori...) identifica l'inode qie és una estructura de dades amb informació sobre el fitxer en un sistema de fitxers (metadada).
+
+* Enllaços: 1. Mostra el nombre d'enllaços durs al fitxer o noms que té.
+
+* Accés: (0664/-rw-rw-r--). Els permisos del fitxer en format numèric i simbòlic:
+0664 és la representació octal dels permisos (r = read, w = write, x = execute). Això significa que el propietari i el grup tenen permisos de lectura i escriptura (rw-), i altres usuaris només tenen permisos de lectura (r--).
+    -rw-rw-r-- és la representació simbòlica: el primer guió significa que és un fitxer ordinari (no un directori), després venen els permisos per al propietari, el grup i altres usuaris.
+
+* UID: (1000/tomas). L'usuari propietari del fitxer que té el UID (User ID) de 1000 i el nom d'usuari és tomas.
+
+* GID: (1000/tomas). El grup propietari del fitxer que té el GID (Group ID) és també 1000 i el nom del grup és tomas.
+
+* Accés: 2024-10-12 10:41:05.321763136 +0200. Data i hora de l'última vegada que s'ha accedit al fitxer (només lectura o consulta).
+
+* Modificació: 2024-10-12 10:41:02.695832661 +0200. Data i hora de l'última modificació del **contingut** del fitxer (quan es van modificar les dades del fitxer).
+
+* Canvi: 2024-10-12 10:41:02.695832661 +0200. Data i hora de l'últim canvi en les **metadades** del fitxer (com els permisos, propietari, etc.).
+
+* Naixement: 2024-04-12 01:11:05.742263329 +0200. Data i hora de **creació** del fitxer.
+
 
 ### Característiques dels inodes
+
 1. **Clau única**: Cada fitxer o directori té un número d'inode únic dins del sistema de fitxers.
 2. **Informació associada**: Conté metadades del fitxer, com propietari, permisos, dates...
 3. **Punter als blocs de dades**: L'inode apunta als blocs del disc on es guarda el contingut del fitxer.
@@ -248,36 +328,47 @@ stat nom_fitxer
 
 Quan crees un fitxer en un sistema de fitxers de Linux, s'assigna un inode per a aquest fitxer. Aquest inode manté informació sobre el fitxer, però el nom del fitxer està associat a aquest inode dins del directori. Quan elimines un fitxer, el sistema de fitxers només elimina l'enllaç (link) entre el nom del fitxer i l'inode, i no allibera l'inode fins que tots els enllaços (si hi ha més d'un) han estat eliminats.
 
+![*Figura 4: Inode estructura*](png/inodo_estructura.png)
 
-**Resum**
-1. Cada fitxer (nom) està enllaçat a un inode únic.Pot haver més d'un (diferència amb la resta de SO)
-2. L'inode conté informació del fitxer (metadades) i apunta als blocs de dades del disc.
-3. Els blocs de dades són els que emmagatzemen el contingut real del fitxer.
+
+Com hem vist el tamanay de cada fitxer (41bytes a l'exemple) és menor del que realment ocupa al disc. Això és deu que cal un mínim de blocs que tenen un tamany determinat. 
+
+## Tamany real i tamany en disc
+
+Només cal entendre que la informació d'un fitxer quan està carregat a la RAM o quan un programador de Python està creant-lo normalment augmenta quan es grava a memòria secundària perquè el disc usa un mínim de blocs amb un tamany.
+
+**Tamany real <= Tamany en disc**
+
+![*Figura 5: Inode estructura*](png/tabla-inodo.png)
+
+
 
 ## 7.2 Representació gràfica
 
 Veiem gràficament les **etiquetes o noms de fitxers**, els **inodes** i **l’àrea de dades** com quedarien en una
 còpia de fitxer, un enllaç dur i un enllaç simbòlic.
 
+
 ### Còpia de fitxer
 
-![*Figura 1: Còpia de fitxer*](png/copiadeFitxer.png)
+![*Figura 1:Còpia de fitxer*](png/copiadeFitxer.png)
 
 ### Enllaç dur
 
-![*Enllaç dur*](png/enllaçDur.png)
+![*Figura 2:Enllaç dur*](png/enllaçDur.png)
 
 ### Enllaç simbòlic
 
-![*Enllaç simbòlic*](png/enllaçSimbòlic.png)
+![*Figura 3:Enllaç simbòlic*](png/enllaçSimbòlic.png)
+
+**Resum**
+1. Cada fitxer (nom) està enllaçat a un inode únic.Pot haver més d'un (diferència amb la resta de SO)
+2. L'inode conté informació del fitxer (metadades) i apunta als blocs de dades del disc.
+3. Els blocs de dades són els que emmagatzemen el contingut real del fitxer.
 
 
 
-
-# 8. Implementació del sistema d’arxius
-Un sistema de fitxers és implementat mitjançant estructures que emmagatzemen la informació sobre els arxius i directoris, com ara taules d'índexs (inodes) i blocs de dades.
-
-## 8.1 Comprovar el sistema d'arxius
+# 8. Comprovar el sistema d'arxius
 Linux ofereix eines per a comprovar i reparar sistemes de fitxers.
 
 ```bash
@@ -286,7 +377,7 @@ fsck /dev/sdX
 
 Aquesta ordre comprova i repara el sistema de fitxers del dispositiu `/dev/sdX`.
 
-# 9. Els sistemes transaccionals
+# 9. Els sistemes transaccionals *Només llegir*
 Els sistemes d’arxius transaccionals permeten que les operacions d’escriptura siguen atòmiques, garantint que qualsevol canvi es complete amb èxit o es revertisca totalment en cas d'error. Un exemple d'això és Btrfs, que permet utilitzar snapshots i còpies segures.
 
 ## 9.1 Com utilitzar snapshots amb Btrfs
@@ -299,6 +390,7 @@ btrfs subvolume snapshot /mnt/source /mnt/snapshot
 Aquesta ordre crea un snapshot del volum `/mnt/source`.
 
 # 10. Enllaços simbòlics i enllaços durs
+
 Un enllaç simbòlic (soft link) és com un "accés directe" a un altre fitxer. Un enllaç dur (hard link) fa que dos noms d'arxiu apunten al mateix contingut.
 
 | Tipus d'enllaç    | Descripció |
@@ -367,6 +459,7 @@ L'ordre `tar` s'utilitza per a empaquetar diversos fitxers en un sol arxiu. El f
 | `-j`      | Comprimeix l'arxiu amb `bzip2` |
 
 ### Exemple d'empaquetament d'una carpeta sencera amb tar
+
 ```bash
 tar -cvf arxiu_empaquetat.tar directori_a_empaquetar/
 ```

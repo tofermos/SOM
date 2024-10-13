@@ -128,14 +128,14 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={U4. Sistema d'arxius. Ubuntu},
-  pdfauthor={by tofermos},
+  pdftitle={U4. Sistema de fitxers. Ubuntu},
+  pdfauthor={@tofermos 2024},
   pdflang={es-ES},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{U4. Sistema d'arxius. Ubuntu}
-\author{by tofermos}
+\title{U4. Sistema de fitxers. Ubuntu}
+\author{@tofermos 2024}
 \date{}
 
 \begin{document}
@@ -148,8 +148,6 @@
 \setstretch{1.5}
 \newpage
 \renewcommand\tablename{Tabla}
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \section{1. Introducció}\label{introducciuxf3}
 
@@ -349,6 +347,8 @@ buit}\label{exemple-3-crear-un-fitxer-buit}
 \end{Highlighting}
 \end{Shaded}
 
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
 \section{5. Els directoris}\label{els-directoris}
 
 Els directoris són arxius especials que contenen altres arxius i
@@ -531,6 +531,26 @@ grandària d'arxiu. \\
 Btrfs & Suporta snapshots, més adequat per a sistemes avançats. \\
 \end{longtable}
 
+Altres que no suporta Linux interessants
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2571}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7429}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Sistema d'arxius
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Característiques
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+ReFS & De Microsfot. Utilitza una tècnica de comprovació de la
+integritat de dades (checksums) \\
+APFS & Apple File System. El més actual d'Apple \\
+\end{longtable}
+
 Per a identificar el sistema de fitxers d'una partició:
 
 \begin{Shaded}
@@ -538,6 +558,16 @@ Per a identificar el sistema de fitxers d'una partició:
 \FunctionTok{df} \AttributeTok{{-}T}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{quote}
+Sobre FAT32
+
+Recordeu que un dels límits de FAT32 és el de tamany de fitxer de 4 Gb.
+Les ISOs de Sistemes operatius actuals, per exemple, solen ocupar més:
+
+Per tant, els pendrive que solen vindre formatats a FAT32, els haurem de
+formatar a NTFS
+\end{quote}
 
 \subsection{7.1 El sistema de fitxers basat en
 inodes}\label{el-sistema-de-fitxers-basat-en-inodes}
@@ -570,7 +600,9 @@ informació sobre el fitxer, com ara:
   Última modificación
 \end{enumerate}
 
-Veiem un exemple. Obtenim aquesta informació amb l'ordre \emph{stat}
+\subsubsection{\texorpdfstring{Veiem un exemple. Obtenim aquesta
+informació amb l'ordre
+\emph{stat}}{Veiem un exemple. Obtenim aquesta informació amb l'ordre stat}}\label{veiem-un-exemple.-obtenim-aquesta-informaciuxf3-amb-lordre-stat}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -586,59 +618,63 @@ Veiem un exemple. Obtenim aquesta informació amb l'ordre \emph{stat}
 \end{Highlighting}
 \end{Shaded}
 
-Mida: 41. Indica la mida del fitxer en bytes. En aquest cas, el fitxer
-té una mida de 41 bytes.
-
-Blocs: 8. Quants blocs de disc ocupa el fitxer. Un bloc és la unitat
-mínima d'emmagatzematge al sistema de fitxers. Encara que el fitxer
-només ocupe 41 bytes, probablement el sistema de fitxers utilitza blocs
-més grans (per exemple, de 4 KB), i aquest fitxer ocupa 8 blocs.
-
-Bloc d'E/S: 4096. És la mida del bloc d'entrada/sortida (E/S) en bytes.
-Això indica la mida de les operacions mínimes de lectura o escriptura
-que el sistema de fitxers utilitza. En aquest cas, són 4096 bytes (4
-KB).
-
-Tipus de fitxer. Aquí indica que és un fitxer ordinari (nidirectoris,
-enllaços simbòlics, dispositius, etc.).
-
-Dispositiu: 10302h/66306d. Identifica al dispositiu (disc) en format
-hexadecimal (10302h) i decimal (66306d). Aquest valor identifica el
-dispositiu d'emmagatzematge en què es troba el fitxer.
-
-Node‐i: 31110068. El número d'inode del fitxer (directori\ldots)
-identifica l'inode qie és una estructura de dades amb informació sobre
-el fitxer en un sistema de fitxers (metadada).
-
-Enllaços: 1. Mostra el nombre d'enllaços durs al fitxer o noms que té.
-
-Accés: (0664/-rw-rw-r--). Els permisos del fitxer en format numèric i
-simbòlic: 0664 és la representació octal dels permisos (r = read, w =
-write, x = execute). Això significa que el propietari i el grup tenen
-permisos de lectura i escriptura (rw-), i altres usuaris només tenen
-permisos de lectura (r--). -rw-rw-r-- és la representació simbòlica: el
-primer guió significa que és un fitxer ordinari (no un directori),
-després venen els permisos per al propietari, el grup i altres usuaris.
-
-UID: (1000/tomas). L'usuari propietari del fitxer que té el UID (User
-ID) de 1000 i el nom d'usuari és tomas.
-
-GID: (1000/tomas). El grup propietari del fitxer que té el GID (Group
-ID) és també 1000 i el nom del grup és tomas.
-
-Accés: 2024-10-12 10:41:05.321763136 +0200. Data i hora de l'última
-vegada que s'ha accedit al fitxer (només lectura o consulta).
-
-Modificació: 2024-10-12 10:41:02.695832661 +0200. Data i hora de
-l'última modificació del \textbf{contingut} del fitxer (quan es van
-modificar les dades del fitxer).
-
-Canvi: 2024-10-12 10:41:02.695832661 +0200. Data i hora de l'últim canvi
-en les \textbf{metadades} del fitxer (com els permisos, propietari,
-etc.).
-
-Naixement: 2024-04-12 01:11:05.742263329 +0200. Data i hora de
-\textbf{creació} del fitxer.
+\begin{itemize}
+\item
+  Mida: 41. Indica la mida del fitxer en bytes. En aquest cas, el fitxer
+  té una mida de 41 bytes.
+\item
+  Blocs: 8. Quants blocs de disc ocupa el fitxer. Un bloc és la unitat
+  mínima d'emmagatzematge al sistema de fitxers. Encara que el fitxer
+  només ocupe 41 bytes, probablement el sistema de fitxers utilitza
+  blocs més grans (per exemple, de 4 KB), i aquest fitxer ocupa 8 blocs.
+\item
+  Bloc d'E/S: 4096. És la mida del bloc d'entrada/sortida (E/S) en
+  bytes. Això indica la mida de les operacions mínimes de lectura o
+  escriptura que el sistema de fitxers utilitza. En aquest cas, són 4096
+  bytes (4 KB).
+\item
+  Tipus de fitxer. Aquí indica que és un fitxer ordinari (nidirectoris,
+  enllaços simbòlics, dispositius, etc.).
+\item
+  Dispositiu: 10302h/66306d. Identifica al dispositiu (disc) en format
+  hexadecimal (10302h) i decimal (66306d). Aquest valor identifica el
+  dispositiu d'emmagatzematge en què es troba el fitxer.
+\item
+  Node‐i: 31110068. El número d'inode del fitxer (directori\ldots)
+  identifica l'inode qie és una estructura de dades amb informació sobre
+  el fitxer en un sistema de fitxers (metadada).
+\item
+  Enllaços: 1. Mostra el nombre d'enllaços durs al fitxer o noms que té.
+\item
+  Accés: (0664/-rw-rw-r--). Els permisos del fitxer en format numèric i
+  simbòlic: 0664 és la representació octal dels permisos (r = read, w =
+  write, x = execute). Això significa que el propietari i el grup tenen
+  permisos de lectura i escriptura (rw-), i altres usuaris només tenen
+  permisos de lectura (r--). -rw-rw-r-- és la representació simbòlica:
+  el primer guió significa que és un fitxer ordinari (no un directori),
+  després venen els permisos per al propietari, el grup i altres
+  usuaris.
+\item
+  UID: (1000/tomas). L'usuari propietari del fitxer que té el UID (User
+  ID) de 1000 i el nom d'usuari és tomas.
+\item
+  GID: (1000/tomas). El grup propietari del fitxer que té el GID (Group
+  ID) és també 1000 i el nom del grup és tomas.
+\item
+  Accés: 2024-10-12 10:41:05.321763136 +0200. Data i hora de l'última
+  vegada que s'ha accedit al fitxer (només lectura o consulta).
+\item
+  Modificació: 2024-10-12 10:41:02.695832661 +0200. Data i hora de
+  l'última modificació del \textbf{contingut} del fitxer (quan es van
+  modificar les dades del fitxer).
+\item
+  Canvi: 2024-10-12 10:41:02.695832661 +0200. Data i hora de l'últim
+  canvi en les \textbf{metadades} del fitxer (com els permisos,
+  propietari, etc.).
+\item
+  Naixement: 2024-04-12 01:11:05.742263329 +0200. Data i hora de
+  \textbf{creació} del fitxer.
+\end{itemize}
 
 \subsubsection{Característiques dels
 inodes}\label{caracteruxedstiques-dels-inodes}
