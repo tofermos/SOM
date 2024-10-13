@@ -54,4 +54,4 @@ linestretch: 1.5
 
 ||||
 |:----|:--|:--|
-|Sistemes de fitxers|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-d-arxius-Ubuntu.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-d-arxius-Ubuntu.html)|
+|Sistemes de fitxers|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-de-fitxers-Ubuntu.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS/UNITAT-4.-Sistema-de-fitxers-Ubuntu.pdf)|
