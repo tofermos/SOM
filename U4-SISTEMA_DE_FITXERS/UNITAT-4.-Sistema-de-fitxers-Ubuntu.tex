@@ -246,7 +246,19 @@ Per a identificar el tipus d'un arxiu:
 
 Aquesta ordre indicarà que \texttt{/bin/bash} és un executable binari.
 
-\section{3. Els permisos d'arxius}\label{els-permisos-darxius}
+\section{3. Els noms}\label{els-noms}
+
+Els noms dels fitxers poden ser llargs i admeten qualsevol caràcter
+alfanumèric excepte ``/''. Tanmateix no es recomanable que s'usen el que
+tenen un significat especial com
+
+\texttt{\textbackslash{}\^{}\textbackslash{}\textasciitilde{}\textbackslash{}!\textbackslash{}\#\textbackslash{}?\textbackslash{}\&\textbackslash{}(\textbackslash{})}
+
+Recordeu que: Linux/UNIX diferència entre MAJÚSCULE S/ minúscules.
+
+\section{4. Els permisos d'arxius}\label{els-permisos-darxius}
+
+\emph{(aquest apartat l'estudiarem més detingudament en un altre tema)}
 
 Cada arxiu o directori en Linux té associats permisos que controlen qui
 pot llegir, escriure o executar l'arxiu.
@@ -289,7 +301,7 @@ exemple:
 -rw-r--r-- 1 usuari grup 1234 oct 13 08:42 document.txt
 \end{verbatim}
 
-\section{4. Operacions comunes
+\section{5. Operacions comunes
 d'arxius}\label{operacions-comunes-darxius}
 
 \begin{longtable}[]{@{}
@@ -349,13 +361,13 @@ buit}\label{exemple-3-crear-un-fitxer-buit}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section{5. Els directoris}\label{els-directoris}
+\section{6. Els directoris}\label{els-directoris}
 
 Els directoris són arxius especials que contenen altres arxius i
 directoris. Permeten estructurar i organitzar el sistema de fitxers de
 manera jeràrquica.
 
-\subsection{5.1 Els permisos dels
+\subsection{6.1 Els permisos dels
 directoris}\label{els-permisos-dels-directoris}
 
 Els permisos per a directoris funcionen de manera similar als arxius,
@@ -372,7 +384,7 @@ Per a canviar permisos a un directori:
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{5.2 Operacions comunes amb els
+\subsection{6.2 Operacions comunes amb els
 directoris}\label{operacions-comunes-amb-els-directoris}
 
 \begin{longtable}[]{@{}
@@ -401,6 +413,8 @@ Canviar de directori & Navegar entre directoris &
 \texttt{cd\ nom\_directori} \\
 Llistar el contingut & Llistar el contingut d'un directori &
 \texttt{ls\ nom\_directori} \\
+Saber en quin directori hi estàs & Et diu el directori actual &
+\texttt{pwd} \\
 \end{longtable}
 
 \subsubsection{Exemple 1: Crear un
@@ -421,18 +435,18 @@ buit}\label{exemple-2-eliminar-un-directori-buit}
 \end{Highlighting}
 \end{Shaded}
 
-\section{6. Rutes relatives i
+\section{7. Rutes relatives i
 absolutes}\label{rutes-relatives-i-absolutes}
 
 En Linux, una \textbf{ruta} és la forma d'accedir a un fitxer o
 directori dins del sistema de fitxers. Hi ha dos tipus principals de
 rutes: \textbf{relatives} i \textbf{absolutes}.
 
-\subsection{6.1 Ruta absoluta}\label{ruta-absoluta}
+\subsection{7.1 Ruta absoluta (completa)}\label{ruta-absoluta-completa}
 
 Una ruta absoluta és aquella que comença des de l'arrel del sistema de
-fitxers (\texttt{/}) i proporciona la ubicació completa d'un fitxer o
-directori. No depèn del directori actual en què et trobes.
+fitxers (\texttt{/}) i mostra tot el camí dins la ubicació completa d'un
+fitxer o directori. No depèn del directori actual en què et trobes.
 
 \subsubsection{Exemple de ruta
 absoluta:}\label{exemple-de-ruta-absoluta}
@@ -457,7 +471,7 @@ tot el camí fins al fitxer \texttt{document.txt}.
 Aquesta ordre et porta directament al directori \texttt{Documentos},
 independentment del directori on et trobes actualment.
 
-\subsection{6.2 Ruta relativa}\label{ruta-relativa}
+\subsection{7.2 Ruta relativa}\label{ruta-relativa}
 
 Una ruta relativa es defineix respecte al directori actual. No comença
 des de l'arrel, sinó des del directori en què estàs treballant. Si estàs
@@ -506,7 +520,7 @@ Per a moure's a un altre directori dins del directori pare:
 \end{Highlighting}
 \end{Shaded}
 
-\section{7. Tipus de sistemes d'arxius}\label{tipus-de-sistemes-darxius}
+\section{8. Tipus de sistemes d'arxius}\label{tipus-de-sistemes-darxius}
 
 Linux suporta diferents tipus de sistemes de fitxers, cadascun amb les
 seues característiques.
@@ -524,8 +538,9 @@ Característiques
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-ext4 & Sistema d'arxius per defecte en moltes distribucions Linux. \\
-NTFS & Utilitzat per Windows, compatible amb Linux. \\
+\textbf{ext4} & Sistema d'arxius per defecte en moltes distribucions
+Linux. \\
+\textbf{NTFS} & Utilitzat per Windows, compatible amb Linux. \\
 FAT32 & Compatible amb diversos sistemes operatius, limitacions de
 grandària d'arxiu. \\
 Btrfs & Suporta snapshots, més adequat per a sistemes avançats. \\
@@ -569,7 +584,7 @@ Per tant, els pendrive que solen vindre formatats a FAT32, els haurem de
 formatar a NTFS
 \end{quote}
 
-\subsection{7.1 El sistema de fitxers basat en
+\subsection{8.1 El sistema de fitxers basat en
 inodes}\label{el-sistema-de-fitxers-basat-en-inodes}
 
 En Linux, el sistema de fitxers està basat en \textbf{inodes}. Un inode
@@ -633,7 +648,7 @@ informació amb l'ordre
   escriptura que el sistema de fitxers utilitza. En aquest cas, són 4096
   bytes (4 KB).
 \item
-  Tipus de fitxer. Aquí indica que és un fitxer ordinari (nidirectoris,
+  Tipus de fitxer. Aquí indica que és un fitxer ordinari (directoris,
   enllaços simbòlics, dispositius, etc.).
 \item
   Dispositiu: 10302h/66306d. Identifica al dispositiu (disc) en format
@@ -751,7 +766,7 @@ amb un tamany.
 \caption{\emph{Figura 5: Inode estructura}}
 \end{figure}
 
-\subsection{7.2 Representació
+\subsection{8.2 Representació
 gràfica}\label{representaciuxf3-gruxe0fica}
 
 Veiem gràficament les \textbf{etiquetes o noms de fitxers}, els
@@ -788,7 +803,7 @@ informació del fitxer (metadades) i apunta als blocs de dades del disc.
 3. Els blocs de dades són els que emmagatzemen el contingut real del
 fitxer.
 
-\section{8. Comprovar el sistema
+\section{9. Comprovar el sistema
 d'arxius}\label{comprovar-el-sistema-darxius}
 
 Linux ofereix eines per a comprovar i reparar sistemes de fitxers.
@@ -802,15 +817,16 @@ Linux ofereix eines per a comprovar i reparar sistemes de fitxers.
 Aquesta ordre comprova i repara el sistema de fitxers del dispositiu
 \texttt{/dev/sdX}.
 
-\section{\texorpdfstring{9. Els sistemes transaccionals \emph{Només
-llegir}}{9. Els sistemes transaccionals Només llegir}}\label{els-sistemes-transaccionals-nomuxe9s-llegir}
+\section{\texorpdfstring{10. Els sistemes transaccionals \emph{Només
+llegir, no cal
+estudiar}}{10. Els sistemes transaccionals Només llegir, no cal estudiar}}\label{els-sistemes-transaccionals-nomuxe9s-llegir-no-cal-estudiar}
 
 Els sistemes d'arxius transaccionals permeten que les operacions
 d'escriptura siguen atòmiques, garantint que qualsevol canvi es complete
 amb èxit o es revertisca totalment en cas d'error. Un exemple d'això és
 Btrfs, que permet utilitzar snapshots i còpies segures.
 
-\subsection{9.1 Com utilitzar snapshots amb
+\subsection{10.1 Com utilitzar snapshots amb
 Btrfs}\label{com-utilitzar-snapshots-amb-btrfs}
 
 Un snapshot és una còpia instantània del sistema de fitxers en un moment
@@ -824,12 +840,12 @@ concret.
 
 Aquesta ordre crea un snapshot del volum \texttt{/mnt/source}.
 
-\section{10. Enllaços simbòlics i enllaços
+\section{11. Enllaços simbòlics i enllaços
 durs}\label{enllauxe7os-simbuxf2lics-i-enllauxe7os-durs}
 
-Un enllaç simbòlic (soft link) és com un ``accés directe'' a un altre
-fitxer. Un enllaç dur (hard link) fa que dos noms d'arxiu apunten al
-mateix contingut.
+Un enllaç simbòlic (soft link) és com un ``accés directe'' de Windows un
+altre fitxer (no exactament igual). Un enllaç dur (hard link) fa que dos
+noms d'arxiu apunten al mateix contingut.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6129}}
@@ -848,7 +864,7 @@ Enllaç simbòlic & Apunta a la ubicació d'un altre arxiu \\
 Enllaç dur & Apunta al mateix contingut de dades dins del disc \\
 \end{longtable}
 
-\subsection{10.1 Crear un enllaç
+\subsection{11.1 Crear un enllaç
 simbòlic}\label{crear-un-enllauxe7-simbuxf2lic}
 
 \begin{Shaded}
@@ -857,7 +873,7 @@ simbòlic}\label{crear-un-enllauxe7-simbuxf2lic}
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{10.2 Crear un enllaç dur}\label{crear-un-enllauxe7-dur}
+\subsection{11.2 Crear un enllaç dur}\label{crear-un-enllauxe7-dur}
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -873,7 +889,7 @@ simbòlic}\label{crear-un-enllauxe7-simbuxf2lic}
 \end{Highlighting}
 \end{Shaded}
 
-\section{11. L'ordre stat}\label{lordre-stat}
+\section{12. L'ordre stat}\label{lordre-stat}
 
 L'ordre \texttt{stat} proporciona informació detallada sobre un arxiu o
 directori, incloent la mida, permisos, inode i dates.
@@ -889,7 +905,7 @@ directori, incloent la mida, permisos, inode i dates.
 Aquesta ordre mostra informació completa sobre el fitxer
 \texttt{document.txt}.
 
-\section{12. L'atribut l/d/-}\label{latribut-ld-}
+\section{13. L'atribut l/d/-}\label{latribut-ld-}
 
 Quan es fa un \texttt{ls\ -l}, el primer caràcter de cada línia indica
 el tipus d'arxiu: - \texttt{-} indica un arxiu normal. - \texttt{d}
@@ -915,7 +931,7 @@ En aquest exemple, \texttt{document.txt} és un arxiu normal,
 \texttt{carpeta} és un directori i \texttt{enllac} és un enllaç
 simbòlic.
 
-\section{13. Empaquetament i compressió de
+\section{14. Empaquetament i compressió de
 fitxers}\label{empaquetament-i-compressiuxf3-de-fitxers}
 
 Empaquetar i comprimir són dues operacions relacionades però diferents.
@@ -923,7 +939,7 @@ Empaquetar i comprimir són dues operacions relacionades però diferents.
 arxiu, mentre que \textbf{comprimir} implica reduir la grandària d'un o
 més arxius mitjançant un algoritme de compressió.
 
-\subsection{13.1 Empaquetament amb tar}\label{empaquetament-amb-tar}
+\subsection{14.1 Empaquetament amb tar}\label{empaquetament-amb-tar}
 
 L'ordre \texttt{tar} s'utilitza per a empaquetar diversos fitxers en un
 sol arxiu. El format \texttt{tar} no realitza compressió per si mateix,
@@ -1018,7 +1034,7 @@ tar.bz2}\label{exemple-de-descompressiuxf3-dun-arxiu-tar.bz2}
 
 Aquesta ordre extreu un arxiu empaquetat i comprimit amb \texttt{bzip2}.
 
-\subsection{13.2 Compressió i descompressió amb
+\subsection{14.2 Compressió i descompressió amb
 zip}\label{compressiuxf3-i-descompressiuxf3-amb-zip}
 
 El format \texttt{zip} és àmpliament utilitzat, especialment en sistemes
@@ -1051,7 +1067,7 @@ zip}\label{exemple-de-descompressiuxf3-dun-arxiu-zip}
 Aquesta ordre descomprimeix el contingut de l'arxiu \texttt{zip} al
 directori actual.
 
-\subsection{13.3 Compressió i descompressió amb
+\subsection{14.3 Compressió i descompressió amb
 rar}\label{compressiuxf3-i-descompressiuxf3-amb-rar}
 
 El format \texttt{rar} és molt utilitzat en Windows i pot comprimir de
@@ -1134,13 +1150,7 @@ que poden descomprimir arxius \texttt{.tar.gz} o \texttt{.tar.bz2}. Això
 fa que els arxius empaquetats en Linux puguen ser utilitzats també en
 Windows.
 
-\section{13 Glossari}\label{glossari}
-
-Clàr! A continuació et presento un glossari basat en el text que hem
-tractat fins ara, amb les definicions claus per ajudar a entendre millor
-els conceptes discutits.
-
-\subsubsection{Glossari}\label{glossari-1}
+\section{15 Glossari}\label{glossari}
 
 \textbf{Arxiu o fitxer}: Element bàsic de magatzematge en un sistema
 operatiu, que pot ser de text, binari, dispositiu, enllaç, o socket.

@@ -2,15 +2,15 @@
 title: U4. Sistema de fitxers. Ubuntu
 author: "@tofermos 2024"
 output:
-  pdf_document: 
-    toc: true
-    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: true
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: 3
@@ -75,8 +75,19 @@ file /bin/bash
 Aquesta ordre indicarà que `/bin/bash` és un executable binari.
 
 
+# 3. Els noms
 
-# 3. Els permisos d’arxius
+Els noms dels fitxers poden ser llargs i admeten qualsevol caràcter alfanumèric excepte “/”.
+Tanmateix no es recomanable que s’usen el que tenen un significat especial com
+
+`\^\~\!\#\?\&\(\)`
+
+Recordeu que: Linux/UNIX diferència entre MAJÚSCULE S/ minúscules.
+
+# 4. Els permisos d’arxius
+
+*(aquest apartat l'estudiarem més detingudament en un altre tema)*
+
 Cada arxiu o directori en Linux té associats permisos que controlen qui pot llegir, escriure o executar l'arxiu.
 
 | Permís | Descripció | ordre |
@@ -106,7 +117,8 @@ Això mostrarà els permisos del fitxer `document.txt`, per exemple:
 ```
 
 
-# 4. Operacions comunes d’arxius
+# 5. Operacions comunes d’arxius
+
 | Operació               | Descripció                                   | ordre                       |
 |------------------------|----------------------------------------------|-----------------------------------|
 | Llistar arxius          | Mostra els arxius del directori actual       | `ls`                             |
@@ -134,10 +146,11 @@ touch nou_fitxer.txt
 
 ---
 
-# 5. Els directoris
+# 6. Els directoris
+
 Els directoris són arxius especials que contenen altres arxius i directoris. Permeten estructurar i organitzar el sistema de fitxers de manera jeràrquica.
 
-## 5.1 Els permisos dels directoris
+## 6.1 Els permisos dels directoris
 Els permisos per a directoris funcionen de manera similar als arxius, però amb algunes diferències:
 - `r` (lectura): permet llistar els continguts del directori.
 - `w` (escriptura): permet crear o eliminar fitxers dins del directori.
@@ -148,7 +161,7 @@ Per a canviar permisos a un directori:
 chmod u+rwx nom_directori
 ```
 
-## 5.2 Operacions comunes amb els directoris
+## 6.2 Operacions comunes amb els directoris
 | Operació                   | Descripció                                      | ordre                         |
 |----------------------------|-------------------------------------------------|-------------------------------------|
 | Crear un directori          | Crea un nou directori                           | `mkdir nom_directori`               |
@@ -157,6 +170,8 @@ chmod u+rwx nom_directori
 | Canviar de directori        | Navegar entre directoris                        | `cd nom_directori`                  |
 | Llistar el contingut        | Llistar el contingut d'un directori             | `ls nom_directori`                  |
 | Saber en quin directori hi estàs|Et diu el directori actual|`pwd`|
+
+
 
 ### Exemple 1: Crear un directori
 ```bash
@@ -170,12 +185,12 @@ rmdir Projecte
 
 
 
-# 6. Rutes relatives i absolutes
+# 7. Rutes relatives i absolutes
 
 En Linux, una **ruta** és la forma d'accedir a un fitxer o directori dins del sistema de fitxers. Hi ha dos tipus principals de rutes: **relatives** i **absolutes**.
 
-## 6.1 Ruta absoluta
-Una ruta absoluta és aquella que comença des de l'arrel del sistema de fitxers (`/`) i proporciona la ubicació completa d'un fitxer o directori. No depèn del directori actual en què et trobes.
+## 7.1 Ruta absoluta (completa)
+Una ruta absoluta és aquella que comença des de l'arrel del sistema de fitxers (`/`) i mostra tot el camí dins la ubicació completa d'un fitxer o directori. No depèn del directori actual en què et trobes.
 
 ### Exemple de ruta absoluta:
 ```bash
@@ -189,7 +204,7 @@ cd /home/usuari/Documentos
 ```
 Aquesta ordre et porta directament al directori `Documentos`, independentment del directori on et trobes actualment.
 
-## 6.2 Ruta relativa
+## 7.2 Ruta relativa
 Una ruta relativa es defineix respecte al directori actual. No comença des de l'arrel, sinó des del directori en què estàs treballant. Si estàs en un directori concret, pots utilitzar rutes relatives per accedir a fitxers o subdirectoris dins del directori actual.
 
 ### Exemple de ruta relativa:
@@ -215,14 +230,14 @@ cd ../Documents
 
 
 
-# 7. Tipus de sistemes d’arxius
+# 8. Tipus de sistemes d’arxius
 
 Linux suporta diferents tipus de sistemes de fitxers, cadascun amb les seues característiques.
 
 | Sistema d’arxius | Característiques                                   |
 |------------------|----------------------------------------------------|
-| ext4             | Sistema d'arxius per defecte en moltes distribucions Linux. |
-| NTFS             | Utilitzat per Windows, compatible amb Linux.       |
+| **ext4**             | Sistema d'arxius per defecte en moltes distribucions Linux. |
+| **NTFS**             | Utilitzat per Windows, compatible amb Linux.       |
 | FAT32            | Compatible amb diversos sistemes operatius, limitacions de grandària d'arxiu. |
 | Btrfs            | Suporta snapshots, més adequat per a sistemes avançats. |
 
@@ -249,7 +264,7 @@ df -T
 > Per tant, els pendrive que solen vindre formatats a FAT32, els haurem de formatar a NTFS 
 
 
-## 7.1 El sistema de fitxers basat en inodes
+## 8.1 El sistema de fitxers basat en inodes
 
 En Linux, el sistema de fitxers està basat en **inodes**. Un inode és una estructura de dades que conté informació important sobre un fitxer o directori. Cada fitxer en un sistema de fitxers de Linux té un inode associat que actua com la seua **clau única**. L'inode no emmagatzema el nom del fitxer ni el seu contingut, sinó que guarda informació sobre el fitxer, com ara:
 
@@ -283,7 +298,7 @@ Modificació: 2024-10-12 10:41:02.695832661 +0200
 
 * Bloc d’E/S: 4096. És la mida del bloc d'entrada/sortida (E/S) en bytes. Això indica la mida de les operacions mínimes de lectura o escriptura que el sistema de fitxers utilitza. En aquest cas, són 4096 bytes (4 KB).
 
-* Tipus de fitxer. Aquí indica que és un fitxer ordinari (nidirectoris, enllaços simbòlics, dispositius, etc.).
+* Tipus de fitxer. Aquí indica que és un fitxer ordinari (directoris, enllaços simbòlics, dispositius, etc.).
 
 * Dispositiu: 10302h/66306d. Identifica al dispositiu (disc) en format hexadecimal (10302h) i decimal (66306d). Aquest valor identifica el dispositiu d’emmagatzematge en què es troba el fitxer. 
 
@@ -344,7 +359,7 @@ Només cal entendre que la informació d'un fitxer quan està carregat a la RAM 
 
 
 
-## 7.2 Representació gràfica
+## 8.2 Representació gràfica
 
 Veiem gràficament les **etiquetes o noms de fitxers**, els **inodes** i **l’àrea de dades** com quedarien en una
 còpia de fitxer, un enllaç dur i un enllaç simbòlic.
@@ -369,7 +384,7 @@ còpia de fitxer, un enllaç dur i un enllaç simbòlic.
 
 
 
-# 8. Comprovar el sistema d'arxius
+# 9. Comprovar el sistema d'arxius
 Linux ofereix eines per a comprovar i reparar sistemes de fitxers.
 
 ```bash
@@ -378,10 +393,12 @@ fsck /dev/sdX
 
 Aquesta ordre comprova i repara el sistema de fitxers del dispositiu `/dev/sdX`.
 
-# 9. Els sistemes transaccionals *Només llegir*
+# 10. Els sistemes transaccionals *Només llegir, no cal estudiar*
+
 Els sistemes d’arxius transaccionals permeten que les operacions d’escriptura siguen atòmiques, garantint que qualsevol canvi es complete amb èxit o es revertisca totalment en cas d'error. Un exemple d'això és Btrfs, que permet utilitzar snapshots i còpies segures.
 
-## 9.1 Com utilitzar snapshots amb Btrfs
+## 10.1 Com utilitzar snapshots amb Btrfs
+
 Un snapshot és una còpia instantània del sistema de fitxers en un moment concret.
 
 ```bash
@@ -390,21 +407,21 @@ btrfs subvolume snapshot /mnt/source /mnt/snapshot
 
 Aquesta ordre crea un snapshot del volum `/mnt/source`.
 
-# 10. Enllaços simbòlics i enllaços durs
+# 11. Enllaços simbòlics i enllaços durs
 
-Un enllaç simbòlic (soft link) és com un "accés directe" a un altre fitxer. Un enllaç dur (hard link) fa que dos noms d'arxiu apunten al mateix contingut.
+Un enllaç simbòlic (soft link) és com un "accés directe" de Windows un altre fitxer (no exactament igual). Un enllaç dur (hard link) fa que dos noms d'arxiu apunten al mateix contingut.
 
 | Tipus d'enllaç    | Descripció |
 |-------------------|------------|
 | Enllaç simbòlic    | Apunta a la ubicació d'un altre arxiu |
 | Enllaç dur         | Apunta al mateix contingut de dades dins del disc |
 
-## 10.1 Crear un enllaç simbòlic
+## 11.1 Crear un enllaç simbòlic
 ```bash
 ln -s fitxer_original enllac_simbòlic
 ```
 
-## 10.2 Crear un enllaç dur
+## 11.2 Crear un enllaç dur
 ```bash
 ln fitxer_original enllac_dur
 ```
@@ -414,7 +431,7 @@ ln fitxer_original enllac_dur
 ln -s /home/usuari/document.txt document_enllac.txt
 ```
 
-# 11. L'ordre stat
+# 12. L'ordre stat
 L'ordre `stat` proporciona informació detallada sobre un arxiu o directori, incloent la mida, permisos, inode i dates.
 
 ### Exemple d'ús
@@ -424,7 +441,7 @@ stat document.txt
 
 Aquesta ordre mostra informació completa sobre el fitxer `document.txt`.
 
-# 12. L'atribut l/d/-
+# 13. L'atribut l/d/-
 Quan es fa un `ls -l`, el primer caràcter de cada línia indica el tipus d'arxiu:
 - `-` indica un arxiu normal.
 - `d` indica un directori.
@@ -442,11 +459,11 @@ lrwxrwxrwx 1 usuari grup   12 oct 13 08:42 enllac -> document.txt
 ```
 En aquest exemple, `document.txt` és un arxiu normal, `carpeta` és un directori i `enllac` és un enllaç simbòlic.
 
-# 13. Empaquetament i compressió de fitxers
+# 14. Empaquetament i compressió de fitxers
 
 Empaquetar i comprimir són dues operacions relacionades però diferents. **Empaquetar** consisteix a ajuntar diversos fitxers en un sol arxiu, mentre que **comprimir** implica reduir la grandària d'un o més arxius mitjançant un algoritme de compressió.
 
-## 13.1 Empaquetament amb tar
+## 14.1 Empaquetament amb tar
 L'ordre `tar` s'utilitza per a empaquetar diversos fitxers en un sol arxiu. El format `tar` no realitza compressió per si mateix, simplement empaqueta fitxers i directoris en un únic arxiu.
 
 ### Paràmetres més comuns de l'ordre tar
@@ -490,7 +507,7 @@ tar -xjvf arxiu_comprimit.tar.bz2
 ```
 Aquesta ordre extreu un arxiu empaquetat i comprimit amb `bzip2`.
 
-## 13.2 Compressió i descompressió amb zip
+## 14.2 Compressió i descompressió amb zip
 
 El format `zip` és àmpliament utilitzat, especialment en sistemes Windows, però és compatible també amb Linux. A diferència de `tar`, `zip` empaqueta i comprimeix fitxers en un únic pas.
 
@@ -506,7 +523,7 @@ unzip arxiu_comprimit.zip
 ```
 Aquesta ordre descomprimeix el contingut de l'arxiu `zip` al directori actual.
 
-## 13.3 Compressió i descompressió amb rar
+## 14.3 Compressió i descompressió amb rar
 
 El format `rar` és molt utilitzat en Windows i pot comprimir de manera molt eficient. A Linux, cal instal·lar l'eina `rar` per a poder treballar amb aquest format.
 
@@ -542,11 +559,8 @@ El format `tar` es fa servir habitualment per a empaquetar programari i bibliote
 
 Els formats `zip` i `rar` són àmpliament utilitzats en Windows, i són compatibles tant amb aquest sistema com amb Linux. El format `tar` és nadiu en Linux, però pot ser utilitzat en Windows mitjançant programari de tercers com **7-Zip** o **WinRAR**, que poden descomprimir arxius `.tar.gz` o `.tar.bz2`. Això fa que els arxius empaquetats en Linux puguen ser utilitzats també en Windows.
 
-# 13 Glossari
+# 15 Glossari
 
-Clàr! A continuació et presento un glossari basat en el text que hem tractat fins ara, amb les definicions claus per ajudar a entendre millor els conceptes discutits.
-
-### Glossari
 
 **Arxiu o fitxer**: Element bàsic de magatzematge en un sistema operatiu, que pot ser de text, binari, dispositiu, enllaç, o socket.
 

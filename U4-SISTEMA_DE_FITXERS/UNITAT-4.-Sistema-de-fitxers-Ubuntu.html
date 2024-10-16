@@ -2841,8 +2841,19 @@ binari.</p>
 </div>
 </div>
 </div>
+<div id="els-noms" class="section level1">
+<h1>3. Els noms</h1>
+<p>Els noms dels fitxers poden ser llargs i admeten qualsevol caràcter
+alfanumèric excepte “/”. Tanmateix no es recomanable que s’usen el que
+tenen un significat especial com</p>
+<p><code>\^\~\!\#\?\&amp;\(\)</code></p>
+<p>Recordeu que: Linux/UNIX diferència entre MAJÚSCULE S/
+minúscules.</p>
+</div>
 <div id="els-permisos-darxius" class="section level1">
-<h1>3. Els permisos d’arxius</h1>
+<h1>4. Els permisos d’arxius</h1>
+<p><em>(aquest apartat l’estudiarem més detingudament en un altre
+tema)</em></p>
 <p>Cada arxiu o directori en Linux té associats permisos que controlen
 qui pot llegir, escriure o executar l’arxiu.</p>
 <table>
@@ -2884,7 +2895,7 @@ exemple:</p>
 </div>
 </div>
 <div id="operacions-comunes-darxius" class="section level1">
-<h1>4. Operacions comunes d’arxius</h1>
+<h1>5. Operacions comunes d’arxius</h1>
 <table>
 <colgroup>
 <col width="22%" />
@@ -2946,12 +2957,12 @@ exemple:</p>
 </div>
 </div>
 <div id="els-directoris" class="section level1">
-<h1>5. Els directoris</h1>
+<h1>6. Els directoris</h1>
 <p>Els directoris són arxius especials que contenen altres arxius i
 directoris. Permeten estructurar i organitzar el sistema de fitxers de
 manera jeràrquica.</p>
 <div id="els-permisos-dels-directoris" class="section level2">
-<h2>5.1 Els permisos dels directoris</h2>
+<h2>6.1 Els permisos dels directoris</h2>
 <p>Els permisos per a directoris funcionen de manera similar als arxius,
 però amb algunes diferències: - <code>r</code> (lectura): permet llistar
 els continguts del directori. - <code>w</code> (escriptura): permet
@@ -2961,7 +2972,7 @@ crear o eliminar fitxers dins del directori. - <code>x</code>
 <pre class="bash"><code>chmod u+rwx nom_directori</code></pre>
 </div>
 <div id="operacions-comunes-amb-els-directoris" class="section level2">
-<h2>5.2 Operacions comunes amb els directoris</h2>
+<h2>6.2 Operacions comunes amb els directoris</h2>
 <table>
 <colgroup>
 <col width="24%" />
@@ -3001,6 +3012,11 @@ crear o eliminar fitxers dins del directori. - <code>x</code>
 <td>Llistar el contingut d’un directori</td>
 <td><code>ls nom_directori</code></td>
 </tr>
+<tr class="even">
+<td>Saber en quin directori hi estàs</td>
+<td>Et diu el directori actual</td>
+<td><code>pwd</code></td>
+</tr>
 </tbody>
 </table>
 <div id="exemple-1-crear-un-directori" class="section level3">
@@ -3014,15 +3030,16 @@ crear o eliminar fitxers dins del directori. - <code>x</code>
 </div>
 </div>
 <div id="rutes-relatives-i-absolutes" class="section level1">
-<h1>6. Rutes relatives i absolutes</h1>
+<h1>7. Rutes relatives i absolutes</h1>
 <p>En Linux, una <strong>ruta</strong> és la forma d’accedir a un fitxer
 o directori dins del sistema de fitxers. Hi ha dos tipus principals de
 rutes: <strong>relatives</strong> i <strong>absolutes</strong>.</p>
-<div id="ruta-absoluta" class="section level2">
-<h2>6.1 Ruta absoluta</h2>
+<div id="ruta-absoluta-completa" class="section level2">
+<h2>7.1 Ruta absoluta (completa)</h2>
 <p>Una ruta absoluta és aquella que comença des de l’arrel del sistema
-de fitxers (<code>/</code>) i proporciona la ubicació completa d’un
-fitxer o directori. No depèn del directori actual en què et trobes.</p>
+de fitxers (<code>/</code>) i mostra tot el camí dins la ubicació
+completa d’un fitxer o directori. No depèn del directori actual en què
+et trobes.</p>
 <div id="exemple-de-ruta-absoluta" class="section level3">
 <h3>Exemple de ruta absoluta:</h3>
 <pre class="bash"><code>/home/usuari/Documentos/document.txt</code></pre>
@@ -3038,7 +3055,7 @@ actualment.</p>
 </div>
 </div>
 <div id="ruta-relativa" class="section level2">
-<h2>6.2 Ruta relativa</h2>
+<h2>7.2 Ruta relativa</h2>
 <p>Una ruta relativa es defineix respecte al directori actual. No
 comença des de l’arrel, sinó des del directori en què estàs treballant.
 Si estàs en un directori concret, pots utilitzar rutes relatives per
@@ -3068,7 +3085,7 @@ immediatament superior).</li>
 </div>
 </div>
 <div id="tipus-de-sistemes-darxius" class="section level1">
-<h1>7. Tipus de sistemes d’arxius</h1>
+<h1>8. Tipus de sistemes d’arxius</h1>
 <p>Linux suporta diferents tipus de sistemes de fitxers, cadascun amb
 les seues característiques.</p>
 <table>
@@ -3084,11 +3101,11 @@ les seues característiques.</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td>ext4</td>
+<td><strong>ext4</strong></td>
 <td>Sistema d’arxius per defecte en moltes distribucions Linux.</td>
 </tr>
 <tr class="even">
-<td>NTFS</td>
+<td><strong>NTFS</strong></td>
 <td>Utilitzat per Windows, compatible amb Linux.</td>
 </tr>
 <tr class="odd">
@@ -3137,7 +3154,7 @@ més:</p>
 de formatar a NTFS</p>
 </blockquote>
 <div id="el-sistema-de-fitxers-basat-en-inodes" class="section level2">
-<h2>7.1 El sistema de fitxers basat en inodes</h2>
+<h2>8.1 El sistema de fitxers basat en inodes</h2>
 <p>En Linux, el sistema de fitxers està basat en
 <strong>inodes</strong>. Un inode és una estructura de dades que conté
 informació important sobre un fitxer o directori. Cada fitxer en un
@@ -3180,7 +3197,7 @@ bytes. Això indica la mida de les operacions mínimes de lectura o
 escriptura que el sistema de fitxers utilitza. En aquest cas, són 4096
 bytes (4 KB).</p></li>
 <li><p>Tipus de fitxer. Aquí indica que és un fitxer ordinari
-(nidirectoris, enllaços simbòlics, dispositius, etc.).</p></li>
+(directoris, enllaços simbòlics, dispositius, etc.).</p></li>
 <li><p>Dispositiu: 10302h/66306d. Identifica al dispositiu (disc) en
 format hexadecimal (10302h) i decimal (66306d). Aquest valor identifica
 el dispositiu d’emmagatzematge en què es troba el fitxer.</p></li>
@@ -3266,7 +3283,7 @@ de blocs amb un tamany.</p>
 </div>
 </div>
 <div id="representació-gràfica" class="section level2">
-<h2>7.2 Representació gràfica</h2>
+<h2>8.2 Representació gràfica</h2>
 <p>Veiem gràficament les <strong>etiquetes o noms de fitxers</strong>,
 els <strong>inodes</strong> i <strong>l’àrea de dades</strong> com
 quedarien en una còpia de fitxer, un enllaç dur i un enllaç
@@ -3300,21 +3317,22 @@ fitxer.</p>
 </div>
 </div>
 <div id="comprovar-el-sistema-darxius" class="section level1">
-<h1>8. Comprovar el sistema d’arxius</h1>
+<h1>9. Comprovar el sistema d’arxius</h1>
 <p>Linux ofereix eines per a comprovar i reparar sistemes de
 fitxers.</p>
 <pre class="bash"><code>fsck /dev/sdX</code></pre>
 <p>Aquesta ordre comprova i repara el sistema de fitxers del dispositiu
 <code>/dev/sdX</code>.</p>
 </div>
-<div id="els-sistemes-transaccionals-només-llegir" class="section level1">
-<h1>9. Els sistemes transaccionals <em>Només llegir</em></h1>
+<div id="els-sistemes-transaccionals-només-llegir-no-cal-estudiar" class="section level1">
+<h1>10. Els sistemes transaccionals <em>Només llegir, no cal
+estudiar</em></h1>
 <p>Els sistemes d’arxius transaccionals permeten que les operacions
 d’escriptura siguen atòmiques, garantint que qualsevol canvi es complete
 amb èxit o es revertisca totalment en cas d’error. Un exemple d’això és
 Btrfs, que permet utilitzar snapshots i còpies segures.</p>
 <div id="com-utilitzar-snapshots-amb-btrfs" class="section level2">
-<h2>9.1 Com utilitzar snapshots amb Btrfs</h2>
+<h2>10.1 Com utilitzar snapshots amb Btrfs</h2>
 <p>Un snapshot és una còpia instantània del sistema de fitxers en un
 moment concret.</p>
 <pre class="bash"><code>btrfs subvolume snapshot /mnt/source /mnt/snapshot</code></pre>
@@ -3323,10 +3341,10 @@ moment concret.</p>
 </div>
 </div>
 <div id="enllaços-simbòlics-i-enllaços-durs" class="section level1">
-<h1>10. Enllaços simbòlics i enllaços durs</h1>
-<p>Un enllaç simbòlic (soft link) és com un “accés directe” a un altre
-fitxer. Un enllaç dur (hard link) fa que dos noms d’arxiu apunten al
-mateix contingut.</p>
+<h1>11. Enllaços simbòlics i enllaços durs</h1>
+<p>Un enllaç simbòlic (soft link) és com un “accés directe” de Windows
+un altre fitxer (no exactament igual). Un enllaç dur (hard link) fa que
+dos noms d’arxiu apunten al mateix contingut.</p>
 <table>
 <colgroup>
 <col width="61%" />
@@ -3350,11 +3368,11 @@ mateix contingut.</p>
 </tbody>
 </table>
 <div id="crear-un-enllaç-simbòlic" class="section level2">
-<h2>10.1 Crear un enllaç simbòlic</h2>
+<h2>11.1 Crear un enllaç simbòlic</h2>
 <pre class="bash"><code>ln -s fitxer_original enllac_simbòlic</code></pre>
 </div>
 <div id="crear-un-enllaç-dur" class="section level2">
-<h2>10.2 Crear un enllaç dur</h2>
+<h2>11.2 Crear un enllaç dur</h2>
 <pre class="bash"><code>ln fitxer_original enllac_dur</code></pre>
 <div id="exemple-4" class="section level3">
 <h3>Exemple</h3>
@@ -3363,7 +3381,7 @@ mateix contingut.</p>
 </div>
 </div>
 <div id="lordre-stat" class="section level1">
-<h1>11. L’ordre stat</h1>
+<h1>12. L’ordre stat</h1>
 <p>L’ordre <code>stat</code> proporciona informació detallada sobre un
 arxiu o directori, incloent la mida, permisos, inode i dates.</p>
 <div id="exemple-dús-2" class="section level3">
@@ -3374,7 +3392,7 @@ arxiu o directori, incloent la mida, permisos, inode i dates.</p>
 </div>
 </div>
 <div id="latribut-ld-" class="section level1">
-<h1>12. L’atribut l/d/-</h1>
+<h1>13. L’atribut l/d/-</h1>
 <p>Quan es fa un <code>ls -l</code>, el primer caràcter de cada línia
 indica el tipus d’arxiu: - <code>-</code> indica un arxiu normal. -
 <code>d</code> indica un directori. - <code>l</code> indica un enllaç
@@ -3392,14 +3410,14 @@ simbòlic.</p>
 </div>
 </div>
 <div id="empaquetament-i-compressió-de-fitxers" class="section level1">
-<h1>13. Empaquetament i compressió de fitxers</h1>
+<h1>14. Empaquetament i compressió de fitxers</h1>
 <p>Empaquetar i comprimir són dues operacions relacionades però
 diferents. <strong>Empaquetar</strong> consisteix a ajuntar diversos
 fitxers en un sol arxiu, mentre que <strong>comprimir</strong> implica
 reduir la grandària d’un o més arxius mitjançant un algoritme de
 compressió.</p>
 <div id="empaquetament-amb-tar" class="section level2">
-<h2>13.1 Empaquetament amb tar</h2>
+<h2>14.1 Empaquetament amb tar</h2>
 <p>L’ordre <code>tar</code> s’utilitza per a empaquetar diversos fitxers
 en un sol arxiu. El format <code>tar</code> no realitza compressió per
 si mateix, simplement empaqueta fitxers i directoris en un únic
@@ -3483,7 +3501,7 @@ gràcies al paràmetre <code>-j</code>.</p>
 </div>
 </div>
 <div id="compressió-i-descompressió-amb-zip" class="section level2">
-<h2>13.2 Compressió i descompressió amb zip</h2>
+<h2>14.2 Compressió i descompressió amb zip</h2>
 <p>El format <code>zip</code> és àmpliament utilitzat, especialment en
 sistemes Windows, però és compatible també amb Linux. A diferència de
 <code>tar</code>, <code>zip</code> empaqueta i comprimeix fitxers en un
@@ -3503,7 +3521,7 @@ al directori actual.</p>
 </div>
 </div>
 <div id="compressió-i-descompressió-amb-rar" class="section level2">
-<h2>13.3 Compressió i descompressió amb rar</h2>
+<h2>14.3 Compressió i descompressió amb rar</h2>
 <p>El format <code>rar</code> és molt utilitzat en Windows i pot
 comprimir de manera molt eficient. A Linux, cal instal·lar l’eina
 <code>rar</code> per a poder treballar amb aquest format.</p>
@@ -3579,12 +3597,7 @@ arxius empaquetats en Linux puguen ser utilitzats també en Windows.</p>
 </div>
 </div>
 <div id="glossari" class="section level1">
-<h1>13 Glossari</h1>
-<p>Clàr! A continuació et presento un glossari basat en el text que hem
-tractat fins ara, amb les definicions claus per ajudar a entendre millor
-els conceptes discutits.</p>
-<div id="glossari-1" class="section level3">
-<h3>Glossari</h3>
+<h1>15 Glossari</h1>
 <p><strong>Arxiu o fitxer</strong>: Element bàsic de magatzematge en un
 sistema operatiu, que pot ser de text, binari, dispositiu, enllaç, o
 socket.</p>
@@ -3630,7 +3643,6 @@ o bzip2.</p>
 <p><strong>Zip/Rar</strong>: Formats de compressió de fitxers que
 permeten reduir la grandària dels fitxers emmagatzemats i suporten la
 compressió d’una carpeta sencera.</p>
-</div>
 </div>
 
 
