@@ -1,0 +1,89 @@
+// Qüestionari alternatiu sobre Sistema de Fitxers a Ubuntu
+
+// Pregunta 1
+::1::Quin comodí substitueix un sol caràcter en una ordre Linux?
+{
+~*
+=?
+~[]
+~%
+}
+
+// Pregunta 2
+::2::Quin sistema de fitxers està dissenyat per a compatibilitat amb Windows però pot ser llegit per Linux?
+{
+=NTFS
+~ext4
+~Btrfs
+~ReFS
+}
+
+// Pregunta 3
+::3::Quina ordre s’utilitza per crear un arxiu buit en Linux?
+{
+=touch
+~ls
+~mv
+~cp
+}
+
+// Pregunta 4
+::4::Què indica una ruta relativa?
+{
+=És un camí basat en la ubicació actual del directori.
+~És un camí complet que comença des de l’arrel (/).
+~Sempre conté almenys tres subdirectoris.
+}
+
+// Pregunta 5
+::5::Què és el que no emmagatzema un inode?
+{
+=El nom del fitxer
+~El tamany del fitxer
+~L’últim canvi de permisos
+}
+
+// Pregunta 6
+::6::Quina és l’ordre per moure un fitxer o canviar-li el nom en Linux?
+{
+=mv
+~rm
+~cp
+~ls
+}
+
+// Pregunta 7
+::7::Quin tipus d’enllaç és un "accés directe" a un altre fitxer?
+{
+=Enllaç simbòlic
+~Enllaç dur
+~Enllaç virtual
+~Enllaç de dades
+}
+
+// Pregunta 8
+::8::En quina situació utilitzaries l’ordre `chmod u+x fitxer`?
+{
+=Per donar permisos d’execució al propietari del fitxer.
+~Per donar permisos de lectura a altres usuaris.
+~Per eliminar un fitxer.
+}
+
+// Pregunta 9
+::9::Quin és el tamany mínim d’un bloc en el sistema de fitxers Linux?
+{
+=4 KB
+~2 KB
+~8 KB
+~1 KB
+}
+
+// Pregunta 10
+::10::Quina ordre mostra informació detallada sobre un fitxer, incloent els permisos i l’inode?
+{
+=stat
+~ls -l
+~chmod
+~cd
+}
+

@@ -1,0 +1,91 @@
+// Qüestionari basat en el Sistema de Fitxers a Ubuntu
+
+// Pregunta 1
+::1::Quin caràcter s’utilitza com a comodí per substituir qualsevol nombre de caràcters en una ordre Linux?
+{
+~=% 
+~!* 
+=*
+~?
+}
+
+// Pregunta 2
+::2::Quin és el sistema de fitxers per defecte en moltes distribucions Linux?
+{
+~NTFS 
+~FAT32 
+=Btrfs 
+=ext4
+}
+
+// Pregunta 3
+::3::Quines ordres necessiten dos operands necessàriament per poder executar-se
+{
+=cp
+=mv
+~rm
+~ls
+}
+
+// Pregunta 4
+::4::Quina diferència hi ha entre una ruta absoluta i una ruta relativa en Linux?
+{
+=La ruta absoluta comença des de l’arrel (/) mentre que la relativa es defineix respecte al directori actual.
+~Les dues comencen des de l’arrel (/).
+~La ruta relativa sempre inclou el nom de l’arxiu final.
+}
+
+// Pregunta 5
+::5::Quina és la funció d’un inode en el sistema de fitxers Linux?
+{
+~Emmagatzemar el nom i contingut del fitxer
+=Conté metadades sobre el fitxer, com propietari i permisos
+~Desem les dades físiques del fitxer al disc
+}
+
+// Pregunta 6
+::6::Quines rutes son correctes si estem en /home/tomas/Documents?
+{
+=ls /home/tomas/Documents
+=ls ../Baixades
+~ls Baixades
+~ls home/tomas/Baixades
+}
+
+// Pregunta 7
+::7::Quin tipus d’enllaç apunta directament al contingut de dades dins del disc?
+{
+=Enllaç dur
+~Enllaç simbòlic
+~Enllaç virtual
+~Accés directe
+}
+
+// Pregunta 8
+::8::Per vore el contingut d'una carpeta des del terminal...)
+{
+~Hem de situar-nos en ell amb cd abans
+~En el terminal no hi ha carpetes, noés directoris i fitxers
+=Amb ls i la ruta 
+~Amb ls ens preguntará la ruta i la indiquem 
+}
+
+// Pregunta 9
+::9::Quina és la limitació de tamany de fitxer en un sistema FAT32?
+{
+=4 GB
+~2 GB
+~8 GB
+~Sense limitació
+}
+
+// Pregunta 10
+::10::Quina informació rellevant sobre un directori ens dona l'ordre stat?
+{
+~L'inode només
+~La data de creació només
+~Quants enllaços té el fitxer només
+~L'inode, quants enlaços té i la data útlia d'accés només
+=Totes les opcions son correctes
+}
+

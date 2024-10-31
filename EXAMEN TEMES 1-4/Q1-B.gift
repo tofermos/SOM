@@ -1,0 +1,82 @@
+// Qüestionari sobre Sistemes Informàtics i Representació de la Informació (Versió B)
+
+// Pregunta 1
+::1::Quina és la unitat de mesura immediatament superior al byte?
+{
+~Bit
+=Kilobyte (KB)
+~Gigabyte
+}
+
+// Pregunta 2
+::2::Quin sistema de numeració utilitza només els dígits 0 i 1?
+{
+~Octal
+=Binari
+~Decimal
+}
+
+// Pregunta 3
+::3::Quina característica tenen els valors numèrics en el sistema hexadecimal?
+{
+~Només utilitza els dígits del 0 al 7
+~Representa valors només en base 2
+=Inclou dígits del 0 al 9 i lletres de la A a la F
+}
+
+// Pregunta 4
+::4::Quina és la funció de les dades d’eixida en un sistema informàtic?
+{
+~Són dades que arriben al sistema per ser processades
+=Són el resultat del processament lliurat a l’usuari
+~Són dades internes del sistema
+}
+
+// Pregunta 5
+::5::Quina diferència hi ha entre UTF-8 i Latin-1?
+{
+~UTF-8 és més limitat en el nombre de caràcters que pot representar
+=UTF-8 pot representar més caràcters que Latin-1
+~Latin-1 és una codificació de longitud variable
+}
+
+// Pregunta 6
+::6::Quina de les següents és una característica dels números naturals en informàtica?
+{
+~Poden representar valors negatius
+=Representen valors positius o zero
+~Inclouen decimals
+}
+
+// Pregunta 7
+::7::Quina codificació es va desenvolupar originalment per al llenguatge anglès i utilitza 7 o 8 bits?
+{
+=ASCII
+~UTF-16
+~Latin-1
+}
+
+// Pregunta 8
+::8::En quin sistema de mesura es basa un Gibibyte (GiB)?
+{
+=Potències de 2
+~Potències de 10
+~Potències de 16
+}
+
+// Pregunta 9
+::9::Quin tipus de dades es codifiquen com a TRUE/FALSE en el sistema binari?
+{
+=Dades booleanes
+~Dades alfanumèriques
+~Números reals
+}
+
+// Pregunta 10
+::10::En el sistema binari, quin valor representa el dígit “1”?
+{
+~Valor neutral o “apagat”
+~Valor negatiu
+=Valor actiu o “encès”
+}
+

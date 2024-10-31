@@ -1,0 +1,82 @@
+// Qüestionari sobre Conceptes Bàsics dels SO (Versió A)
+
+// Pregunta 1
+::1::Quin és el component central d’un sistema operatiu que gestiona la memòria, processos i dispositius?
+{
+~Interfície d'usuari
+~Bootloader
+=Nucli (Kernel)
+}
+
+// Pregunta 2
+::2::Quin tipus d'interfície permet als usuaris interactuar amb el sistema operatiu a través de línies d'ordres?
+{
+~GUI (Graphical User Interface)
+~API (Application Programming Interface)
+=CLI (Command Line Interface)
+}
+
+// Pregunta 3
+::3::Quina és una funció del gestor de fitxers en un sistema operatiu?
+{
+=Organitzar fitxers en directoris
+~Controlar l'accés a la xarxa
+~Gestionar els processos del sistema
+}
+
+// Pregunta 4
+::4::Què és un microkernel en un sistema operatiu?
+{
+~Combina funcions de kernel monolític i microkernel
+~Inclou totes les funcions en un espai de memòria únic
+=Només inclou funcions bàsiques com la gestió de processos i memòria
+}
+
+// Pregunta 5
+::5::Quina de les següents és una tècnica de gestió de memòria en un SO?
+{
+~Còpia de seguretat
+~Defragmentació
+=Paginació
+}
+
+// Pregunta 6
+::6::Quin tipus de sistema d'arxius és habitualment utilitzat en Windows?
+{
+~ext4
+=NTFS
+~APFS
+}
+
+// Pregunta 7
+::7::Què fa un controlador (driver) en el context d'un sistema operatiu?
+{
+~Permet canviar l'escriptori
+~Controla els permisos de fitxers
+=Tradueix ordres del SO per al dispositiu
+}
+
+// Pregunta 8
+::8::Quin dels següents és un avantatge de CLI sobre GUI?
+{
+~És més fàcil per a principiants
+~Proporciona una interfície gràfica intuïtiva
+=No cal desplaçar-se als directoris on volem que s'excute l'ordre
+}
+
+// Pregunta 9
+::9::Per què ens convé formatar els pendrive de FAT32 a NTFS?
+{
+~Per compatibilitat amb Lliurex
+=Per què FAT32 no admet fitxers de tamany superior a 4GB
+~Per a poder treballar amb enllaços i inode
+}
+
+// Pregunta 10
+::10::Què comprova la fase POST (Power-On Self Test) durant l’engegada de l’ordinador?
+{
+=Que el maquinari essencial funcioni correctament
+~Que el SO estigui completament carregat
+~Que l'usuari estigui autenticat correctament
+}
+

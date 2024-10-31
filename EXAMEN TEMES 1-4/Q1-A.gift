@@ -1,0 +1,82 @@
+// Qüestionari sobre Sistemes Informàtics i Representació de la Informació (Versió A)
+
+// Pregunta 1
+::1::Quina és la unitat mínima d’informació en informàtica?
+{
+=Bit
+~Byte
+~Kilobyte
+}
+
+// Pregunta 2
+::2::Quina és la diferència entre un byte i un bit?
+{
+=Un byte conté 8 bits
+~Un byte conté 1024 bits
+~No hi ha diferència
+}
+
+// Pregunta 3
+::3::Quin sistema de numeració utilitza els dígits 0 al 9 i les lletres A a F?
+{
+=Hexadecimal
+~Decimal
+~Octal
+}
+
+// Pregunta 4
+::4::Com es defineixen les dades booleanes en informàtica?
+{
+=Com valors TRUE/FALSE
+~Com caràcters de text
+~Com valors numèrics
+}
+
+// Pregunta 5
+::5::Quina codificació permet representar caràcters de diferents idiomes en un format variable de 1 a 4 bytes?
+{
+~Latin-1
+=UTF-8
+~ASCII
+}
+
+// Pregunta 6
+::6::Quin tipus de dades es troben en els perifèrics d'entrada com el teclat?
+{
+~Dades de sortida
+~Dades internes
+=Dades d'entrada
+}
+
+// Pregunta 7
+::7::Quina és una característica dels números reals en informàtica?
+{
+~Només representen valors positius
+=Poden incloure una part decimal
+~Només inclouen valors negatius
+}
+
+// Pregunta 8
+::8::Com es representa el color en el sistema RGB?
+{
+~Utilitza un valor únic en format decimal
+~Utilitza valors binaris únicament
+=Utilitza tres valors (roig, verd, blau) per representar colors
+}
+
+// Pregunta 9
+::9::Quina codificació és menys eficient per representar textos que continguen caràcters no ASCII?
+{
+=Latin-1
+~UTF-8
+~UTF-16
+}
+
+// Pregunta 10
+::10::Quina operació s'utilitza per passar de binari a decimal?
+{
+~Suma de potències de 10 per cada dígit
+~Multiplicació de potències de 2
+=Suma de potències de 2 per cada bit actiu
+}
+

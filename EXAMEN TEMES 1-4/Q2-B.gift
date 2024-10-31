@@ -1,0 +1,82 @@
+// Qüestionari sobre Virtualització (Versió B)
+
+// Pregunta 1
+::1::Quina de les següents és una característica destacada de les màquines virtuals?
+{
+=Permet instal·lar un sistema operatiu diferent al de l'amfitrió
+~Necessiten un disc dur separat
+~No poden comunicar-se amb la xarxa de l’amfitrió
+}
+
+// Pregunta 2
+::2::Quin avantatge ofereix la virtualització en termes de recuperació davant de fallades?
+{
+=Facilita la recuperació ràpida del sistema
+~Elimina la necessitat de còpies de seguretat
+~Optimitza la velocitat de processament del maquinari
+}
+
+// Pregunta 3
+::3::Quin tipus d’hipervisor s'executa sobre el sistema operatiu amfitrió?
+{
+=Hipervisor de tipus 2
+~Hipervisor de tipus 1
+~Hyper-V
+}
+
+// Pregunta 4
+::4::Quin format de disc virtual és natiu de VirtualBox i s'utilitza principalment en aquest programari?
+{
+=VDI
+~VMDK
+~ISO
+}
+
+// Pregunta 5
+::5::Quin és un ús pràctic de les carpetes compartides en VirtualBox?
+{
+=Facilitar l'intercanvi de fitxers entre l'amfitrió i la màquina virtual
+~Permetre que la màquina virtual es reinicie automàticament
+~Millorar la velocitat de connexió a internet
+}
+
+// Pregunta 6
+::6::Quin tipus de configuració de xarxa VirtualBox assigna una IP del mateix rang que la de l’amfitrió?
+{
+=Adaptador pont (Bridge)
+~NAT
+~Xarxa interna
+}
+
+// Pregunta 7
+::7::Quina de les següents opcions de disc virtual s’utilitza principalment en entorns de Microsoft?
+{
+=VHD
+~VDI
+~VMDK
+}
+
+// Pregunta 8
+::8::Quina és la funció principal del “boot order” en VirtualBox?
+{
+=Definir l’ordre de dispositius per arrencar el sistema operatiu
+~Ajustar la configuració de xarxa de la màquina virtual
+~Configurar els paràmetres de CPU per la màquina virtual
+}
+
+// Pregunta 9
+::9::Quina opció de xarxa en VirtualBox permet la comunicació només entre màquines virtuals sense accés a internet?
+{
+=Xarxa interna
+~NAT
+~Adaptador pont (Bridge)
+}
+
+// Pregunta 10
+::10::Quina és la solució de virtualització de Microsoft inclosa en Windows 10 i Windows Server?
+{
+=Hyper-V
+~VMware Workstation
+~KVM
+}
+

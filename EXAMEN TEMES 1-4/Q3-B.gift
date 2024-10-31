@@ -1,0 +1,83 @@
+// Qüestionari sobre Conceptes Bàsics dels SO (Versió B)
+
+// Pregunta 1
+::1::Quin component s’encarrega de coordinar la comunicació entre el programari i el maquinari?
+{
+=Nucli (Kernel)
+~Interfície gràfica d'usuari
+~BIOS
+}
+
+// Pregunta 2
+::2::Quin tipus d'interfície d’usuari es basa en icones i finestres per facilitar la interacció?
+{
+=GUI (Graphical User Interface)
+~CLI (Command Line Interface)
+~CUI (Character User Interface)
+}
+
+// Pregunta 3
+::3::Quina funció del SO controla l'accés dels usuaris als fitxers i recursos?
+{
+=Protecció
+~Processos
+~Seqüència d'inici del PC
+}
+
+// Pregunta 4
+::4::Què caracteritza un nucli monolític en un sistema operatiu?
+{
+=Inclou totes les funcions en un espai de memòria únic
+~Només inclou funcions bàsiques
+~És un nucli que es carrega després del Bootloader
+}
+
+// Pregunta 5
+::5::Quina tècnica permet a un SO utilitzar espai en disc com si fora memòria RAM?
+{
+=Memòria virtual
+~Càrrega de processos
+~Control de versions
+}
+
+// Pregunta 6
+::6::En instal·lar un SO des d'una ISO de 4GB que tenim en un pendrive ens dona un error com si el fitxer estiguera mal. A què pot deure's?
+{
+~La versió del SO i la VirtualBox no és correcta
+~El PC de l'aula és massa lent
+~Estem usant un usuari que no té permisos per a instal·lar
+=El pen está en FAT32 i el fitxer no s'ha gravat completament
+}
+
+// Pregunta 7
+::7::Quina és la funció principal d’un carregador d’arrencada (bootloader)?
+{
+=Carregar el sistema operatiu en la memòria
+~Carregar fitxers de gran tamany
+~Gestionar els fitxers de l'usuari
+}
+
+// Pregunta 8
+::8::Quina interfície és el que usem en tasques administratives en sistemes sense GUI?
+{
+=CLI (Command Line Interface)
+~GUI (Graphical User Interface)
+~Interfície tàctil
+}
+
+// Pregunta 9
+::9::Quin dels següents tipus de nucli té les funcions essencials i delega altres funcions fora del nucli?
+{
+=Microkernel
+~Nucli híbrid
+~Nucli monolític
+}
+
+// Pregunta 10
+::10::En quina fase es carrega el sistema d’inicialització com `systemd` en Linux?
+{
+=Inicialització dels serveis i processos del sistema
+~Execució del Bootloader
+~Inici de la interfície gràfica d'usuari
+}
+

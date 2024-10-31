@@ -1,0 +1,82 @@
+// Qüestionari sobre Virtualització (Versió A)
+
+// Pregunta 1
+::1::Quin és un avantatge clau de la virtualització vista a classe?
+{
+~Elimina la necessitat de sistemes emmagatzematge externs
+=Permet a múltiples sistemes operatius funcionar simultàniament en el mateix hardware
+~Requereix menys recursos de maquinari que un SO físic
+}
+
+// Pregunta 2
+::2::Què és una màquina virtual?
+{
+~Un tipus de maquinari utilitzat per millorar la velocitat del sistema
+~Un disc dur virtual que es pot clonar
+=Una emulació d’un ordinador que funciona dins d’un sistema físic
+}
+
+// Pregunta 3
+::3::Quin tipus d’hipervisor s'executa directament sobre el maquinari sense un sistema operatiu amfitrió?
+{
+~Hipervisor de tipus 2
+~Hipervisor de tipus 3
+=Hipervisor de tipus 1
+}
+
+// Pregunta 4
+::4::Quin dels següents és un format de disc virtual utilitzat principalment en VirtualBox?
+{
+~ISO
+~IMG
+=VDI
+}
+
+// Pregunta 5
+::5::Quin element de VirtualBox facilita la transferència de fitxers entre el sistema amfitrió i la màquina virtual?
+{
+~Discs durs externs
+~Xarxa interna
+=Carpetes compartides
+}
+
+// Pregunta 6
+::6::Quina és la funció del TPM (Trusted Platform Module) en una màquina virtual?
+{
+~Permet la comunicació entre màquines virtuals
+=Proporciona seguretat criptogràfica per emmagatzemar claus i dades sensibles
+~Redueix l'ús de memòria RAM
+}
+
+// Pregunta 7
+::7::Quin tipus de connexió de xarxa en VirtualBox permet que la màquina virtual tingui la mateixa IP que la xarxa local?
+{
+~Xarxa interna
+~NAT
+=Adaptador pont (Bridge)
+}
+
+// Pregunta 8
+::8::Quin format de disc dur virtual és compatible tant amb VirtualBox com amb VMware?
+{
+~VDI
+=VMDK
+~HFS
+}
+
+// Pregunta 9
+::9::Quina opció de xarxa en VirtualBox assigna una IP diferent a la màquina virtual en relació amb l’amfitrió?
+{
+=NAT
+~Adaptador pont (Bridge)
+~Xarxa interna
+}
+
+// Pregunta 10
+::10::Quin hipervisor s'utilitza en màquines Windows per crear màquines virtuals i està integrat al sistema?
+{
+~VirtualBox
+=Hyper-V
+~Parallels
+}
+

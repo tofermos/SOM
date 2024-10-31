@@ -745,6 +745,7 @@ En la Unitat 2 provarem una funció Hash.
 - **ECC (Error-Correcting Code):** Utilitzat en memòries RAM per corregir errors simples o dobles en dades, millorant la fiabilitat del sistema.
 
 - **Hamming Code:** Codi de correcció que pot detectar i corregir errors simples d'un sol bit en la transmissió de dades.
+
 ## 7.2 Compressió de dades 
 
 *(Només cal llegir. Tractarem la compressió més avant)*
