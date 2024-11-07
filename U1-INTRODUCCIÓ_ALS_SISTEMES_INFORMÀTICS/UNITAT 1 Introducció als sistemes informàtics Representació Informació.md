@@ -29,6 +29,9 @@ linestretch: 1.5
 ---
 
 
+\newpage
+\renewcommand\tablename{Tabla}
+
 # 1. La informació
 
 ## 2.1 Conceptes.
