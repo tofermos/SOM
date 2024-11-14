@@ -6,15 +6,15 @@ subtitle: |
   | IES MARIA ENRÍQUEZ
 author: "Tomàs Ferrandis Moscardó"
 output:
+  pdf_document: 
+    toc: false
+    keep_tex: true
   html_document:
     toc: false
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
-  pdf_document: 
-    toc: false
-    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -58,7 +58,7 @@ linestretch: 1.5
 |Activitat 3: Exercicis ordres bàsiques sobre fitxers i directoris|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS/U4-Activitat4.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS/U4-Activitat4.pdf)|
 |Ordres de tratament de fitxers de text (cat,cut,tr,sort, wc)|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT/U4-Sistema_de_fitxers_tractament_text.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT/U4-Sistema_de_fitxers_tractament_text.pdf)|
 |Ordres de tratament de fitxers de text (head, tail) wc)|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-2.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-2.pdf)|
-|Activitat 4: Tractament de textos|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-Activitat1.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-Activitat1.pdf)|
+|Activitat 4: Tractament de texts|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-Activitat1.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-Activitat1.pdf)|
 
 
 
