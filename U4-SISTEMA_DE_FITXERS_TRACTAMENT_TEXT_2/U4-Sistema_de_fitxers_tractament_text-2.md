@@ -1,6 +1,6 @@
 ---
-title: U4. Sistema de fitxers. Ubuntu (III)
-subtitle: TRACTAMENT DE TEXT (I)
+title: U4. Sistema de fitxers. Ubuntu (IV)
+subtitle: TRACTAMENT DE TEXT (II)
 author: "@tofermos 2024"
 output:
   html_document:
@@ -49,7 +49,7 @@ L'eixida és l'entrada de l'ordre wc ( wc s'aplica sobre el resultat de ls -l)
 ls -l|wc
 ```
 
-![Figura1: Les tres eixides possibles de l'ordre](png/ordresEixida.png)
+![*Figura1: Les tres eixides de dades (no d'errors) possibles d'una ordre*](png/ordresEixida.png)
 
 
 # 2 ORDRE head
@@ -152,7 +152,7 @@ f02
 f03
 f04
 ```
-![head](png/head.png)
+![*Figura2: Els paràmetre de l'ordre head*](png/head.png)
 
 # 3 ORDRE tail
 
@@ -259,6 +259,6 @@ f12
 f13
 fitxer.txt
 ```
-![tail](png/tail.png)
+![*Figura3: Els paràmetres de l'ordre tail*](png/tail.png)
 
 
