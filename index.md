@@ -6,15 +6,15 @@ subtitle: |
   | IES MARIA ENRÍQUEZ
 author: "Tomàs Ferrandis Moscardó"
 output:
-  pdf_document: 
-    toc: false
-    keep_tex: true
   html_document:
     toc: false
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: false
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -59,6 +59,20 @@ linestretch: 1.5
 |Ordres de tratament de fitxers de text (cat,cut,tr,sort, wc)|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT/U4-Sistema_de_fitxers_tractament_text.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT/U4-Sistema_de_fitxers_tractament_text.pdf)|
 |Ordres de tratament de fitxers de text (head, tail) wc)|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-2.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-2.pdf)|
 |Activitat 4: Tractament de texts|[![](recursos/iconohtml.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-Activitat1.html)|[![](recursos/iconopdf.png)](U4-SISTEMA_DE_FITXERS_TRACTAMENT_TEXT_2/U4-Sistema_de_fitxers_tractament_text-Activitat1.pdf)|
+
+### [5 Instal·lació d'un SO GNU/Linux. Ubuntu](#U5)
+
+||||
+|:----|:--|:--|
+|Instal·lació i estructura d'un Lubuntu|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.pdf)|
+
+### [6 Tasques bàsiques amb Ubuntu](#U6)
+
+||||
+|:----|:--|:--|
+|Usuaris i grups|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-COMPTES_LOCALS_UBUNTU.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-COMPTES_LOCALS_UBUNTU.pdf)|
+|Permisos i propietat|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-PERMISOS_I_PROPIETAT.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-PERMISOS_I_ PROPIETAT.pdf)|
+|Activitat. Usuari i permisos|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ActivitatPermisosBotiga.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ActivitatPermisosBotiga.pdf)|
 
 
 

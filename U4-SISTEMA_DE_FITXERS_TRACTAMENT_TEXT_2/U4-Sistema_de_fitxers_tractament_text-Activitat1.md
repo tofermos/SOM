@@ -28,8 +28,8 @@ linestretch: 1.5
 ```
 # Resum
 
-En esta pràctica has de combinar les algunes de les ordres de tractament de fitxers de text (o d'eixida d'ordres a pantalla) per investigar sobre el sistema.
-Coneixerem una ordre nova inrteressant (*last*)
+En esta pràctica usaràs ordres de tractament de text per averiguar qui ha iniciat sessió en el teu PC.
+Coneixerem una ordre nova interessant (*last*)
 
 # 1 Consultem el inicis de sessió 
 

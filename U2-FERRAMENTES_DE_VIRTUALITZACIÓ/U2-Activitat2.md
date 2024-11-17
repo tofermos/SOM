@@ -131,7 +131,7 @@ Descàrrega la ISO de Lubuntu més avançada i fes la comprovació de la integri
 
 Usarem la **funció de hash: *sha256*** de Linux per comprovar que coincidesca amb el codi SHA256 que corresponga; el consultarem en l'enllaç de la Web. 
 
-![Enllaç codi SHA256](png/EnllaçSHA.png)
+![Enllaç codi SHA256](png/enllaçSHA.png)
 
 Estem, per tant fent una comprovació per detectar si hi ha hagut algun error en la baixada o en la gravació en disc; assegurant la integritat de les dades.
 

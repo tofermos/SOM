@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  14 NOV 2024 16:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.3.16)  17 NOV 2024 01:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -419,7 +419,8 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count302
 \l__pdf_internal_box=\box61
-) (./index.aux)
+)
+No file index.aux.
 \openout1 = `index.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
@@ -596,6 +597,10 @@ File: recursos/iconopdf.png Graphic file (type png)
 Package pdftex.def Info: recursos/iconopdf.png  used on input line 135.
 (pdftex.def)             Requested size: 48.17986pt x 48.17986pt.
 
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1 on input line 136.
+
+
 LaTeX Warning: Hyper reference `U2' on page 1 undefined on input line 139.
 
 File: recursos/iconohtml.png Graphic file (type png)
@@ -615,6 +620,10 @@ File: recursos/iconopdf.png Graphic file (type png)
 Package pdftex.def Info: recursos/iconopdf.png  used on input line 156.
 (pdftex.def)             Requested size: 48.17986pt x 48.17986pt.
 
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2 on input line 157.
+
+
 LaTeX Warning: Hyper reference `U3' on page 1 undefined on input line 161.
 
 File: recursos/iconohtml.png Graphic file (type png)
@@ -633,6 +642,10 @@ File: recursos/iconopdf.png Graphic file (type png)
 <use recursos/iconopdf.png>
 Package pdftex.def Info: recursos/iconopdf.png  used on input line 178.
 (pdftex.def)             Requested size: 48.17986pt x 48.17986pt.
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 3 on input line 179.
+
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./recursos/iconohtml.png> 
@@ -680,26 +693,30 @@ File: recursos/iconopdf.png Graphic file (type png)
 <use recursos/iconopdf.png>
 Package pdftex.def Info: recursos/iconopdf.png  used on input line 211.
 (pdftex.def)             Requested size: 48.17986pt x 48.17986pt.
-[2] (./index.aux)
 
-LaTeX Warning: There were undefined references.
+Package longtable Warning: Column widths have changed
+(longtable)                in table 4 on input line 212.
 
- ) 
+
+LaTeX Warning: Hyper reference `U5' on page 2 undefined on input line 216.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
+16.
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+! Argument of \MT@res@a has an extra }.
+<inserted text> 
+                \par 
+l.227 ...�_LUBUNTU/U5-INSTAL·LACIÓ_LUBUNTU.html}
+                                                  {\includegraphics{recursos...
+ 
 Here is how much of TeX's memory you used:
- 14632 strings out of 478287
- 234221 string characters out of 5849289
- 588185 words of memory out of 5000000
- 32550 multiletter control sequences out of 15000+600000
- 499150 words of font info for 68 fonts, out of 8000000 for 9000
+ 14668 strings out of 478287
+ 235043 string characters out of 5849289
+ 587396 words of memory out of 5000000
+ 32580 multiletter control sequences out of 15000+600000
+ 500199 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,9n,77p,1002b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/
-public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr17.pfb>
-Output written on index.pdf (2 pages, 85097 bytes).
-PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 16435 words of extra memory for PDF output out of 17280 (max. 10000000)
-
+ 74i,9n,77p,1002b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
