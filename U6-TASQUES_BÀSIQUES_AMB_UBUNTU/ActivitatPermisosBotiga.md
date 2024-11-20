@@ -1,20 +1,20 @@
 ---
-title: ACTIVITAT BOTIGA
+title: ACTIVITAT BOTIGA (Permisos i propietaris)
 author: "@tofermos 2024"
 lang: "ca-ES"
 papersize: A4
 linestretch: 1.5
 output:
+  pdf_document:
+    toc: true
+    keep_tex: true
+    latex_engine: xelatex
   html_document:
     toc: true
     toc_float: true
     toc_depth: 3
     df_print: paged
     number_sections: false
-  pdf_document:
-    toc: true
-    keep_tex: true
-    latex_engine: xelatex
 ---
 
 \newpage

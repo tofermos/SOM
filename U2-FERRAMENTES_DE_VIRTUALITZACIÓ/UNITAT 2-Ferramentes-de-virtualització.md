@@ -14,7 +14,7 @@ output:
   pdf_document: 
     toc: true
     keep_tex: true
-  word_document:
+  word_document:Tres p
     toc: true
     toc_depth: '3'
 lang: "es-ES"

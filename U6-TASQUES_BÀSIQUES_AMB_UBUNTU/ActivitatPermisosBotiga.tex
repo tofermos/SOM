@@ -1,0 +1,150 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{catalan}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={ACTIVITAT BOTIGA (Permisos i propietaris)},
+  pdfauthor={@tofermos 2024},
+  pdflang={ca-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{ACTIVITAT BOTIGA (Permisos i propietaris)}
+\author{@tofermos 2024}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\setstretch{1.5}
+\newpage
+\renewcommand\tablename{Tabla}
+
+\section{Activitat 1: PC mostrador botiga amb 2
+usuaris}\label{activitat-1-pc-mostrador-botiga-amb-2-usuaris}
+
+\subsection{Descripció del problema}\label{descripciuxf3-del-problema}
+
+Tenim un PC en un mostrador d'una botiga de telefonia mòbil on treballen
+2 técnics-venedors i anem a fer la FCT-Dual. Cadascun treballarem en un
+torn diferent i necessitem compartir informació. Per a què quede
+contància de què fa cadascun de nosaltres hem de crear un usuari
+diferent per a cadascú:
+
+\begin{itemize}
+\tightlist
+\item
+  tecnicMati
+\item
+  tecnicVesprada
+\item
+  tecnicFCTDual
+\end{itemize}
+
+Veiem que, en crear-los, el sistema els ha assignat un grup per defecte
+però nosaltres necessitem per administrar recursos organitzar-nos. Convé
+que els incloem a tots al mateix grup així usarem el grup per assignar
+permisos a carpetes, per exemple i no un a un:
+
+\begin{itemize}
+\tightlist
+\item
+  gr\_tecnics
+\end{itemize}
+
+Crearem una carpeta on compartirem documents entre els tres en
+\emph{\texttt{/home/catalegs}}
+
+Ningú més ha de poder llegir els fitxers d'esta carpeta.
+
+\subsection{Indicacions a seguir.}\label{indicacions-a-seguir.}
+
+Resol i contesta:
+
+1- Crea els usuaris. Fes un inici de sessió en cadascun
+
+2- Crea el grup i assigna els usuaris amb \emph{usermod}
+
+3- Crea la carpeta amb \emph{\texttt{mkdir}} o el GUI. Indica els
+problemes que trobes i como ho soluciones.
+
+4- Intenta entrar a la carpeta amb qualsevol usuari i crear un fitxer
+
+5- Indica el problema i com ho soluciones.
+
+6- Torna a provar
+
+\end{document}

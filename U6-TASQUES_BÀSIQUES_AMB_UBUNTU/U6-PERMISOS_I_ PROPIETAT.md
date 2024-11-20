@@ -1,5 +1,5 @@
 ---
-title: U6. PERMISOS UGO
+title: U6. PERMISOS UGO I PROPIETAT
 author: "@tofermos 2024"
 lang: "ca-ES"
 papersize: A4
