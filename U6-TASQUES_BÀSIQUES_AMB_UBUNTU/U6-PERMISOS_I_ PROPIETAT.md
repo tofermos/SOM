@@ -5,16 +5,16 @@ lang: "ca-ES"
 papersize: A4
 linestretch: 1.5
 output:
+  pdf_document:
+    toc: true
+    keep_tex: true
+    latex_engine: xelatex
   html_document:
     toc: true
     toc_float: true
     toc_depth: 3
     df_print: paged
     number_sections: false
-  pdf_document:
-    toc: true
-    keep_tex: true
-    latex_engine: xelatex
 ---
 
 \newpage
@@ -27,7 +27,7 @@ Els permisos de fitxers i directoris són una part fonamental de la seguretat i 
 
 Les ordres més importants són:
 
-- **`chmod`**: Modificar els permisos de fitxers i directoris.
+- **`chmod`**: Modificar els permisos de fitxers i dels directoris.
 - **`chown`**: Canviar el propietari i grup d’un fitxer o directori.
 
 # 2. Visualització de permisos
