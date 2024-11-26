@@ -191,6 +191,20 @@ GNU/Linux}\label{el-sistema-operatiu-gnulinux}
   \item
     Exemples: \textbf{bash}, \textbf{sh}, \textbf{dash}.
   \end{itemize}
+\end{enumerate}
+
+Els shells diponible sels tenim al fitxer /etc/shells
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{ /etc/shells}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
 \item
   \textbf{Utilitats}:
 
@@ -277,7 +291,7 @@ GNU/Linux}\label{el-sistema-operatiu-gnulinux}
 \item
   Descarrega la imatge ISO des d'\href{https://ubuntu.com/}{ubuntu.com}.
 \item
-  Grava-la en un USB amb eines com \textbf{Rufus} o \textbf{Etcher}.
+  Grava-la en un USB amb eines com \textbf{Ventoy} ( o Rufus, Etcher).
 \item
   Arranca des del USB i segueix el procés d'instal·lació:
 
@@ -289,6 +303,39 @@ GNU/Linux}\label{el-sistema-operatiu-gnulinux}
 \item
   Inicia sessió després de la instal·lació.
 \end{enumerate}
+
+\section{4.1 Versió d'Ubuntu}\label{versiuxf3-dubuntu}
+
+Amb l'ordre:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{lsb\_release} \AttributeTok{{-}a}
+\end{Highlighting}
+\end{Shaded}
+
+o llegintel fitxer de configuració
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{cat}\NormalTok{ /etc/os{-}release}
+\end{Highlighting}
+\end{Shaded}
+
+Una vegada més veiem com en un fitxer de text pla es guarda informació
+del sistema. En este cas:
+
+\begin{itemize}
+\tightlist
+\item
+  Nom del SO
+\item
+  Distribució
+\item
+  Versió
+\end{itemize}
+
+I el fitxer le manté una ordre: lsb\_release
 
 \section{5. Entorn gràfic}\label{entorn-gruxe0fic}
 
@@ -365,6 +412,10 @@ l'escriptori}\label{personalitzaciuxf3-de-lescriptori}
 \item
   Reproductor multimèdia: \textbf{VLC}.
 \end{itemize}
+
+Habitualment entenem per aplciacions les que són gràfiques però no hem
+d'oblidar que hi ha moltes eines que són aplicacions que s'executen en
+modeu CLI. ( apt, net-tools, nano, mdadm\ldots).
 
 \subsection{5.5 Llocs}\label{llocs}
 

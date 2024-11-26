@@ -41,6 +41,12 @@ output:
    - Interfície que permet interactuar amb el sistema.
    - Exemples: **bash**, **sh**, **dash**.
   
+  Els shells diponible sels tenim al fitxer /etc/shells
+  
+  ```bash
+  cat /etc/shells
+  ```
+  
 
 3. **Utilitats**:
    - Comandes bàsiques: `ls`, `cp`, `mv`.
@@ -76,10 +82,29 @@ output:
 
 # 4. Instal·lació de Ubuntu
 1. Descarrega la imatge ISO des d'[ubuntu.com](https://ubuntu.com/).
-2. Grava-la en un USB amb eines com **Rufus** o **Etcher**.
+2. Grava-la en un USB amb eines com **Ventoy** ( o Rufus, Etcher).
 3. Arranca des del USB i segueix el procés d'instal·lació:
    - Idioma, fus horari, particions.
 4. Inicia sessió després de la instal·lació.
+
+# 4.1 Versió d'Ubuntu
+
+Amb l'ordre: 
+```bash
+lsb_release -a
+```
+o llegintel fitxer de configuració
+```bash
+cat /etc/os-release
+```
+
+Una vegada més veiem com en un fitxer de text pla es guarda informació del sistema. En este cas:
+
+* Nom del SO
+* Distribució
+* Versió
+
+I el fitxer le manté una ordre: lsb_release
 
 # 5. Entorn gràfic
 
@@ -107,6 +132,8 @@ output:
 - Navegador web: **Firefox**.
 - Suite ofimàtica: **LibreOffice**.
 - Reproductor multimèdia: **VLC**.
+
+Habitualment entenem per aplciacions les que són gràfiques però no hem d'oblidar que hi ha moltes eines que són aplicacions que s'executen en modeu CLI. ( apt, net-tools, nano, mdadm...).
 
 ## 5.5 Llocs
 

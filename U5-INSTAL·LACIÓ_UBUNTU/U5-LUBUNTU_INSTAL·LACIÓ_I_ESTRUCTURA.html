@@ -2784,6 +2784,10 @@ servidors.</li>
 <li>Exemples: <strong>bash</strong>, <strong>sh</strong>,
 <strong>dash</strong>.</li>
 </ul></li>
+</ol>
+<p>Els shells diponible sels tenim al fitxer /etc/shells</p>
+<pre class="bash"><code>cat /etc/shells</code></pre>
+<ol start="3" style="list-style-type: decimal">
 <li><strong>Utilitats</strong>:
 <ul>
 <li>Comandes bàsiques: <code>ls</code>, <code>cp</code>,
@@ -2855,14 +2859,29 @@ altres programes.</p></li>
 <h1>4. Instal·lació de Ubuntu</h1>
 <ol style="list-style-type: decimal">
 <li>Descarrega la imatge ISO des d’<a href="https://ubuntu.com/">ubuntu.com</a>.</li>
-<li>Grava-la en un USB amb eines com <strong>Rufus</strong> o
-<strong>Etcher</strong>.</li>
+<li>Grava-la en un USB amb eines com <strong>Ventoy</strong> ( o Rufus,
+Etcher).</li>
 <li>Arranca des del USB i segueix el procés d’instal·lació:
 <ul>
 <li>Idioma, fus horari, particions.</li>
 </ul></li>
 <li>Inicia sessió després de la instal·lació.</li>
 </ol>
+</div>
+<div id="versió-dubuntu" class="section level1">
+<h1>4.1 Versió d’Ubuntu</h1>
+<p>Amb l’ordre:</p>
+<pre class="bash"><code>lsb_release -a</code></pre>
+<p>o llegintel fitxer de configuració</p>
+<pre class="bash"><code>cat /etc/os-release</code></pre>
+<p>Una vegada més veiem com en un fitxer de text pla es guarda
+informació del sistema. En este cas:</p>
+<ul>
+<li>Nom del SO</li>
+<li>Distribució</li>
+<li>Versió</li>
+</ul>
+<p>I el fitxer le manté una ordre: lsb_release</p>
 </div>
 <div id="entorn-gràfic" class="section level1">
 <h1>5. Entorn gràfic</h1>
@@ -2946,6 +2965,9 @@ fons</strong>.</li>
 <li>Suite ofimàtica: <strong>LibreOffice</strong>.</li>
 <li>Reproductor multimèdia: <strong>VLC</strong>.</li>
 </ul>
+<p>Habitualment entenem per aplciacions les que són gràfiques però no
+hem d’oblidar que hi ha moltes eines que són aplicacions que s’executen
+en modeu CLI. ( apt, net-tools, nano, mdadm…).</p>
 </div>
 <div id="llocs" class="section level2">
 <h2>5.5 Llocs</h2>
