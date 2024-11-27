@@ -64,7 +64,7 @@ linestretch: 1.5
 
 ||||
 |:----|:--|:--|
-|Instal·lació i estructura d'un Lubuntu|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.pdf)|
+|Instal·lació i estructura d'un Lubuntu|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_ESTRUCTURA.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_ESTRUCTURA.pdf)|
 
 ### [6 Tasques bàsiques amb Ubuntu](#U6)
 
