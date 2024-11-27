@@ -5,16 +5,16 @@ lang: "ca-ES"
 papersize: A4
 linestretch: 1.5
 output:
+  pdf_document:
+    toc: true
+    keep_tex: true
+    latex_engine: xelatex
   html_document:
     toc: true
     toc_float: true
     toc_depth: 3
     df_print: paged
     number_sections: false
-  pdf_document:
-    toc: true
-    keep_tex: true
-    latex_engine: xelatex
 ---
 
 \newpage
@@ -340,6 +340,8 @@ Per tant, està en un nivell inferior al Gestor de Finestres, navegadors web, ed
 > La MV de VirutalBox et permet fer les proves abans.
 
 ##  Canviar en la sessió de Gestor de Finestres
+
+Instal·la un nou Gestor de finestres
 
 ```bash
 sudo apt install openbox

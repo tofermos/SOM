@@ -143,11 +143,10 @@
 \newpage
 \renewcommand\tablename{Tabla}
 
-\section{1. El sistema operatiu GNU/Linux.
-Característiques}\label{el-sistema-operatiu-gnulinux.-caracteruxedstiques}
+\section{1. El sistema operatiu
+GNU/Linux.}\label{el-sistema-operatiu-gnulinux.}
 
-\subsection{1.1 El sistema operatiu
-GNU/Linux}\label{el-sistema-operatiu-gnulinux}
+\subsection{1.1 Característiques}\label{caracteruxedstiques}
 
 \begin{itemize}
 \tightlist
@@ -159,7 +158,7 @@ GNU/Linux}\label{el-sistema-operatiu-gnulinux}
   Escalable: pot ser utilitzat en dispositius menuts o grans servidors.
 \end{itemize}
 
-\section{1.2 Distribucions}\label{distribucions}
+\subsection{1.2 Distribucions}\label{distribucions}
 
 Una \textbf{distribució} Linux (distro) és un sistema operatiu basat en
 el nucli Linux que inclou programari específic, eines d'administració,
@@ -185,8 +184,9 @@ Manjaro & \\
 
 Als cicles de FP ens centrarem en \textbf{Ubuntu}
 
-\subsection{1.4 Característiques
-d'Ubuntu}\label{caracteruxedstiques-dubuntu}
+\section{2 UBUNTU}\label{ubuntu}
+
+\subsection{2.1 Característiques}\label{caracteruxedstiques-1}
 
 \begin{itemize}
 \tightlist
@@ -202,10 +202,10 @@ d'Ubuntu}\label{caracteruxedstiques-dubuntu}
   \textbf{Portabilitat}: Funciona en diferents plataformes.
 \end{itemize}
 
-\section{2. La Instal·lació de
+\subsection{2.2 La Instal·lació de
 Ubuntu}\label{la-installaciuxf3-de-ubuntu}
 
-\subsection{2.1 Pasos}\label{pasos}
+\textbf{Resum dels pasos a seguir}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -227,7 +227,7 @@ Ubuntu}\label{la-installaciuxf3-de-ubuntu}
   Canvia el BootOrder i incia sessió.
 \end{enumerate}
 
-\subsection{2.2 Versió d'Ubuntu}\label{versiuxf3-dubuntu}
+\subsection{2.3 Versió d'Ubuntu}\label{versiuxf3-dubuntu}
 
 Amb l'ordre:
 
@@ -258,7 +258,7 @@ del sistema. En este cas:
   Versió
 \end{itemize}
 
-I el fitxer el manté una ordre: lsb\_release
+I el fitxer el manté una ordre: \texttt{lsb\_release}
 
 \section{3 Estructura}\label{estructura}
 
@@ -318,7 +318,7 @@ que no reiniciem sessió amb l'usuari.
 
 \texttt{apt}, ǹet-tools\texttt{,}mdadm',
 
-\subsubsection{Curiositats}\label{curiositats}
+\subsubsection{Curiositat}\label{curiositat}
 
 Podem instal·lar un emulador del shell més avançat de MS-Windows a
 Ubuntu: el PowerShell.
@@ -327,15 +327,38 @@ Ubuntu: el PowerShell.
 
 \subsubsection{3.3.1 Entorn d'escriptori}\label{entorn-descriptori}
 
-Un \textbf{entorn d'escriptori} és el conjunt d'elements gràfics que
-defineixen la interfície visual del sistema operatiu. Inclou la gestió
-de finestres, menús, barres d'eines, icones i aplicacions
-predeterminades, com el gestor d'arxius o l'emulador de terminal.
+\begin{itemize}
+\item
+  Cada Distro en porta un Entorn per defecte que podem canviar i tindre
+  un altre o més d'un i triar en l'inici de sessió d'usuari.
+\item
+  Un \textbf{Entorn d'escriptori} és el conjunt d'elements gràfics que
+  defineixen la interfície visual del sistema operatiu. Inclou:
 
-CAda Distro en porta un per defecte que podem canviar i tindre un altre
-o més d'un i triar en l'inici de sessió d'usuari.
+  \begin{itemize}
+  \item
+    Gestor de finestres. (a)
+  \item
+    Gestor de fitxers.
+  \item
+    Menús, barres d'eines, icones i aplicacions predeterminades.
+  \item
+    Emulador de terminal.
 
-\textbf{Exemples:} Gnome, KDE Plasma, Xfce, LXQt, Mate, Cinnamon.
+    \begin{enumerate}
+    \def\labelenumi{(\alph{enumi})}
+    \tightlist
+    \item
+      Usat per tots els altres components ( està un nivell per baix)
+    \end{enumerate}
+  \end{itemize}
+\item
+  Tot que \textbf{cada eçentorn d'escriptori té el seu gestor de
+  finestres i gestor de fitxers per defecte però podeu canviar-los} i es
+  manté l'estructura.
+\item
+  No tots els canvis funcionen perfectament.
+\end{itemize}
 
 \subsubsection{3.3.2 Gestor d'arxius}\label{gestor-darxius}
 
@@ -362,6 +385,17 @@ d'un\ldots{}
 
 \textbf{Exemples:} Gnome Terminal, Konsole (KDE), Xfce Terminal,
 QTerminal (LXQt).
+
+\subsubsection{3.3.4 Gestor de Finestres (+ informació al Punt
+6)}\label{gestor-de-finestres-informaciuxf3-al-punt-6}
+
+El gestor de finestres és un component més bàsic per al funcionament de
+l'entorn gràfic en general. Controla les finestres de totes les
+aplicacions, no només del gestor de fitxers. Per tant, està en un nivell
+inferior al Gestor de Finestres, navegadors web, editors de text,
+terminals, etc.
+
+\emph{(+ informació al Punt 6: Fora de temari en SOM)}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -428,12 +462,8 @@ d'Ubuntu (pre-Gnome 2017). & \texttt{ubuntu-unity-desktop} &
 (\texttt{gnome-terminal})} \\
 \end{longtable}
 
-\subsection{4.2 Exemples d'instal·lació i
-desinstal·lació}\label{exemples-dinstallaciuxf3-i-desinstallaciuxf3}
-
-\subsubsection{\texorpdfstring{\textbf{1. Instal·lar i desinstal·lar un
-entorn d'escriptori (LXQt -
-Lubuntu)}}{1. Instal·lar i desinstal·lar un entorn d'escriptori (LXQt - Lubuntu)}}\label{installar-i-desinstallar-un-entorn-descriptori-lxqt---lubuntu}
+\subsection{4.2 Instal·lació i desinstal·lació d'un entorn
+d'escriptori}\label{installaciuxf3-i-desinstallaciuxf3-dun-entorn-descriptori}
 
 \begin{itemize}
 \item
@@ -441,7 +471,7 @@ Lubuntu)}}{1. Instal·lar i desinstal·lar un entorn d'escriptori (LXQt - Lubunt
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{sudo}\NormalTok{ apt install lubuntu{-}desktop}
+\FunctionTok{sudo}\NormalTok{ apt install ubuntu{-}gnome{-}desktop}
 \end{Highlighting}
 \end{Shaded}
 \item
@@ -449,15 +479,54 @@ Lubuntu)}}{1. Instal·lar i desinstal·lar un entorn d'escriptori (LXQt - Lubunt
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{sudo}\NormalTok{ apt remove }\AttributeTok{{-}{-}purge}\NormalTok{ lubuntu{-}desktop}
+\FunctionTok{sudo}\NormalTok{ apt remove }\AttributeTok{{-}{-}purge}\NormalTok{ ubuntu{-}gnome{-}desktop}
 \FunctionTok{sudo}\NormalTok{ apt autoremove }\AttributeTok{{-}{-}purge}
 \end{Highlighting}
 \end{Shaded}
 \end{itemize}
 
-\subsubsection{\texorpdfstring{\textbf{2. Instal·lar i desinstal·lar un
-gestor de fitxers (Dolphin -
-KDE)}}{2. Instal·lar i desinstal·lar un gestor de fitxers (Dolphin - KDE)}}\label{installar-i-desinstallar-un-gestor-de-fitxers-dolphin---kde}
+\textbf{El gestor de pantalles}
+
+Quan instal·les un nou escriptori (com ara GNOME en Lubuntu, que
+utilitza per defecte LXQt), potser et demane que tries quin
+\textbf{gestor de pantalles (display manager)} prefreixes usar.
+
+El gestor de pantalles és el programa que s'encarrega de la interfície
+d'inici de sessió gràfica. És el que veus quan encens l'ordinador i et
+demana que introduesques el teu usuari, contrasenya i l'escriptori
+gràfic o sessió vols iniciar (per exemple, GNOME, KDE, LXQt, etc.).
+
+\begin{itemize}
+\tightlist
+\item
+  gdm3 (GNOME Display Manager): Dissenyat per a GNOME, però pot
+  gestionar altres entorns gràfics.
+\item
+  sddm (Simple Desktop Display Manager): Sovint utilitzat per entorns
+  lleugers com LXQt o KDE Plasma.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{png/avisGestorPantalla.png}
+\caption{\emph{Figura 1: gestor de pantalles}}
+\end{figure}
+
+Si vols prioritzar l'ús de GNOME (el que acabes d'instal·lar),
+selecciona gdm3. Si prefereixes mantenir l'entorn lleuger de Lubuntu
+(LXQt), pots optar per sddm.
+
+Si en algun moment necessites canviar de gestor de pantalles, pots
+fer-ho amb l'a comand'ordre
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ dpkg{-}reconfigure gdm3}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{4.3 Instal·lar i desinstal·lar un gestor de
+fitxers}\label{installar-i-desinstallar-un-gestor-de-fitxers}
 
 \begin{itemize}
 \item
@@ -478,9 +547,8 @@ KDE)}}{2. Instal·lar i desinstal·lar un gestor de fitxers (Dolphin - KDE)}}\la
 \end{Shaded}
 \end{itemize}
 
-\subsubsection{\texorpdfstring{\textbf{3. Instal·lar i desinstal·lar un
-emulador de terminal (Tilix -
-Budgie)}}{3. Instal·lar i desinstal·lar un emulador de terminal (Tilix - Budgie)}}\label{installar-i-desinstallar-un-emulador-de-terminal-tilix---budgie}
+\subsection{4.4 Instal·lar i desinstal·lar un emulador de
+terminal}\label{installar-i-desinstallar-un-emulador-de-terminal}
 
 \begin{itemize}
 \item
@@ -515,7 +583,7 @@ Després de desinstal·lar qualsevol paquet, és recomanable executar:
 Això elimina dependències innecessàries per alliberar espai al sistema.
 \end{quote}
 
-\subsection{4.3 Dreceres (combinació de
+\subsection{4.5 Dreceres (combinació de
 tecles)}\label{dreceres-combinaciuxf3-de-tecles}
 
 Lligat a l'anterior punt, pot ser interessant accedir a l'emulador de
@@ -560,7 +628,7 @@ instal·lar)
 \caption{Figura4: Creem una nova drecera}
 \end{figure}
 
-\subsection{4.3 Aplicacions}\label{aplicacions}
+\subsection{4.6 Aplicacions}\label{aplicacions}
 
 \begin{itemize}
 \tightlist
@@ -601,7 +669,129 @@ la intercanviabilitat.
 Linux és més gran i friqui encara!}
 
 Tot açò junt a característiques com ser multiusuari (poder tindre
-sessiona de terminal de distints usuaris al mateix temps) fa que siga
+sessions de terminal de distints usuaris al mateix temps) fa que siga
 ideal per a una introducció al món del Sistema Operatius.
+
+Podem fer proves al nostre entorn de proves (màquines virtuals de
+VirtualBox) instal·lant Escriptoris, Gestors o Terminals, però una
+vegada tinguem clar quin volem, interessa alleugerir la instal·lació amb
+només el que anem a usar.
+
+\section{6 (Fora de temari) Gestor de
+finestres}\label{fora-de-temari-gestor-de-finestres}
+
+El gestor de finestres és un component més bàsic per al funcionament de
+l'entorn gràfic en general. Controla les finestres de totes les
+aplicacions, no només del gestor de fitxers. Per tant, està en un nivell
+inferior al Gestor de Finestres, navegadors web, editors de text,
+terminals, etc.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1390}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2086}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2032}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2193}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2299}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Entorn d'Escriptori}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Gestor de Finestres Predeterminat}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Gestor de Fitxers Predeterminat}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Alternatives de Gestor de Finestres}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Alternatives de Gestor de Fitxers}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{GNOME} & Mutter & Nautilus (Files) & Openbox, i3, bspwm &
+Thunar, PCManFM, Dolphin \\
+\textbf{LXQt} & Openbox (o altres lleugers) & PCManFM-Qt & i3, Fluxbox,
+bspwm & Thunar, Dolphin, Nautilus \\
+\textbf{MATE} & Marco & Caja & Openbox, i3, bspwm & Nautilus, Dolphin,
+Thunar \\
+\textbf{KDE Plasma} & KWin & Dolphin & Openbox, i3, bspwm & Thunar,
+Nautilus, PCManFM \\
+\textbf{Xfce} & Xfwm & Thunar & Openbox, i3, bspwm & Nautilus, Dolphin,
+PCManFM \\
+& & & & \\
+\textbf{Unity (antic)} & Compiz & Nautilus & Openbox, Mutter & Thunar,
+Dolphin, PCManFM \\
+& & & & \\
+\end{longtable}
+
+\textbf{Recomanacions}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Compatibilitat}: Quan canvies un gestor de finestres o un
+  gestor de fitxers, assegura't que és compatible amb l'entorn que
+  utilitzes. Això és especialment important en entorns com GNOME o KDE,
+  que tenen una integració molt ajustada.
+\item
+  \textbf{Flexibilitat}: En entorns més lleugers com \textbf{LXQt},
+  \textbf{LXDE} o \textbf{Xfce}, és més fàcil combinar components
+  diferents sense trencar l'experiència de l'escriptori.
+\item
+  \textbf{Minimalisme}: Si utilitzes un gestor de finestres minimalista
+  com \textbf{i3} o \textbf{bspwm}, sovint hauràs de configurar
+  manualment el gestor de fitxers i altres components.
+\end{itemize}
+
+\begin{quote}
+\textbf{Nota}
+
+La MV de VirutalBox et permet fer les proves abans.
+\end{quote}
+
+\subsection{Canviar en la sessió de Gestor de
+Finestres}\label{canviar-en-la-sessiuxf3-de-gestor-de-finestres}
+
+Instal·la un nou Gestor de finestres
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt install openbox}
+\end{Highlighting}
+\end{Shaded}
+
+Substitueix Marco pel nou gestor:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{openbox} \AttributeTok{{-}{-}replace}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Canvi permanent}\label{canvi-permanent}
+
+Al nostre Lubuntu, com exemple, tenim el Gestor de finestres OpenBox.
+Ara, instal·lem el i3 i el posem com predeterminat. El provarem
+
+\begin{figure}
+\centering
+\includegraphics{png/AjustsGestorFinestres0.png}
+\caption{\emph{Figura5: Canvi del gestor de finestres}}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{png/AjustsGestorFinestres1.png}
+\caption{\emph{Figura6: Canvi del gestor de finestres}}
+\end{figure}
+
+Vegem 3 Gestors de Fitxers amb el mateix Gestor de Finetres. Podem fer
+canvis i comprovar que totes les combinacions no funcionen massa bé.
+
+\begin{figure}
+\centering
+\includegraphics{png/3ambOpenBox.png}
+\caption{\emph{Figura7: Caja, Thunar i PCMan-FM-Qt amb OpenBox}}
+\end{figure}
 
 \end{document}
