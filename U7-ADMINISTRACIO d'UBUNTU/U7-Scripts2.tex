@@ -1,0 +1,342 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12 pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdfauthor={Tomàs Ferrandis Moscardó},
+  pdflang={es-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{U7- ADMINISTRACIÓ D'UBUNTU}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{~BUCLES EN ELS SCRIPTS}
+\author{Tomàs Ferrandis Moscardó}
+\date{}
+
+\begin{document}
+\maketitle
+
+\setstretch{1.5}
+En Bash, els bucles \textbf{\texttt{for}} i
+\textbf{\texttt{for\ ...\ in}} són essencialment dues formes del mateix
+concepte. No obstant això, la seva sintaxi i ús poden diferir
+lleugerament segons el context.
+
+\section{\texorpdfstring{\textbf{El bucle \texttt{for} en
+Bash}}{El bucle for en Bash}}\label{el-bucle-for-en-bash}
+
+\subsection{\texorpdfstring{\textbf{1.
+\texttt{for\ ...\ in}}}{1. for ... in}}\label{for-...-in}
+
+Aquest és el mètode més comú i flexible per fer un bucle \texttt{for} a
+Bash. Permet iterar sobre una llista explícita, una seqüència numèrica o
+el resultat d'una comanda.
+
+\subsubsection{\texorpdfstring{\textbf{Sintaxi}:}{Sintaxi:}}\label{sintaxi}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ variable }\KeywordTok{in}\NormalTok{ valor1 valor2 valor3}\KeywordTok{;} \ControlFlowTok{do}
+    \CommentTok{\# Accions amb la variable}
+\ControlFlowTok{done}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{\textbf{Exemples}:}{Exemples:}}\label{exemples}
+
+\paragraph{Iterar sobre una llista
+fixa:}\label{iterar-sobre-una-llista-fixa}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\ControlFlowTok{for}\NormalTok{ fruita }\KeywordTok{in}\NormalTok{ poma taronja raïm}\KeywordTok{;} \ControlFlowTok{do}
+    \BuiltInTok{echo} \StringTok{"M\textquotesingle{}agrada la }\VariableTok{$fruita}\StringTok{!"}
+\ControlFlowTok{done}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sortida:}
+
+\begin{verbatim}
+M'agrada la poma!
+M'agrada la taronja!
+M'agrada la raïm!
+\end{verbatim}
+
+\paragraph{Iterar sobre una seqüència de
+números:}\label{iterar-sobre-una-sequxfcuxe8ncia-de-nuxfameros}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\ControlFlowTok{for}\NormalTok{ num }\KeywordTok{in} \DataTypeTok{\{}\DecValTok{1}\DataTypeTok{..}\DecValTok{5}\DataTypeTok{\}}\KeywordTok{;} \ControlFlowTok{do}
+    \BuiltInTok{echo} \StringTok{"Número: }\VariableTok{$num}\StringTok{"}
+\ControlFlowTok{done}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sortida:}
+
+\begin{verbatim}
+Número: 1
+Número: 2
+Número: 3
+Número: 4
+Número: 5
+\end{verbatim}
+
+\paragraph{Iterar sobre resultats d'una
+comanda:}\label{iterar-sobre-resultats-duna-comanda}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\ControlFlowTok{for}\NormalTok{ fitxer }\KeywordTok{in} \VariableTok{$(}\FunctionTok{ls} \PreprocessorTok{*}\NormalTok{.txt}\VariableTok{)}\KeywordTok{;} \ControlFlowTok{do}
+    \BuiltInTok{echo} \StringTok{"Fitxer de text: }\VariableTok{$fitxer}\StringTok{"}
+\ControlFlowTok{done}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sortida (depèn del sistema):}
+
+\begin{verbatim}
+Fitxer de text: document1.txt
+Fitxer de text: llista.txt
+Fitxer de text: notes.txt
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{\textbf{2. \texttt{for} (sense
+\texttt{in})}}{2. for (sense in)}}\label{for-sense-in}
+
+Quan no es proporciona cap llista després del \texttt{for}, Bash
+assumeix una seqüència implícita (\texttt{\{1..N\}} o una seqüència
+numèrica generada d'altres maneres). Aquest mètode s'utilitza
+principalment en combinació amb \texttt{C-style\ for\ loops}.
+
+\subsubsection{\texorpdfstring{\textbf{Sintaxi}:}{Sintaxi:}}\label{sintaxi-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for} \KeywordTok{((} \VariableTok{inicialitzaci}\NormalTok{ó}\KeywordTok{;} \VariableTok{condici}\NormalTok{ó}\KeywordTok{;} \VariableTok{increment} \KeywordTok{));} \ControlFlowTok{do}
+    \CommentTok{\# Accions dins del bucle}
+\ControlFlowTok{done}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{\texorpdfstring{\textbf{Exemple}:}{Exemple:}}\label{exemple}
+
+\paragraph{Bucles d'estil C:}\label{bucles-destil-c}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\ControlFlowTok{for} \KeywordTok{((} \VariableTok{i}\OperatorTok{=}\DecValTok{1}\KeywordTok{;} \VariableTok{i}\OperatorTok{\textless{}=}\DecValTok{5}\KeywordTok{;} \VariableTok{i}\OperatorTok{++} \KeywordTok{));} \ControlFlowTok{do}
+    \BuiltInTok{echo} \StringTok{"Número: }\VariableTok{$i}\StringTok{"}
+\ControlFlowTok{done}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{Sortida:}
+
+\begin{verbatim}
+Número: 1
+Número: 2
+Número: 3
+Número: 4
+Número: 5
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{\texorpdfstring{\textbf{Comparació entre \texttt{for} i
+\texttt{for\ ...\ in}}}{Comparació entre for i for ... in}}\label{comparaciuxf3-entre-for-i-for-...-in}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2393}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4017}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3590}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Característica
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\texttt{for\ ...\ in}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\texttt{for} (estil C)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Iteració explícita} & Itera sobre una llista o seqüència donada.
+& Control total sobre inicialització i increment. \\
+\textbf{Usos comuns} & Treballar amb llistes o sortides de comandes. &
+Bucle numèric controlat manualment. \\
+\textbf{Simplicitat} & Més senzill i llegible per llistes. & Més
+complex, però més flexible en casos numèrics. \\
+\textbf{Exemple típic} & \texttt{for\ item\ in\ a\ b\ c;\ do\ ...\ done}
+& \texttt{for\ ((\ i=1;\ i\textless{}=10;\ i++\ ));\ do\ ...\ done} \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{\texorpdfstring{\textbf{Quan utilitzar cada
+tipus?}}{Quan utilitzar cada tipus?}}\label{quan-utilitzar-cada-tipus}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\texttt{for\ ...\ in}}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Ideal per treballar amb llistes definides o resultats de comandes.
+  \item
+    Exemple: Processar fitxers, iterar sobre paraules, etc.
+  \end{itemize}
+\item
+  \textbf{\texttt{for} (estil C)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Ideal per a bucles numèrics o quan necessites més control sobre les
+    condicions d'inici, finalització i increment.
+  \end{itemize}
+\end{itemize}
+
+\end{document}

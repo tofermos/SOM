@@ -76,5 +76,10 @@ linestretch: 1.5
 |Activitat. Usuari i permisos|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ActivitatPermisosBotiga.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ActivitatPermisosBotiga.pdf)|
 
 
+### [7 Administració en Ubuntu](#U7)
 
-
+||||
+|:----|:--|:--|
+|Variables|[![](recursos/iconohtml.png)](U7-Variables.html)|[![](recursos/iconopdf.png)](U7-Variables.pdf)|
+|Scripts en Linux (I)|[![](recursos/iconohtml.png)](U7-Scripts.html)|[![](recursos/iconopdf.png)](U7-Scripts.pdf)|
+|Scripts en Linux (II). Bulcles|[![](recursos/iconohtml.png)](U7-Scripts2.html)|[![](recursos/iconopdf.png)](U7-Scripts2.pdf)|

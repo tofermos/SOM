@@ -1,0 +1,340 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12 pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdfauthor={Tomàs Ferrandis Moscardó},
+  pdflang={es-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{U7- ADMINISTRACIÓ D'UBUNTU}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{~INTRODUCCIÓ ALS SCRIPTS}
+\author{Tomàs Ferrandis Moscardó}
+\date{}
+
+\begin{document}
+\maketitle
+
+\setstretch{1.5}
+\section{\texorpdfstring{1. La primera línia:
+\texttt{\#!/bin/bash}}{1. La primera línia: \#!/bin/bash}}\label{la-primera-luxednia-binbash}
+
+\begin{itemize}
+\tightlist
+\item
+  La línia \texttt{\#!/bin/bash} indica al sistema que ha d'executar
+  l'script amb Bash.\\
+\item
+  Sense aquesta línia, el sistema podria intentar executar l'script amb
+  un altre shell i donar errors.
+\end{itemize}
+
+\section{Exemple:}\label{exemple}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\BuiltInTok{echo} \StringTok{"Aquest script s\textquotesingle{}executa amb Bash"}
+\end{Highlighting}
+\end{Shaded}
+
+\section{2. Extensió i assignació de permís
+d'execució}\label{extensiuxf3-i-assignaciuxf3-de-permuxeds-dexecuciuxf3}
+
+\begin{itemize}
+\tightlist
+\item
+  Els scripts solen tenir l'extensió \texttt{.sh} per identificar-los
+  fàcilment.\\
+\item
+  Passos per crear i executar un script:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \item
+    \textbf{Crea un fitxer nou:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{nano}\NormalTok{ exemple.sh}
+\end{Highlighting}
+\end{Shaded}
+  \item
+    \textbf{Escriu el codi dins del fitxer i guarda'l.}\\
+  \item
+    \textbf{Dona permís d'execució:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{chmod}\NormalTok{ +x exemple.sh}
+\end{Highlighting}
+\end{Shaded}
+  \item
+    \textbf{Executa l'script:}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{./exemple.sh}
+\end{Highlighting}
+\end{Shaded}
+  \end{enumerate}
+\end{itemize}
+
+\section{3. Assignar valor a una variable i
+llegir-la}\label{assignar-valor-a-una-variable-i-llegir-la}
+
+\begin{itemize}
+\item
+  Pots assignar valors a variables sense espais:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\VariableTok{nom}\OperatorTok{=}\StringTok{"Maria"}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Per utilitzar o llegir el valor de la variable, escriu \texttt{\$}
+  seguit del nom:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{echo} \StringTok{"Hola, }\VariableTok{$nom}\StringTok{!"}
+\end{Highlighting}
+\end{Shaded}
+\item
+  Per llegir dades de l'usuari, utilitza \texttt{read}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\BuiltInTok{echo} \StringTok{"Com et dius?"}
+\BuiltInTok{read} \VariableTok{nom}
+\BuiltInTok{echo} \StringTok{"Hola, }\VariableTok{$nom}\StringTok{! Encantat de conèixer{-}vos."}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+
+\section{\texorpdfstring{4. Els paràmetres especials \texttt{\$0},
+\texttt{\$1}, \texttt{\$2},
+\ldots{}}{4. Els paràmetres especials \$0, \$1, \$2, \ldots{}}}\label{els-paruxe0metres-especials-0-1-2}
+
+\begin{itemize}
+\tightlist
+\item
+  Quan executes un script, pots passar valors com a paràmetres.\\
+\item
+  Aquests es llegeixen amb \texttt{\$1}, \texttt{\$2}, etc.
+\end{itemize}
+
+\section{Exemple d'script amb
+paràmetres:}\label{exemple-dscript-amb-paruxe0metres}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+\BuiltInTok{echo} \StringTok{"Nom de l\textquotesingle{}script: }\VariableTok{$0}\StringTok{"}
+\BuiltInTok{echo} \StringTok{"Primer paràmetre: }\VariableTok{$1}\StringTok{"}
+\BuiltInTok{echo} \StringTok{"Segon paràmetre: }\VariableTok{$2}\StringTok{"}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Com executar-lo:}\label{com-executar-lo}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{./exemple.sh}\NormalTok{ Hola Món}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Sortida:}\label{sortida}
+
+\begin{verbatim}
+Nom de l'script: ./exemple.sh
+Primer paràmetre: Hola
+Segon paràmetre: Món
+\end{verbatim}
+
+\section{\texorpdfstring{5. Comprovar si un paràmetre és un fitxer o un
+directori amb
+\texttt{if}}{5. Comprovar si un paràmetre és un fitxer o un directori amb if}}\label{comprovar-si-un-paruxe0metre-uxe9s-un-fitxer-o-un-directori-amb-if}
+
+\begin{itemize}
+\tightlist
+\item
+  Amb condicions, pots comprovar si un paràmetre és un fitxer o un
+  directori.
+\end{itemize}
+
+\section{Exemple:}\label{exemple-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#!/bin/bash}
+
+\ControlFlowTok{if} \BuiltInTok{[} \VariableTok{$\#} \OtherTok{{-}eq}\NormalTok{ 0 }\BuiltInTok{]}\KeywordTok{;} \ControlFlowTok{then}
+  \BuiltInTok{echo} \StringTok{"Per favor, passa un fitxer o directori com a paràmetre."}
+  \BuiltInTok{exit}\NormalTok{ 1}
+\ControlFlowTok{fi}
+
+\VariableTok{element}\OperatorTok{=}\VariableTok{$1}
+
+\ControlFlowTok{if} \BuiltInTok{[} \OtherTok{{-}f} \StringTok{"}\VariableTok{$element}\StringTok{"} \BuiltInTok{]}\KeywordTok{;} \ControlFlowTok{then}
+  \BuiltInTok{echo} \StringTok{"}\VariableTok{$element}\StringTok{ és un fitxer."}
+\ControlFlowTok{elif} \BuiltInTok{[} \OtherTok{{-}d} \StringTok{"}\VariableTok{$element}\StringTok{"} \BuiltInTok{]}\KeywordTok{;} \ControlFlowTok{then}
+  \BuiltInTok{echo} \StringTok{"}\VariableTok{$element}\StringTok{ és un directori."}
+\ControlFlowTok{else}
+  \BuiltInTok{echo} \StringTok{"}\VariableTok{$element}\StringTok{ no existeix o no és ni un fitxer ni un directori."}
+\ControlFlowTok{fi}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Com executar-lo:}\label{com-executar-lo-1}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{./exemple.sh}\NormalTok{ nom\_fitxer\_o\_directori}
+\end{Highlighting}
+\end{Shaded}
+
+\section{Resum de comandes clau}\label{resum-de-comandes-clau}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \texttt{\#!/bin/bash}: Especifica que l'script s'executa amb Bash.\\
+\item
+  \texttt{chmod\ +x\ nom\_script.sh}: Dona permisos d'execució.\\
+\item
+  \texttt{\$0}, \texttt{\$1}, \texttt{\$2}: Accedeix al nom de l'script
+  i als paràmetres.\\
+\item
+  \texttt{read}: Llegeix una entrada de l'usuari.\\
+\item
+  \texttt{{[}\ -f\ {]}}, \texttt{{[}\ -d\ {]}}: Comprova si un paràmetre
+  és un fitxer o un directori.
+\end{enumerate}
+
+\end{document}
