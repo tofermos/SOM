@@ -1,0 +1,184 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12 pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdfauthor={Tomàs Ferrandis Moscardó},
+  pdflang={es-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{U7-ADMINISTRACIÓ D'UBUNTU}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{~Exercicis scripts}
+\author{Tomàs Ferrandis Moscardó}
+\date{}
+
+\begin{document}
+\maketitle
+
+\setstretch{1.5}
+\subsubsection{\texorpdfstring{\textbf{Exercici 1: Nom de l'usuari
+actual}}{Exercici 1: Nom de l'usuari actual}}\label{exercici-1-nom-de-lusuari-actual}
+
+Crea un script que mostre el nom de l'usuari que està executant el
+sistema i el guarde en una variable.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 2: Llistat de
+fitxers}}{Exercici 2: Llistat de fitxers}}\label{exercici-2-llistat-de-fitxers}
+
+Crea un script que, donat un directori com a paràmetre, mostre el
+llistat de fitxers que conté i guarde eixe llistat en una variable.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 3: Espai lliure al
+disc}}{Exercici 3: Espai lliure al disc}}\label{exercici-3-espai-lliure-al-disc}
+
+Crea un script que calcule l'espai lliure al disc i el mostre per
+pantalla, guardant-lo també en una variable.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 4: Número de fitxers en
+un
+directori}}{Exercici 4: Número de fitxers en un directori}}\label{exercici-4-nuxfamero-de-fitxers-en-un-directori}
+
+Crea un script que conte quants fitxers hi ha en un directori
+especificat per l'usuari i mostre el resultat per pantalla.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 5: Llig el contingut
+d'un
+fitxer}}{Exercici 5: Llig el contingut d'un fitxer}}\label{exercici-5-llig-el-contingut-dun-fitxer}
+
+Crea un script que llija el contingut d'un fitxer donat per l'usuari com
+a paràmetre i el mostre per pantalla.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 6: Informació del
+sistema}}{Exercici 6: Informació del sistema}}\label{exercici-6-informaciuxf3-del-sistema}
+
+Crea un script que mostre informació bàsica del sistema, com el nom de
+l'ordinador, la versió del kernel i el temps que porta el sistema en
+funcionament.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 7: Paràmetres
+múltiples}}{Exercici 7: Paràmetres múltiples}}\label{exercici-7-paruxe0metres-muxfaltiples}
+
+Crea un script que lligca diversos paràmetres passats per l'usuari i els
+mostre per pantalla.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 8: Crear un
+fitxer}}{Exercici 8: Crear un fitxer}}\label{exercici-8-crear-un-fitxer}
+
+Crea un script que cree un fitxer amb un nom indicat per l'usuari com a
+paràmetre i escriga un text predefinit dins d'eixe fitxer.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 9: Comprovar si un
+fitxer
+existeix}}{Exercici 9: Comprovar si un fitxer existeix}}\label{exercici-9-comprovar-si-un-fitxer-existeix}
+
+Crea un script que comprove si un fitxer donat per l'usuari existeix i
+mostre un missatge indicant si està present o no.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{\textbf{Exercici 10: Processos en
+execució}}{Exercici 10: Processos en execució}}\label{exercici-10-processos-en-execuciuxf3}
+
+Crea un script que mostre el nombre de processos que actualment estan en
+execució al sistema i guarde eixa informació en una variable. A més, el
+script hauria de mostrar el procés amb més consum de CPU.
+
+\end{document}
