@@ -310,9 +310,9 @@ Aquí tens una guia completa sobre l'ordre `locate`, incloent-hi la diferència 
    ```
 
 2. **Cerca per part del nom**
-   ```bash
-   locate smx                          # Mostra tots els fitxers i directoris que contenen "smx" en el nom.
-   ```
+```bash
+locate smx                          # Mostra tots els fitxers i directoris que contenen "smx" en el nom.
+```
 
 ---
 
@@ -320,38 +320,39 @@ Aquí tens una guia completa sobre l'ordre `locate`, incloent-hi la diferència 
 
 ### 1. Limitar el nombre de resultats (`-n`)
 
-   - Limita el nombre de resultats que `locate` retorna.
-   ```bash
-   locate -n 5 tomas                  # Mostra només els primers 5 resultats.
-   ```
+- Limita el nombre de resultats que `locate` retorna.
+```bash
+locate -n 5 tomas                  # Mostra només els primers 5 resultats.
+```
 
 ### 2. Cerca insensible a majúscules/minúscules (`-i`)
 
-   - Cerca sense diferenciar entre majúscules i minúscules.
-   ```bash
-   locate -i smx                        # Cerca "smx" sense distingir majúscules o minúscules.
-   ```
+- Cerca sense diferenciar entre majúscules i minúscules.
+```bash
+locate -i smx                        # Cerca "smx" sense distingir majúscules o minúscules.
+```
 
 ### 3. Usar expressions regulars (`locate | grep`)
 
-   - `locate` no suporta expressions regulars directament, però es pot utilitzar `grep` per filtrar els resultats.
-   ```bash
-   locate .pdf | grep -E 'tomas|marienriquez'  # Cerca fitxers PDF amb "tomas" o "marienriquez" en el nom.
-   ```
+- `locate` no suporta expressions regulars directament, però es pot utilitzar `grep` per filtrar els resultats.
+```bash
+locate .pdf | grep -E 'tomas|marienriquez'  # Cerca fitxers PDF amb "tomas" o "marienriquez" en el nom.
+```
 
 ### 4. Excloure resultats amb una paraula específica (`grep -v`)
 
-   - Exclou resultats amb `grep -v`.
-   ```bash
-   locate smx | grep -v "backup"        # Cerca "smx" i exclou els resultats que continguin "backup".
-   ```
+- Exclou resultats amb `grep -v`.
+```bash
+locate smx | grep -v "backup"        # Cerca "smx" i exclou els resultats que continguin "backup".
+```
 
 ### 5. Actualitzar la base de dades (`updatedb`)
 
-   - Com que `locate` depèn d’una base de dades, aquesta es pot actualitzar manualment amb `updatedb` (requereix permisos d’administrador).
-   ```bash
-   sudo updatedb                       # Actualitza la base de dades per a una cerca actualitzada.
-   ```
+- Com que `locate` depèn d’una base de dades, aquesta es pot actualitzar manualment amb `updatedb` (requereix permisos d’administrador).
+
+```bash
+sudo updatedb                       # Actualitza la base de dades per a una cerca actualitzada.
+```
 
 ---
 

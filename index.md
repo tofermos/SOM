@@ -85,3 +85,4 @@ linestretch: 1.5
 |Scripts en Linux (II). Bucles|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/U7-Scripts2.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/U7-Scripts2.pdf)|
 |Exercicis senzills d'scripts|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/U7-Exercicis.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/U7-Exercicis.pdf)|
 |Activitat de repàs d'scripts|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/U7-scriptExemple.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/U7-scriptExemple.pdf)|
+|APT (amb activitat)|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/apt.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/apt.pdf)|
