@@ -1,7 +1,7 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 # APT
@@ -37,10 +37,15 @@ Per gestionar paquets `.deb` amb `apt`, les opcions principals són:
    
 Activitat:
 
+
 1.- Descarrega't i guarda en una carperta /home/tomas/Documents/SOFTWARE el .deb de Visual Studio Code.
+
 2.- Accedeix a ell des de a MV Lubuntu.
+
 3.- Instal·la'l.
+
 4.- Comprova que funciona correctament
+
 5.- Desinstal·la'l.
 
 [Visual Studio Code](https://code.visualstudio.com/)
