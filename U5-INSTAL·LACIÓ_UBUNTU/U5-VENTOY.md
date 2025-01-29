@@ -89,7 +89,8 @@ Durant la instal·lació, el terminal et demanarà confirmació. Escriu `y` per 
 
 ---
 
-** Ja tenim el Ventoy instal·lat !**
+
+**Ja tenim el Ventoy instal·lat !**
 
 # 3. Copia d’arxius ISO
 
@@ -97,6 +98,8 @@ Durant la instal·lació, el terminal et demanarà confirmació. Escriu `y` per 
 > Abans de copiar la ISO podem comprovar si està correctament descarregada.
 
 ## 3.1 Comprovar la ISO del SO 
+
+(Hi ha una unitat posterior que també ho explica per a Linux i per a Windows)
 
 **Si la ISO està correcta, no cal fer este pas però s'ha de saber fer.**
 
