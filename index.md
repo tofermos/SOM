@@ -89,3 +89,4 @@ linestretch: 1.5
 |APT (amb activitat)|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/apt.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/apt.pdf)|
 |Programar tasques. at i cron|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/U7-ProgramarTasques.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/U7-ProgramarTasques.pdf)|
 |Empaquetat i compressió de fitxers|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/U7-tar.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/U7-tar.pdf)|
+|Dos scripts d'examen|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/scripts.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/scripts.pdf)|
