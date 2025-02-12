@@ -158,7 +158,7 @@ un sol arxiu \texttt{.tar}. Si es combina amb \texttt{gzip}
 
 \subsection{2.1 Empaquetar i comprimir}\label{empaquetar-i-comprimir}
 
-\texttt{tar\ -cxf\ arxiu.tar\ carpeta/}
+\texttt{tar\ -czf\ arxiu.gz\ *}
 
 Aquest comandament empaqueta el contingut de \textbf{carpeta/} en un
 arxiu \texttt{.tar}.
@@ -168,18 +168,18 @@ arxiu \texttt{.tar}.
 \item
   \texttt{-c} → Crea un nou arxiu \texttt{.tar}.\\
 \item
-  \texttt{-x} → (Error) Aquesta opció s'utilitza per extreure, però aquí
-  no és necessària.\\
+  \texttt{-z} → Indica que l'arxiu serà comprimit. En compte de
+  \texttt{.tar} usarem \texttt{.gz}
 \item
-  \texttt{-f} → Especifica el nom del fitxer \texttt{.tar}.
+  \texttt{-f} → Especifica el nom del fitxer \texttt{.gz}.
 \end{itemize}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{\texorpdfstring{2.2 Desempaquetar i descomprimir.
-\texttt{tar\ -xf\ arxiu.tar}}{2.2 Desempaquetar i descomprimir. tar -xf arxiu.tar}}\label{desempaquetar-i-descomprimir.-tar--xf-arxiu.tar}
+\texttt{tar\ -xf\ arxiu.gz}}{2.2 Desempaquetar i descomprimir. tar -xf arxiu.gz}}\label{desempaquetar-i-descomprimir.-tar--xf-arxiu.gz}
 
-Esta ordre \textbf{extreu} el contingut d'un arxiu \texttt{.tar} a la
+Esta ordre \textbf{extreu} el contingut d'un arxiu \texttt{.gz} a la
 ubicació actual.
 
 \begin{itemize}
@@ -195,12 +195,104 @@ afegir \texttt{-z} així:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\FunctionTok{tar} \AttributeTok{{-}xzf}\NormalTok{ arxiu.tar.gz}
+\FunctionTok{tar} \AttributeTok{{-}xzf}\NormalTok{ comprimit.gz }
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{\texorpdfstring{2.3 Ús de l'opció \texttt{-C} en
-\texttt{tar}}{2.3 Ús de l'opció -C en tar}}\label{uxfas-de-lopciuxf3--c-en-tar}
+\subsection{2.3 Exemple:}\label{exemple}
+
+1.- Tenim 3 fitxers (f1.txt, f2\ldots) i una carpeta novaCarpeta
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ ls }\AttributeTok{{-}l}
+\ExtensionTok{total}\NormalTok{ 7}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f1.txt}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f2.txt}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f3.txt}
+\ExtensionTok{drwxrwxr{-}x}\NormalTok{ 2 tomas tomas 4096 de febr. 12 12:44 novaCarpeta}
+\end{Highlighting}
+\end{Shaded}
+
+2- Fem un fitxer comprimit dels 3 fitxers amb el tar -czf i
+comprovem\ldots{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ tar }\AttributeTok{{-}czf}\NormalTok{ comprimit.tz f}\PreprocessorTok{?}\NormalTok{.txt}
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ ls }\AttributeTok{{-}l}
+\ExtensionTok{total}\NormalTok{ 8}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas  136 de febr. 12 12:48 comprimit.tz}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f1.txt}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f2.txt}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f3.txt}
+\ExtensionTok{drwxrwxr{-}x}\NormalTok{ 2 tomas tomas 4096 de febr. 12 12:44 novaCarpeta}
+\end{Highlighting}
+\end{Shaded}
+
+3- Movem el comprimit a la carpeta novaCarpeta amb el \emph{mv}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ mv comprimit.tz novaCarpeta/}
+\end{Highlighting}
+\end{Shaded}
+
+4- Borrem els fitxers f1.txt, f2.txt, f3.txt\ldots{}
+
+Pensem que es tracta d'un borrat accidental o que ha entrat un
+virus\ldots{}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ rm f}\PreprocessorTok{?}\NormalTok{.txt}
+\end{Highlighting}
+\end{Shaded}
+
+5 - Comprovem el contingut ( ja no estan els fitxers f?. txt)
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ ls }\AttributeTok{{-}l}
+\ExtensionTok{total}\NormalTok{ 1}
+\ExtensionTok{drwxrwxr{-}x}\NormalTok{ 2 tomas tomas 4096 de febr. 12 12:48 novaCarpeta}
+\end{Highlighting}
+\end{Shaded}
+
+L'accident ens ha deixat sense fitxers\ldots{}
+
+6- Ara recuperarem els fitxers (tar -xf ) de la copia comprimida.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ tar }\AttributeTok{{-}xf}\NormalTok{ novaCarpeta/comprimit.tz}
+\end{Highlighting}
+\end{Shaded}
+
+7- Comprovem que els hem recuperat.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tomas@portatil:\textasciitilde{}/Documents/borrar$}\NormalTok{ ls }\AttributeTok{{-}l}
+\ExtensionTok{total}\NormalTok{ 4}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f1.txt}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f2.txt}
+\ExtensionTok{{-}rw{-}rw{-}r{-}{-}}\NormalTok{ 1 tomas tomas    0 de febr. 12 12:39 f3.txt}
+\ExtensionTok{drwxrwxr{-}x}\NormalTok{ 2 tomas tomas 4096 de febr. 12 12:48 novaCarpeta}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{2.4 Ús}\label{uxfas}
+
+A banda de poder reproduir l'exemple anterior creant fitxers amb
+\emph{touch} i carpetes amb \emph{mkdir} ( o des de l'entorn gràfic),
+podeu fer-se còpies de seguretat comprimides dels fitxers dels altres
+mòduls a un pen, disc extraïble o el núvol.
+
+\emph{FINS ACÍ CAL SABER}
+
+\subsection{\texorpdfstring{(Opcional) 2.3 Ús de l'opció \texttt{-C} en
+\texttt{tar}}{(Opcional) 2.3 Ús de l'opció -C en tar}}\label{opcional-2.3-uxfas-de-lopciuxf3--c-en-tar}
 
 L'opció \texttt{-C} permet especificar el directori on s'ha de realitzar
 l'operació. Això és útil tant per empaquetar com per extreure fitxers en

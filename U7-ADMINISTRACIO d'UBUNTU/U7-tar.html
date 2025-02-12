@@ -2774,25 +2774,23 @@ fitxers en un sol arxiu <code>.tar</code>. Si es combina amb
 <h1>2 L’ordre <code>tar</code></h1>
 <div id="empaquetar-i-comprimir" class="section level2">
 <h2>2.1 Empaquetar i comprimir</h2>
-<p><code>tar -cxf arxiu.tar carpeta/</code></p>
+<p><code>tar -czf arxiu.gz *</code></p>
 <p>Aquest comandament empaqueta el contingut de
 <strong>carpeta/</strong> en un arxiu <code>.tar</code>.</p>
 <ul>
 <li><code>-c</code> → Crea un nou arxiu <code>.tar</code>.<br />
 </li>
-<li><code>-x</code> → (Error) Aquesta opció s’utilitza per extreure,
-però aquí no és necessària.<br />
-</li>
+<li><code>-z</code> → Indica que l’arxiu serà comprimit. En compte de
+<code>.tar</code> usarem <code>.gz</code></li>
 <li><code>-f</code> → Especifica el nom del fitxer
-<code>.tar</code>.</li>
+<code>.gz</code>.</li>
 </ul>
 <hr />
 </div>
-<div id="desempaquetar-i-descomprimir.-tar--xf-arxiu.tar" class="section level2">
-<h2>2.2 Desempaquetar i descomprimir.
-<code>tar -xf arxiu.tar</code></h2>
+<div id="desempaquetar-i-descomprimir.-tar--xf-arxiu.gz" class="section level2">
+<h2>2.2 Desempaquetar i descomprimir. <code>tar -xf arxiu.gz</code></h2>
 <p>Esta ordre <strong>extreu</strong> el contingut d’un arxiu
-<code>.tar</code> a la ubicació actual.</p>
+<code>.gz</code> a la ubicació actual.</p>
 <ul>
 <li><code>-x</code> → Extreu fitxers d’un arxiu <code>.tar</code>.<br />
 </li>
@@ -2800,10 +2798,59 @@ però aquí no és necessària.<br />
 </ul>
 <p>Si l’arxiu està comprimit amb <code>gzip</code>
 (<code>.tar.gz</code>), cal afegir <code>-z</code> així:</p>
-<pre class="bash"><code>tar -xzf arxiu.tar.gz</code></pre>
+<pre class="bash"><code>tar -xzf comprimit.gz </code></pre>
 </div>
-<div id="ús-de-lopció--c-en-tar" class="section level2">
-<h2>2.3 Ús de l’opció <code>-C</code> en <code>tar</code></h2>
+<div id="exemple" class="section level2">
+<h2>2.3 Exemple:</h2>
+<p>1.- Tenim 3 fitxers (f1.txt, f2…) i una carpeta novaCarpeta</p>
+<pre class="bash"><code>tomas@portatil:~/Documents/borrar$ ls -l
+total 7
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f1.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f2.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f3.txt
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:44 novaCarpeta</code></pre>
+<p>2- Fem un fitxer comprimit dels 3 fitxers amb el tar -czf i
+comprovem…</p>
+<pre class="bash"><code>tomas@portatil:~/Documents/borrar$ tar -czf comprimit.tz f?.txt
+tomas@portatil:~/Documents/borrar$ ls -l
+total 8
+-rw-rw-r-- 1 tomas tomas  136 de febr. 12 12:48 comprimit.tz
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f1.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f2.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f3.txt
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:44 novaCarpeta</code></pre>
+<p>3- Movem el comprimit a la carpeta novaCarpeta amb el <em>mv</em></p>
+<pre class="bash"><code>tomas@portatil:~/Documents/borrar$ mv comprimit.tz novaCarpeta/</code></pre>
+<p>4- Borrem els fitxers f1.txt, f2.txt, f3.txt…</p>
+<p>Pensem que es tracta d’un borrat accidental o que ha entrat un
+virus…</p>
+<pre class="bash"><code>tomas@portatil:~/Documents/borrar$ rm f?.txt</code></pre>
+<p>5 - Comprovem el contingut ( ja no estan els fitxers f?. txt)</p>
+<pre class="bash"><code>tomas@portatil:~/Documents/borrar$ ls -l
+total 1
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:48 novaCarpeta</code></pre>
+<p>L’accident ens ha deixat sense fitxers…</p>
+<p>6- Ara recuperarem els fitxers (tar -xf ) de la copia comprimida.</p>
+<pre class="bash"><code>tomas@portatil:~/Documents/borrar$ tar -xf novaCarpeta/comprimit.tz</code></pre>
+<p>7- Comprovem que els hem recuperat.</p>
+<pre class="bash"><code>tomas@portatil:~/Documents/borrar$ ls -l
+total 4
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f1.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f2.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f3.txt
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:48 novaCarpeta</code></pre>
+</div>
+<div id="ús" class="section level2">
+<h2>2.4 Ús</h2>
+<p>A banda de poder reproduir l’exemple anterior creant fitxers amb
+<em>touch</em> i carpetes amb <em>mkdir</em> ( o des de l’entorn
+gràfic), podeu fer-se còpies de seguretat comprimides dels fitxers dels
+altres mòduls a un pen, disc extraïble o el núvol.</p>
+<p><em>FINS ACÍ CAL SABER</em></p>
+</div>
+<div id="opcional-2.3-ús-de-lopció--c-en-tar" class="section level2">
+<h2>(Opcional) 2.3 Ús de l’opció <code>-C</code> en
+<code>tar</code></h2>
 <p>L’opció <code>-C</code> permet especificar el directori on s’ha de
 realitzar l’operació. Això és útil tant per empaquetar com per extreure
 fitxers en una ubicació diferent.</p>

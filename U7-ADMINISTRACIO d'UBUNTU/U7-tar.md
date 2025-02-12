@@ -5,15 +5,15 @@ subtitle: |
   |  Empaquetar i comprimir **tar**
 Author: "Tomàs Ferrandis Moscardó"
 output:
-  pdf_document: 
-    toc: false
-    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: false
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -37,29 +37,99 @@ L'eina `tar` (Tape ARchive) s'utilitza per empaquetar fitxers en un sol arxiu `.
 
 ## 2.1 Empaquetar i comprimir
 
-`tar -cxf arxiu.tar carpeta/`
+`tar -czf arxiu.gz *`
 
 Aquest comandament empaqueta el contingut de **carpeta/** en un arxiu `.tar`.  
 
 - `-c` → Crea un nou arxiu `.tar`.  
-- `-x` → (Error) Aquesta opció s'utilitza per extreure, però aquí no és necessària.  
-- `-f` → Especifica el nom del fitxer `.tar`.  
+- `-z` → Indica que l'arxiu serà comprimit. En compte de `.tar` usarem `.gz`
+- `-f` → Especifica el nom del fitxer `.gz`.  
 
 ---
 
-## 2.2 Desempaquetar i descomprimir. `tar -xf arxiu.tar`
+## 2.2 Desempaquetar i descomprimir. `tar -xf arxiu.gz`
 
-Esta ordre **extreu** el contingut d'un arxiu `.tar` a la ubicació actual.  
+Esta ordre **extreu** el contingut d'un arxiu `.gz` a la ubicació actual.  
 
 - `-x` → Extreu fitxers d'un arxiu `.tar`.  
 - `-f` → Indica el nom de l'arxiu a extreure.  
 
 Si l'arxiu està comprimit amb `gzip` (`.tar.gz`), cal afegir `-z` així:  
 ```bash
-tar -xzf arxiu.tar.gz
+tar -xzf comprimit.gz 
 ```
 
-## 2.3 Ús de l’opció `-C` en `tar`  
+## 2.3 Exemple:
+
+1.- Tenim 3 fitxers (f1.txt, f2...) i una carpeta novaCarpeta
+
+```bash
+tomas@portatil:~/Documents/borrar$ ls -l
+total 7
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f1.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f2.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f3.txt
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:44 novaCarpeta
+```
+
+2- Fem un fitxer comprimit dels 3 fitxers amb el tar -czf i comprovem...
+
+```bash
+tomas@portatil:~/Documents/borrar$ tar -czf comprimit.tz f?.txt
+tomas@portatil:~/Documents/borrar$ ls -l
+total 8
+-rw-rw-r-- 1 tomas tomas  136 de febr. 12 12:48 comprimit.tz
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f1.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f2.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f3.txt
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:44 novaCarpeta
+```
+
+3-  Movem el comprimit a la carpeta novaCarpeta amb el *mv*
+```bash
+tomas@portatil:~/Documents/borrar$ mv comprimit.tz novaCarpeta/
+```
+
+4- Borrem els fitxers f1.txt, f2.txt, f3.txt...
+
+Pensem que es tracta d'un borrat accidental o que ha entrat un virus...
+
+```bash
+tomas@portatil:~/Documents/borrar$ rm f?.txt
+```
+
+5 - Comprovem el contingut ( ja no estan els fitxers f?. txt)
+
+```bash
+tomas@portatil:~/Documents/borrar$ ls -l
+total 1
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:48 novaCarpeta
+```
+L'accident ens ha deixat sense fitxers...
+
+6- Ara recuperarem els fitxers (tar -xf ) de la copia comprimida.
+```bash
+tomas@portatil:~/Documents/borrar$ tar -xf novaCarpeta/comprimit.tz
+```
+7- Comprovem que els hem recuperat.
+
+```bash
+tomas@portatil:~/Documents/borrar$ ls -l
+total 4
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f1.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f2.txt
+-rw-rw-r-- 1 tomas tomas    0 de febr. 12 12:39 f3.txt
+drwxrwxr-x 2 tomas tomas 4096 de febr. 12 12:48 novaCarpeta
+```
+
+## 2.4 Ús
+
+A banda de poder reproduir l'exemple anterior creant fitxers amb *touch* i carpetes amb *mkdir* ( o des de l'entorn gràfic), podeu fer-se còpies de seguretat comprimides dels fitxers dels altres mòduls a un pen, disc extraïble o el núvol. 
+
+
+*FINS ACÍ CAL SABER*
+
+## (Opcional) 2.3 Ús de l’opció `-C` en `tar`  
 
 L’opció `-C` permet especificar el directori on s’ha de realitzar l’operació. Això és útil tant per empaquetar com per extreure fitxers en una ubicació diferent.  
 
