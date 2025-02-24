@@ -5,15 +5,15 @@ subtitle: |
   | Comunicació amb la màquina amfitriona
 Author: "Tomàs Ferrandis Moscardó"
 output:
-  pdf_document: 
-    toc: false
-    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: false
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -77,6 +77,9 @@ En la màquina física i en la virtual.
 
 En esta configuració les màquines virtuals estan aïllades de la real.
 
+
+\newpage
+
 # Carpetes compartides
 
 En **Dispositius**
@@ -100,6 +103,7 @@ Ara ja vorem en el nostre explorardor de la Màquina virtual la carpeta de la m�
 Si treballem en un Lubuntu a casa pero el nostre portàtil és un Windows Home, molt probablement voldrem que els documents o imatges ( captures de pantalla de les pràctiques, per exemple) es guarden a Documentos del Windows. Compartiríem esta carpeta de Windows en el Lubuntu.
 
 
+\newpage
 
 # Copiar entre màquines. 
 

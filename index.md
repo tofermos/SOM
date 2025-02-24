@@ -25,7 +25,9 @@ papersize: A4
 linestretch: 1.5
 ---
 
+
 ## INDEX
+
 
 ### [1 Introducció sistemes informàtics](#U1)
 
@@ -97,4 +99,4 @@ linestretch: 1.5
 
 ||||
 |:----|:--|:--|
-|Comunicació Windows 11 VirtuaBox i amfitrió|[![](recursos/iconohtml.png)](U8-Virtualització-Windows11.hmtl)|[![](recursos/iconopdf.png)](U8-Virtualització-Windows11.pdf)|
+|Comunicació Windows 11 VirtuaBox i amfitrió|[![](recursos/iconohtml.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Virtualització-Windows11.html)|[![](recursos/iconopdf.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Virtualització-Windows11.pdf)|
