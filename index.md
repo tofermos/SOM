@@ -90,3 +90,11 @@ linestretch: 1.5
 |Programar tasques. at i cron|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/U7-ProgramarTasques.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/U7-ProgramarTasques.pdf)|
 |Empaquetat i compressió de fitxers|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/U7-tar.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/U7-tar.pdf)|
 |Dos scripts d'examen|[![](recursos/iconohtml.png)](U7-ADMINISTRACIO d'UBUNTU/scripts.html)|[![](recursos/iconopdf.png)](U7-ADMINISTRACIO d'UBUNTU/scripts.pdf)|
+
+
+
+### [8 Sistemes Operatius](#U7)
+
+||||
+|:----|:--|:--|
+|Comunicació Windows 11 VirtuaBox i amfitrió|[![](recursos/iconohtml.png)](U8-Virtualització-Windows11.hmtl)|[![](recursos/iconopdf.png)](U8-Virtualització-Windows11.pdf)|

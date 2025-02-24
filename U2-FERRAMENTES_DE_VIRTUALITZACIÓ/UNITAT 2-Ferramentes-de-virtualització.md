@@ -3,7 +3,7 @@ title: |
   | U2: FERRAMENTES DE VIRTUALITZACIÓ
 subtitle: |
   | Aproximació al VirtualBox (instal·lació mínima)
-author: by tofermos
+Author: "Tomàs Ferrandis Moscardó"
 output:
   html_document:
     toc: true
@@ -12,9 +12,9 @@ output:
     df_print: paged
     number_sections: false
   pdf_document: 
-    toc: true
+    toc: false
     keep_tex: true
-  word_document:Tres p
+  word_document:
     toc: true
     toc_depth: '3'
 lang: "es-ES"
