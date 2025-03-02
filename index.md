@@ -100,3 +100,4 @@ linestretch: 1.5
 ||||
 |:----|:--|:--|
 |Comunicació Windows 11 VirtuaBox i amfitrió|[![](recursos/iconohtml.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Virtualització-Windows11.html)|[![](recursos/iconopdf.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Virtualització-Windows11.pdf)|
+|Edicions de Windows 11|[![](recursos/iconohtml.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-DistrosWindows11.html)|[![](recursos/iconopdf.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-DistrosWindows11.pdf)|

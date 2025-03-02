@@ -1,0 +1,150 @@
+// Qüestionari complet sobre les edicions de Windows 11
+
+// 1. Pregunta de selecció única
+::Edició per a ús domèstic::
+Quina edició de Windows 11 està pensada per a usuaris domèstics?
+{ =Windows 11 Home ~Windows 11 Pro ~Windows 11 Enterprise ~Windows 11 IoT }
+
+// 2. Pregunta de selecció múltiple
+::Edicions que poden unir-se a un domini::
+Quines edicions de Windows 11 permeten unir-se a un domini?
+{ ~Windows 11 Home =Windows 11 Pro =Windows 11 Enterprise =Windows 11 Education ~Windows 11 SE }
+
+// 3. Pregunta de selecció única
+::Edició per a treballs intensius::
+Quina edició de Windows 11 està optimitzada per a treballs intensius com edició de vídeo o modelatge 3D?
+{ ~Windows 11 Home ~Windows 11 Education =Windows 11 Pro for Workstations ~Windows 11 SE }
+
+// 4. Pregunta de resposta curta
+::Edició per a dispositius especialitzats::
+Quina edició de Windows 11 està pensada per a dispositius especialitzats com caixers automàtics?
+{ =Windows 11 IoT =Windows IoT }
+
+// 5. Pregunta de vertader o fals
+::Windows 11 SE és per a empreses grans::
+Windows 11 SE està dissenyat per a empreses grans.
+{ FALSE }
+
+// 6. Pregunta de completació
+::Funcions avançades d'Enterprise::
+Omple el buit: Windows 11 {=Enterprise} ofereix funcions avançades de seguretat i gestió per a empreses grans.
+
+// 7. Selecció única
+::BitLocker a Windows 11::
+Quina edició de Windows 11 ofereix el xifrat de disc BitLocker?
+{ ~Windows 11 Home =Windows 11 Pro =Windows 11 Enterprise =Windows 11 Education }
+
+// 8. Selecció única
+::Edició per a estudiants::
+Quina versió de Windows 11 està dissenyada per a escoles i estudiants amb funcionalitats limitades?
+{ ~Windows 11 Home =Windows 11 SE ~Windows 11 Pro ~Windows 11 Enterprise }
+
+// 9. Selecció múltiple
+::Edicions que inclouen Hyper-V::
+Quines edicions de Windows 11 inclouen Hyper-V per a la virtualització?
+{ ~Windows 11 Home =Windows 11 Pro =Windows 11 Enterprise =Windows 11 Pro for Workstations }
+
+// 10. Vertader o fals
+::Windows 11 Home i els dominis::
+Windows 11 Home permet unir-se a un domini d’empresa.
+{ FALSE }
+
+// 11. Resposta curta
+::Sistema de fitxers avançat::
+Quina edició de Windows 11 utilitza ReFS (Resilient File System)?
+{ =Windows 11 Pro for Workstations }
+
+// 12. Selecció única
+::Windows Defender Application Guard::
+Quina edició de Windows 11 inclou Windows Defender Application Guard?
+{ ~Windows 11 Home =Windows 11 Enterprise ~Windows 11 SE ~Windows 11 IoT }
+
+// 13. Selecció múltiple
+::Edicions compatibles amb Active Directory::
+Quines edicions de Windows 11 poden unir-se a Active Directory (AD)?
+{ ~Windows 11 Home =Windows 11 Pro =Windows 11 Enterprise =Windows 11 Education }
+
+// 14. Vertader o fals
+::Windows 11 Pro i Azure AD::
+Windows 11 Pro és necessari per a unir-se a Azure AD.
+{ TRUE }
+
+// 15. Resposta curta
+::Windows 11 per a educació::
+Quina edició de Windows 11 està optimitzada per a entorns d’ensenyament i restringeix la instal·lació d’aplicacions de tercers?
+{ =Windows 11 SE }
+
+// 16. Completar espai en blanc
+::Funcions empresarials::
+Windows 11 {=Enterprise} està dissenyat per a grans corporacions i ofereix característiques avançades de seguretat i gestió.
+
+// 17. Selecció única
+::Subsistema de Linux::
+Quina edició de Windows 11 suporta Windows Subsystem for Linux (WSL)?
+{ ~Windows 11 Home =Windows 11 Pro =Windows 11 Enterprise =Windows 11 Pro for Workstations }
+
+// 18. Vertader o fals
+::Windows 11 Education i Enterprise::
+Windows 11 Education té les mateixes característiques que Windows 11 Enterprise, però està orientat a l’àmbit educatiu.
+{ TRUE }
+
+// 19. Resposta curta
+::Windows Sandbox::
+Quina edició de Windows 11 permet l’ús de Windows Sandbox per executar aplicacions en un entorn aïllat?
+{ =Windows 11 Pro }
+
+// 20. Selecció múltiple
+::Windows Update for Business::
+Quines edicions de Windows 11 poden utilitzar el Windows Update for Business per gestionar actualitzacions?
+{ ~Windows 11 Home =Windows 11 Pro =Windows 11 Enterprise =Windows 11 Education }
+
+// 21. Vertader o fals
+::Windows 11 IoT i el gaming::
+Windows 11 IoT està optimitzat per a ordinadors de joc.
+{ FALSE }
+
+// 22. Resposta curta
+::Edició més bàsica de Windows 11::
+Quina edició de Windows 11 és la més bàsica i no inclou funcions empresarials?
+{ =Windows 11 Home }
+
+// 23. Selecció única
+::Windows per a grans volums de dades::
+Quina versió de Windows 11 és ideal per a treballar amb grans volums de dades i servidors?
+{ =Windows 11 Pro for Workstations }
+
+// 24. Selecció única
+::Windows per a empreses grans::
+Quina versió de Windows 11 està dissenyada específicament per a l’ús en empreses grans amb gestió centralitzada?
+{ =Windows 11 Enterprise }
+
+// 25. Selecció múltiple
+::Edicions amb control remot::
+Quines edicions de Windows 11 poden utilitzar la funcionalitat de control remot?
+{ ~Windows 11 Home =Windows 11 Pro =Windows 11 Enterprise =Windows 11 Education }
+
+// 26. Vertader o fals
+::Windows 11 SE i aplicacions de tercers::
+Windows 11 SE permet la instal·lació lliure de qualsevol aplicació.
+{ FALSE }
+
+// 27. Completar espai en blanc
+::Windows IoT i dispositius especialitzats::
+Windows 11 {=IoT} és una edició dissenyada per a dispositius especialitzats, com caixers automàtics i terminals de venda.
+
+// 28. Selecció única
+::Windows per a estacions de treball::
+Quina edició de Windows 11 ofereix la millor optimització per a estacions de treball amb hardware avançat?
+{ =Windows 11 Pro for Workstations }
+
+// 29. Vertader o fals
+::Funcions de seguretat de Windows 11 Home::
+Windows 11 Home inclou característiques de seguretat avançades com BitLocker i Windows Defender Application Guard.
+{ FALSE }
+
+// 30. Selecció única
+::Windows per a estudiants::
+Quina versió de Windows 11 està més enfocada a un ús bàsic per a estudiants i té accés limitat a aplicacions?
+{ =Windows 11 SE }
+
+

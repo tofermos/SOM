@@ -1,0 +1,276 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12 pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdflang={es-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{U8 DISTRIBUCIONS DE WINDOWS 11}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Resum característiques}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+\setstretch{1.5}
+\newpage
+\renewcommand\tablename{Tabla}
+
+\section{1 Introducció}\label{introducciuxf3}
+
+Windows 11 té diverses edicions o ``distros'' dissenyades per a
+diferents tipus d'usuaris i necessitats. Aquí tens una explicació de les
+principals:
+
+\subsection{1. Windows 11 Home}\label{windows-11-home}
+
+\begin{itemize}
+\tightlist
+\item
+  Destinat a usuaris domèstics.
+\item
+  Inclou funcions bàsiques com Microsoft Edge, Microsoft Store, el mode
+  fosc, i la compatibilitat amb aplicacions d'Android (a partir de
+  Windows Subsystem for Android).
+\item
+  Té integració amb Microsoft Teams i la possibilitat d'iniciar sessió
+  amb un compte de Microsoft.
+\item
+  No permet unir-se a dominis d'empresa ni té BitLocker nadiu.
+\end{itemize}
+
+\subsection{2. Windows 11 Pro}\label{windows-11-pro}
+
+\begin{itemize}
+\tightlist
+\item
+  Inclou totes les funcions de Windows 11 Home, però amb
+  característiques addicionals per a professionals i empreses.
+\item
+  Suporta BitLocker (xifrat de disc), Hyper-V (virtualització), Windows
+  Sandbox, i la unió a Active Directory i Azure AD.
+\item
+  Permet un millor control sobre les actualitzacions i més opcions de
+  seguretat avançada.
+\end{itemize}
+
+\subsection{3. Windows 11 Pro for
+Workstations}\label{windows-11-pro-for-workstations}
+
+\begin{itemize}
+\tightlist
+\item
+  Una versió millorada per a ordinadors d'alt rendiment.
+\item
+  Ofereix suport per a ReFS (Resilient File System), memòria persistent,
+  i Windows Subsystem for Linux (WSL).
+\item
+  Optimitzat per a processadors d'alt rendiment i per a treballs
+  exigents, com l'edició de vídeo o modelatge 3D.
+\end{itemize}
+
+\subsection{4. Windows 11 Enterprise}\label{windows-11-enterprise}
+
+\begin{itemize}
+\tightlist
+\item
+  Dissenyat per a grans empreses.
+\item
+  Té totes les funcions de Windows 11 Pro, però amb eines avançades per
+  a gestió de seguretat i desplegament a gran escala.
+\item
+  Inclou Windows Defender Application Guard, protecció contra amenaces
+  avançades i gestió remota millorada.
+\end{itemize}
+
+\subsection{5. Windows 11 Education}\label{windows-11-education}
+
+\begin{itemize}
+\tightlist
+\item
+  Similar a Windows 11 Enterprise, però adaptat a centres educatius.
+\item
+  Ofereix eines per a gestió de dispositius d'estudiants i seguretat
+  millorada per a institucions educatives.
+\item
+  No inclou algunes funcions empresarials innecessàries en l'àmbit
+  educatiu.
+\end{itemize}
+
+\subsection{6. Windows 11 SE}\label{windows-11-se}
+
+\begin{itemize}
+\tightlist
+\item
+  Versió més lleugera i simplificada per a dispositius educatius,
+  especialment portàtils destinats a estudiants.
+\item
+  Optimitzat per a aplicacions en el núvol i integració amb Microsoft
+  365.
+\item
+  Limita la instal·lació d'apps de tercers per millorar la seguretat i
+  el rendiment.
+\end{itemize}
+
+\subsection{7. Windows 11 IoT (Internet of
+Things)}\label{windows-11-iot-internet-of-things}
+
+\begin{itemize}
+\item
+  Dissenyat per a dispositius especialitzats com caixers automàtics,
+  dispositius mèdics i terminals de punt de venda.
+\item
+  Ofereix una versió més personalitzable i segura per a aplicacions
+  industrials.
+\end{itemize}
+
+\newpage
+
+\section{2 Quina versió triar?}\label{quina-versiuxf3-triar}
+
+\begin{itemize}
+\tightlist
+\item
+  Per a ús domèstic: Windows 11 Home.
+\item
+  Per a treball i empreses menudes: Windows 11 Pro.
+\item
+  Per a treballs exigents (disseny, edició, etc.): Windows 11 Pro for
+  Workstations.
+\item
+  Per a empreses grans: Windows 11 Enterprise.
+\item
+  Per a educació: Windows 11 Education o Windows 11 SE.
+\item
+  Per a dispositius especialitzats: Windows 11 IoT.
+\end{itemize}
+
+\section{3 Taula resum}\label{taula-resum}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1986}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5106}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2908}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Edició
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Característiques principals
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Destinat a\ldots{}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Windows 11 Home} & Funcions bàsiques, integració amb Microsoft
+Teams, sense BitLocker & Usuaris domèstics \\
+\textbf{Windows 11 Pro} & BitLocker, Hyper-V, Active Directory, gestió
+empresarial & Professionals i xicotes empreses \\
+\textbf{Windows 11 Pro for Workstations} & ReFS, optimitzat per a
+treballs exigents, WSL & Usuaris avançats i treballs d'alt rendiment \\
+\textbf{Windows 11 Enterprise} & Seguretat avançada, gestió d'equips,
+protecció contra amenaces & Empreses grans \\
+\textbf{Windows 11 Education} & Adaptat a institucions educatives, eines
+per a estudiants i professors & Centres educatius \\
+\textbf{Windows 11 SE} & Versió simplificada per a estudiants,
+optimitzada per a núvol & Estudiants i escoles \\
+\textbf{Windows 11 IoT} & Personalització per a dispositius industrials
+i comercials & Dispositius especialitzats (caixers, terminals) \\
+\end{longtable}
+
+\end{document}
