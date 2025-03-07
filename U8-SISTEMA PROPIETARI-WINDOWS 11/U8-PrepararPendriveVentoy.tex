@@ -138,15 +138,64 @@
 
 \setstretch{1.5}
 \newpage
+
 \renewcommand\tablename{Tabla}
 
-\section{1. Formatejar el pendrive en
-NTFS}\label{formatejar-el-pendrive-en-ntfs}
+\section{1. Introducció}\label{introducciuxf3}
+
+\subsection{1.1 Què és Ventoy}\label{quuxe8-uxe9s-ventoy}
+
+\textbf{Ventoy} és una ferramenta lliure i de codi obert que permet
+crear un \textbf{USB bootejable} d'una manera molt més senzilla i
+eficient que els mètodes tradicionals. A diferència d'altres programes
+com Rufus o UNetbootin, Ventoy no requereix que crees un nou USB
+bootejable per a cada imatge ISO; en lloc d'això, simplement copies els
+fitxers ISO al pendrive i Ventoy els detecta automàticament en el moment
+d'arrancar.
+
+En la \textbf{classificació del software} que vam estudiar a principi de
+curs, es tractaria d'un \textbf{software de sistema} que actua molt a
+prop del firmware (BIOS/UEFI). Concretament és un gestor d'arrancada.
+
+\subsection{1.2 Característiques principals de
+Ventoy}\label{caracteruxedstiques-principals-de-ventoy}
+
+\begin{itemize}
+\tightlist
+\item
+  No cal tornar a formatar el pendrive cada vegada que vols afegir una
+  nova ISO.
+\item
+  Compatible amb BIOS i UEFI sense necessitat de canviar configuracions.
+\item
+  Suporta múltiples ISOs al mateix USB (pots tenir Linux, Windows i
+  eines de recuperació o per clonar al mateix pendrive).
+\item
+  Admet arxius ISO de més de 4GB (ideal per a Windows 11 o Server).
+\item
+  100\% de codi obert i gratuït, amb suport per a Windows i Linux.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\newpage
 
 \section{2. Preparar Ventoy en un pendrive des
 d'Ubuntu}\label{preparar-ventoy-en-un-pendrive-des-dubuntu}
 
-\subsection{2.1. Descarregar Ventoy}\label{descarregar-ventoy}
+\subsection{2.1 Formatejar el pendrive en
+NTFS}\label{formatejar-el-pendrive-en-ntfs}
+
+Usem NTFS que admet fitxer amb tamańy superior a 4Gb i compatibilitat en
+Windows i Linux
+
+\begin{figure}
+\centering
+\includegraphics{png/formatar.png}
+\caption{Imatge1: Formatejar}
+\end{figure}
+
+\subsection{2.2 Descarregar Ventoy}\label{descarregar-ventoy}
 
 Baixa l'última versió de Ventoy per a Linux des del seu web oficial:
 
@@ -154,9 +203,37 @@ Baixa l'última versió de Ventoy per a Linux des del seu web oficial:
 https://www.ventoy.net/en/download.html
 \end{verbatim}
 
-Descarrega el fitxer .tar.gz per a Linux.
+Descarrega el fitxer .tar.gz per a Linux. Observeru el codi
+\emph{sha256} !
 
-\subsection{2.2 Extraure l'arxiu}\label{extraure-larxiu}
+\begin{figure}
+\centering
+\includegraphics{png/descarrega1.png}
+\caption{Imatge2: Descàrrega Ventoy per a Ubuntu}
+\end{figure}
+
+Ens obri una segona pàgina des d'on descarregar ja.
+
+\begin{figure}
+\centering
+\includegraphics{png/descarrega2.png}
+\caption{Imatge3: Descàrrega Ventoy per a Ubuntu}
+\end{figure}
+
+\subsubsection{2.2.1 Comprovació
+sha256sum}\label{comprovaciuxf3-sha256sum}
+
+Opcionalment podem comprovar si s'ha descarregat bé el fitxer. A la web
+de descàrrega esn faciliten el codi sha256 per a comprovar. Executem la
+utilitat de Linux i mirem si el valor és igual.
+
+\begin{figure}
+\centering
+\includegraphics{png/sha256sum.png}
+\caption{Imatge3: Comprovació amb sha256sum}
+\end{figure}
+
+\subsection{2.3 Extraure l'arxiu}\label{extraure-larxiu}
 
 Obre un terminal i executa:
 
@@ -168,7 +245,7 @@ Obre un terminal i executa:
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{2.3. Identificar el dispositiu
+\subsection{2.4 Identificar el dispositiu
 USB}\label{identificar-el-dispositiu-usb}
 
 Connecta el teu USB i comprova la seva identificació amb:
@@ -190,7 +267,7 @@ O també amb:
 Busca el nom del teu USB, per exemple /dev/sdX (substitueix ``X'' per la
 lletra correcta).
 
-\subsection{2.4. Instal·lar Ventoy al
+\subsection{2.5 Instal·lar Ventoy al
 pendrive}\label{installar-ventoy-al-pendrive}
 
 Executa la instal·lació (substitueix X per la lletra del teu USB):
@@ -219,17 +296,248 @@ Per instal·lar amb confirmació prèvia:
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{2.5. Copiar les ISOs al
+\subsection{2.6 Copiar les ISOs al
 pendrive}\label{copiar-les-isos-al-pendrive}
 
 Una vegada instal·lat, només cal que copieu les imatges ISO (Windows,
 Linux, etc.) directament al pendrive, sense necessitat de crear
 particions ni fer res més.
 
-\subsection{2.6. Provar el pendrive}\label{provar-el-pendrive}
+\subsection{2.7 Provar el pendrive}\label{provar-el-pendrive}
 
-Reinicia l'ordinador, entra a la BIOS/UEFI i selecciona el pendrive com
-a dispositiu d'arrencada. Hauries de veure el menú de Ventoy amb les
-ISOs que hi has copiat.
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Reinicia el teu ordinador.\\
+\item
+  Entra a la BIOS/UEFI prement una de les tecles següents (depèn del
+  fabricant):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    F2, F12, ESC, DEL\\
+  \end{itemize}
+\item
+  Canvia l'ordre (BOOT ORDER, BOOT SEQUENCE\ldots) i reodrena pera que
+  el pendrive USB siga el 1r dispositiu d'arrencada.
+\item
+  Reininicia el PC. Si tot ha anat bé, apareixerà el menú de Ventoy amb
+  les ISOs que has copiat.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\newpage
+
+\section{3. Guia per instal·lar Ventoy en un USB des de Windows
+11}\label{guia-per-installar-ventoy-en-un-usb-des-de-windows-11}
+
+\subsection{3.0 Formatar el pendrive}\label{formatar-el-pendrive}
+
+Seleccionem el PenDrive
+
+\begin{figure}
+\centering
+\includegraphics{png/formatWindows.png}
+\caption{Imatge 4:Formatejar un Pendrive}
+\end{figure}
+
+Indiquem el tipus de Sistema de Fitxers (File System, SF): NTFS
+
+\begin{figure}
+\centering
+\includegraphics{png/formatWindows2.png}
+\caption{Imatge 5:Formatejar un Pendrive:NTFS}
+\end{figure}
+
+\subsection{3.1 Descarregar Ventoy per a
+Windows}\label{descarregar-ventoy-per-a-windows}
+
+\begin{itemize}
+\item
+  Ves a la web oficial:\\
+  \url{https://www.ventoy.net/en/download.html}
+\item
+  Descarrega l'arxiu ``Ventoy-xxxxx-windows.zip''.
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics{png/zipDownload.png}
+\caption{Imatge 6:Formatejar un Pendrive:NTFS}
+\end{figure}
+
+\subsection{3.2 Comprovar el SHA256 del fitxer descarregat
+(OPCIONAL)}\label{comprovar-el-sha256-del-fitxer-descarregat-opcional}
+
+Abans d'instal·lar Ventoy, és recomanable comprovar la seva integritat
+verificant el \textbf{SHA256} del fitxer descarregat.
+
+\subsubsection{Opció 1: amb PowerShell:
+**}\label{opciuxf3-1-amb-powershell}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Obri PowerShell (Win + X → Terminal (PowerShell)).\\
+\item
+  Executa el següent cmdLet:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Get{-}FileHash }\StringTok{"C:\textbackslash{}ruta\textbackslash{}al\textbackslash{}fitxer.zip"} \OperatorTok{{-}}\NormalTok{Algorithm SHA256}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Es mostrarà un codi hash. Compara'l amb el proporcionat a la web
+  oficial de Ventoy.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{png/Get-FileHash.png}
+\caption{Imatge 6: Get-FileHash}
+\end{figure}
+
+\subsubsection{Opció 2: amb CMD
+(CertUtil):}\label{opciuxf3-2-amb-cmd-certutil}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Obri el símbol del sistema (Win + R, escriu \texttt{cmd} i prem
+  Enter).\\
+\item
+  Escriu la següent ordre:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{   certutil }\AttributeTok{{-}hashfile} \StringTok{"C:\textbackslash{}ruta\textbackslash{}al\textbackslash{}fitxer.zip"}\NormalTok{ SHA256}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Compara el resultat amb el hash oficial.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{png/certutil.png}
+\caption{Figura 7: certutil}
+\end{figure}
+
+\subsection{3.3 Extraure l'arxiu}\label{extraure-larxiu-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Ves a la carpeta de Descàrregues.\\
+\item
+  Fes clic dret al fitxer ZIP i selecciona ``Extreure tot\ldots{}''.\\
+\item
+  Obri la carpeta generada després de l'extracció.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{png/extraerZip.png}
+\caption{Imatge 8:Descomprimir ZIP}
+\end{figure}
+
+\subsubsection{3.5 Obrir Ventoy}\label{obrir-ventoy}
+
+A la carpeta extreta, \textbf{executa com a Administrador} l'executable
+\textbf{Ventoy2Disk.exe}.
+
+\begin{figure}
+\centering
+\includegraphics{png/Executar.png}
+\caption{Imatge 9: Instal·lar Ventoy des de Windows}
+\end{figure}
+
+\subsubsection{3.6 Seleccionar el pendrive i instal·lar
+Ventoy}\label{seleccionar-el-pendrive-i-installar-ventoy}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  A la part superior, assegura't que el dispositiu seleccionat és el teu
+  pendrive.\\
+\item
+  Opcional: Pots clicar a ``Opcions'' → ``Estil de partició'' i escollir
+  entre:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{MBR} (recomanat per compatibilitat universal, BIOS +
+    UEFI).\\
+  \item
+    \textbf{GPT} (per a UEFI moderns).\\
+  \end{itemize}
+\item
+  Finalment, fes clic a ``Instal·lar''.\\
+\item
+  Apareixeran dos missatges d'advertència, fes clic a ``Sí'' dues
+  vegades per confirmar.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\includegraphics{png/executar2.png}
+\caption{Imatge 19: Elegir unitat destí (Pendrive)}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{png/executar3.png}
+\caption{Imatge 11: Confirmar instal·lació}
+\end{figure}
+
+\subsection{3.7 Copiar les imatges ISO}\label{copiar-les-imatges-iso}
+
+Una vegada instal·lat el Ventoy al Pendrive només cal copiar els fitxers
+ISO (per exemple, Windows, Linux, etc.) directament al pendrive.
+
+\subsubsection{3.8 Provar l'arrencada}\label{provar-larrencada}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Reinicia el teu ordinador.\\
+\item
+  Entra a la BIOS/UEFI prement una de les tecles següents (depèn del
+  fabricant):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    F2, F12, ESC, DEL\\
+  \end{itemize}
+\item
+  Canvia l'ordre (BOOT ORDER, BOOT SEQUENCE\ldots) i reodrena pera que
+  el pendrive USB siga el 1r dispositiu d'arrencada.
+\item
+  Reininicia el PC. Si tot ha anat bé, apareixerà el menú de Ventoy amb
+  les ISOs que has copiat.
+\end{enumerate}
 
 \end{document}
