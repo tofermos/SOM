@@ -1,0 +1,197 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12 pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdflang={es-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{U8 Evolució històrica del Windows i requisits 11}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Evolución històrica de Windows 11 i les necessitats per
+instal·lar}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\setstretch{1.5}
+\newpage
+\renewcommand\tablename{Tabla}
+
+\section{1. Windows 11. Evolució històrica de
+Windows}\label{windows-11.-evoluciuxf3-histuxf2rica-de-windows}
+
+Windows 11 és la darrera versió del sistema operatiu de Microsoft,
+llançat el 5 d'octubre de 2021. Ha evolucionat des dels seus
+predecessors amb un nou disseny, millores en rendiment i una major
+integració amb serveis en el núvol.
+
+\subsection{Versions principals de Windows fins a Windows
+11}\label{versions-principals-de-windows-fins-a-windows-11}
+
+\begin{itemize}
+\tightlist
+\item
+  Windows 95/98/ME: Primera interfície gràfica integrada amb el menú
+  d'inici.\\
+\item
+  Windows XP (2001): Gran èxit pel seu rendiment i estabilitat.\\
+\item
+  Windows Vista (2006): Introducció de l'efecte Aero, però amb crítiques
+  per requeriments alts.\\
+\item
+  Windows 7 (2009): Millores en rendiment i compatibilitat.\\
+\item
+  Windows 8/8.1 (2012-2013): Eliminació del menú d'inici, introducció de
+  la interfície Metro.\\
+\item
+  Windows 10 (2015): Unificació de dispositius i suport continu amb
+  actualitzacions periòdiques.\\
+\item
+  Windows 11 (2021): Nou disseny, millor compatibilitat amb aplicacions
+  Android, millor optimització en jocs i enfocament en seguretat.
+\end{itemize}
+
+\section{2. Requisits del sistema
+operatiu}\label{requisits-del-sistema-operatiu}
+
+\subsection{Requisits mínims per instal·lar Windows
+11}\label{requisits-muxednims-per-installar-windows-11}
+
+\begin{itemize}
+\tightlist
+\item
+  Processador: 1 GHz o més, amb 2 o més nuclis i arquitectura de 64
+  bits.\\
+\item
+  Memòria RAM: 4 GB mínim.\\
+\item
+  Emmagatzematge: 64 GB d'espai lliure.\\
+\item
+  Firmware del sistema: UEFI amb Secure Boot activat.\\
+\item
+  TPM (Trusted Platform Module): Versió 2.0 obligatòria.\\
+\item
+  Targeta gràfica: Compatible amb DirectX 12 o superior.\\
+\item
+  Pantalla: Resolució mínima de 720p (9 polzades o més).
+\end{itemize}
+
+\subsection{Explicació dels components
+clau}\label{explicaciuxf3-dels-components-clau}
+
+\subsubsection{Firmware del sistema: UEFI amb Secure Boot
+activat}\label{firmware-del-sistema-uefi-amb-secure-boot-activat}
+
+UEFI (Unified Extensible Firmware Interface) és el sistema que gestiona
+l'arrencada del sistema operatiu i reemplaça la BIOS tradicional.
+Ofereix avantatges com arrencada més ràpida, suport per a discos grans
+(més de 2 TB) i major seguretat. Secure Boot és una funcionalitat d'UEFI
+que impedeix l'execució de codi maliciós en iniciar el sistema,
+garantint que només s'executin sistemes operatius verificats.
+
+\subsubsection{TPM (Trusted Platform Module) versió 2.0
+obligatòria}\label{tpm-trusted-platform-module-versiuxf3-2.0-obligatuxf2ria}
+
+El TPM és un mòdul de seguretat integrat en el maquinari que protegeix
+dades sensibles mitjançant xifratge i claus criptogràfiques. Windows 11
+requereix la versió 2.0 perquè millora la protecció contra atacs basats
+en maquinari i facilita l'ús de tecnologies com BitLocker per xifrar
+unitats de disc.
+
+\subsubsection{Targeta gràfica compatible amb DirectX 12 o
+superior}\label{targeta-gruxe0fica-compatible-amb-directx-12-o-superior}
+
+DirectX 12 és un conjunt d'API que permet un millor rendiment gràfic en
+aplicacions i videojocs. Una targeta gràfica compatible amb DirectX 12
+assegura una experiència fluida en Windows 11, especialment en
+aplicacions exigents com jocs, edició de vídeo o disseny 3D.
+
+\end{document}

@@ -1,0 +1,284 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  12 pt,
+  a4paper,
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Times New Roman}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{spanish}
+\ifPDFTeX
+\else
+\babelfont{rm}[]{Times New Roman}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdflang={es-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{U8 Tipus d'instal·lacions i consideracions prèvies}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Informació sobre la instal·lació}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\setstretch{1.5}
+\newpage
+\renewcommand\tablename{Tabla}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{1 Tipus d'instal·lacions}\label{tipus-dinstallacions}
+
+\begin{itemize}
+\item
+  Instal·lació neta: Esborra tot el disc i instal·la el sistema des de
+  zero.
+\item
+  Actualització des de Windows 10: Conserva dades i programes.
+\item
+  Instal·lació en màquina virtual: Per provar Windows 11 sense modificar
+  el sistema actual. ( La que fem en VirtualBox)
+\item
+  Instal·lació en un altre disc o partició: Per tenir Windows 11 al
+  costat d'un altre sistema operatiu (dual boot: si volem en un PC
+  tindre Windows 11 i Linux, per exemple)
+\end{itemize}
+
+\section{2. Consideracions prèvies abans de la
+instal·lació}\label{consideracions-pruxe8vies-abans-de-la-installaciuxf3}
+
+\begin{itemize}
+\item
+  Verificar compatibilitat del hardware ( maquinari) amb la ferramenta
+  PC Health Check de Microsoft.
+\item
+  Fer una còpia de seguretat de les dades per evitar pèrdues.
+\item
+  Assegurar-se que el BIOS/UEFI està configurat correctament (Secure
+  Boot i TPM activats).
+\item
+  Decidir quin tipus d'instal·lació fer: neta, actualització o màquina
+  virtual.
+\item
+  Disposar d'una connexió a internet estable per descarregar
+  actualitzacions i controladors.
+\end{itemize}
+
+\section{3. Instal·lació manual de Windows
+11}\label{installaciuxf3-manual-de-windows-11}
+
+\textbf{Este apartat 3 NO CAL estudiar-lo perquè estem veient com fer-ho
+amb VENTOY}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Descarregar l'eina de creació de suports de Microsoft (Media Creation
+  Tool).
+\item
+  Crear un USB d'instal·lació (mínim 8 GB) amb l'eina o mitjançant
+  Rufus.
+\item
+  Accedir a la BIOS/UEFI i configurar l'ordre d'arrencada perquè el PC
+  iniciï des del USB.
+\item
+  Iniciar l'instal·lador i seguir els passos:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Seleccionar idioma i configuració regional.\\
+  \item
+    Triar ``Instal·lació personalitzada'' per fer una instal·lació
+    neta.\\
+  \item
+    Esborrar particions antigues (opcional) i instal·lar Windows 11 en
+    l'espai lliure.\\
+  \end{itemize}
+\item
+  Finalitzar la instal·lació i configurar el compte d'usuari.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{4. Actualització del sistema
+operatiu}\label{actualitzaciuxf3-del-sistema-operatiu}
+
+Si tens Windows 10 i el teu dispositiu és compatible, pots
+actualitzar-lo sense perdre dades.
+
+\subsection{Mètodes d'actualització}\label{muxe8todes-dactualitzaciuxf3}
+
+\begin{itemize}
+\item
+  Via Windows Update:
+
+  \begin{itemize}
+  \item
+    Anar a Configuració → Actualització i seguretat → Windows Update.
+  \item
+    Si apareix l'opció d'actualitzar a Windows 11, seguir les
+    instruccions.
+  \end{itemize}
+\item
+  Amb l'Assistent d'actualització de Windows 11:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Descarregar des del web oficial de Microsoft i seguir els passos.
+  \end{itemize}
+\end{itemize}
+
+Avantatge: Manté fitxers i programes.\\
+Desavantatge: Pot haver-hi problemes de compatibilitat amb controladors
+antics.
+
+\section{5. Documentació respecte a la instal·lació i
+incidències}\label{documentaciuxf3-respecte-a-la-installaciuxf3-i-inciduxe8ncies}
+
+\subsection{Documents útils sobre Windows
+11}\label{documents-uxfatils-sobre-windows-11}
+
+\begin{itemize}
+\item
+  Guia oficial de Microsoft:
+  \href{https://support.microsoft.com}{support.microsoft.com}
+\item
+  Fòrum d'ajuda de Microsoft:
+  \href{https://answers.microsoft.com}{answers.microsoft.com}
+\item
+  Documents tècnics sobre compatibilitat i instal·lació:
+
+  \begin{itemize}
+  \item
+    \href{https://docs.microsoft.com/en-us/windows-hardware/}{Windows
+    Hardware Certification}
+  \item
+    \href{https://docs.microsoft.com/en-us/windows/deployment/}{Windows
+    Deployment Toolkit}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Incidències més comunes durant la instal·lació i com
+solucionar-les}\label{inciduxe8ncies-muxe9s-comunes-durant-la-installaciuxf3-i-com-solucionar-les}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5200}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4800}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Problema
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Solució
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+No es pot instal·lar per falta de TPM 2.0 & Activar TPM des de la
+BIOS/UEFI \\
+Windows 11 no apareix a Windows Update & Descarregar i utilitzar
+l'Assistent d'Actualització \\
+Error ``No es pot instal·lar en aquest PC'' & Comprovar compatibilitat
+amb PC Health Check \\
+Falta d'espai en disc & Alliberar espai o instal·lar en un altre disc \\
+\end{longtable}
+
+\section{Conclusió}\label{conclusiuxf3}
+
+Windows 11 representa un pas endavant en seguretat i rendiment, però
+també imposa nous requisits de maquinari (hardware). Seguir una guia
+estructurada per a la instal·lació ajuda a evitar problemes i optimitzar
+el sistema.
+
+\end{document}
