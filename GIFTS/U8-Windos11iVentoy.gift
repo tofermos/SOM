@@ -1,0 +1,82 @@
+// Qüestionari Windows 11 – Format GIFT vàlid per a Moodle
+
+::Q1::Quin tipus d’instal·lació de Windows 11 esborra tot el disc i comença des de zero?
+{
+=Instal·lació neta
+~Actualització des de Windows 10
+~Instal·lació en màquina virtual
+~Instal·lació dual boot
+}
+
+::Q2::Quina eina ofereix Microsoft per comprovar la compatibilitat del maquinari amb Windows 11?
+{
+=PC Health Check
+~Assistent d'actualització
+~Rufus
+~UEFI Checker
+}
+
+::Q3::Quina és una de les característiques destacades de Ventoy?
+{
+=Permet múltiples ISOs en un mateix USB
+~Només compatible amb sistemes UEFI
+~Cal formatar el pendrive per a cada nova ISO
+~Només funciona amb Windows
+}
+
+::Q4::Quina versió de Windows va eliminar el menú d’inici i va introduir la interfície Metro?
+{
+=Windows 8/8.1
+~Windows 7
+~Windows 10
+~Windows XP
+}
+
+::Q5::Quin component és obligatori per instal·lar Windows 11 i millora la seguretat del sistema?
+{
+=TPM 2.0
+~UEFI
+~Secure Boot
+~DirectX 12
+}
+
+::Q6::Quin avantatge té fer una actualització des de Windows 10 a Windows 11?
+{
+=Es conserven fitxers i programes
+~Millor compatibilitat amb Linux
+~S'elimina tot el disc dur
+~Es duplica l'espai disponible
+}
+
+::Q7::Quin sistema de fitxers s’ha de triar per formatejar el pendrive amb Ventoy si volem suportar ISOs grans?
+{
+=NTFS
+~FAT32
+~exFAT
+~EXT4
+}
+
+::Q8::Quina és la data oficial de llançament de Windows 11?
+{
+=5 d’octubre de 2021
+~15 de juny de 2021
+~1 de gener de 2022
+~10 de març de 2020
+}
+
+::Q9::Quina és la resolució mínima de pantalla requerida per a Windows 11?
+{
+=720p
+~800x600
+~1024x768
+~640x480
+}
+
+::Q10::Quina és la funció principal del Secure Boot?
+{
+=Impedeix l’execució de codi maliciós en iniciar el sistema
+~Accelera el rendiment gràfic
+~Actualitza automàticament el sistema operatiu
+~Detecta dispositius USB maliciosos
+}
+

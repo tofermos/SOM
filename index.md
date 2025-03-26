@@ -6,15 +6,15 @@ subtitle: |
   | IES MARIA ENRÍQUEZ
 author: "Tomàs Ferrandis Moscardó"
 output:
-  pdf_document: 
-    toc: false
-    keep_tex: true
   html_document:
     toc: false
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: false
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -95,7 +95,7 @@ linestretch: 1.5
 
 
 
-### [8 Sistemes Operatius](#U7)
+### [8 Instal·lació d’un SO propietari. MS Windows](#U8)
 
 ||||
 |:----|:--|:--|
@@ -104,3 +104,10 @@ linestretch: 1.5
 |Preparar Pendrive amb Ventoy|[![](recursos/iconohtml.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-PrepararPendriveVentoy.html)|[![](recursos/iconopdf.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-PrepararPendriveVentoy.pdf)|
 |Evolució històrica i requisits|[![](recursos/iconohtml.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Windows11EvolucióRequisits.html)|[![](recursos/iconopdf.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Windows11EvolucióRequisits.pdf)|
 |Tipus d'instal·lació i consideracions prèvies|[![](recursos/iconohtml.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Windows11TipusInstalConsideracionsPrevies.html)|[![](recursos/iconopdf.png)](U8-SISTEMA PROPIETARI-WINDOWS 11/U8-Windows11TipusInstalConsideracionsPrevies.pdf)|
+
+
+### [9 Tasques bàsiques amb MS Windows](#U9)
+
+||||
+|:----|:--|:--|
+|Usuaris locals en Windows 11|[![](recursos/iconohtml.png)](https://tofermos.github.io/Windows11/gestions/comptesLocals.html)|[![](recursos/iconopdf.png)](https://tofermos.github.io/Windows11/gestions/comptesLocals.pdf)|
