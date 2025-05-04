@@ -112,4 +112,4 @@ linestretch: 1.5
 |:----|:--|:--|
 |Usuaris locals en Windows 11|[![](recursos/iconohtml.png)](https://tofermos.github.io/Windows11/gestions/comptesLocals.html)|[![](recursos/iconopdf.png)](https://tofermos.github.io/Windows11/gestions/comptesLocals.pdf)|
 |Instal·lació/Desinstal·lació d'aplicacions|[![](recursos/iconohtml.png)](https://tofermos.github.io/Windows11/software/software.html)|[![](recursos/iconopdf.png)](https://tofermos.github.io/Windows11/software/software.pdf)|
-
+|Mode text (cmd)|[![](recursos/iconohtml.png)](https://tofermos.github.io/Windows11/cmd/cmd.html)|[![](recursos/iconopdf.png)](https://tofermos.github.io/Windows11/cmd/cmd.pdf)|
