@@ -5,15 +5,15 @@ subtitle: |
   | Resum característiques
 Author: "Tomàs Ferrandis Moscardó"
 output:
-  pdf_document: 
-    toc: false
-    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: false
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -49,7 +49,7 @@ Els avantatges del Ventoy respecte a altres siens de creació de Pendrives boota
 Ventoy i Rufus en el procés d'engegament
 
 ![Imatge0: Procés d'inici](png/procesEngegar.png)
----
+
 
 \newpage
 
