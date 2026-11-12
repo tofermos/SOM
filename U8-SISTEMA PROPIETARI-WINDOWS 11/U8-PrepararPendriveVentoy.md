@@ -5,15 +5,15 @@ subtitle: |
   | Resum característiques
 Author: "Tomàs Ferrandis Moscardó"
 output:
-  pdf_document: 
-    toc: false
-    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
+  pdf_document: 
+    toc: false
+    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -32,11 +32,13 @@ linestretch: 1.5
 
 ## 1.1 Què és Ventoy
 
-**Ventoy** és una ferramenta lliure i de codi obert que permet crear un **USB bootejable** d'una manera molt més senzilla i eficient que els mètodes tradicionals. A diferència d'altres programes com Rufus o UNetbootin, Ventoy no requereix que crees un nou USB bootejable per a cada imatge ISO; en lloc d'això, simplement copies els fitxers ISO al pendrive i Ventoy els detecta automàticament en el moment d'arrancar.
+**Ventoy** és una ferramenta lliure i de codi obert que permet crear un **USB bootejable** d'una manera molt més senzilla i eficient que els mètodes tradicionals. 
 
-En la **classificació del software** que vam estudiar a principi de curs, es tractaria d'un **software de sistema** que actua molt a prop del firmware (BIOS/UEFI). Concretament és un gestor d'arrancada.
+En la **classificació del software** que vam estudiar a principi de curs, es tractaria d'un **software de sistema** que actua molt a prop del firmware (BIOS/UEFI).
 
-## 1.2 Característiques principals de Ventoy
+## 1.2 Avantatges de Ventoy
+
+Els avantatges del Ventoy respecte a altres siens de creació de Pendrives bootable son:
 
 * No cal tornar a formatar el pendrive cada vegada que vols afegir una nova ISO.
 * Compatible amb BIOS i UEFI sense necessitat de canviar configuracions.
@@ -73,7 +75,7 @@ Ens obri una segona pàgina des d'on descarregar ja.
 
 ### 2.2.1 Comprovació sha256sum
 
-Opcionalment podem comprovar si s'ha descarregat bé el fitxer. A la web de descàrrega esn faciliten el codi sha256 per a comprovar.
+Opcionalment podem comprovar si s'ha descarregat bé el fitxer. A la web de descàrrega ens faciliten el codi sha256 per a comprovar.
 Executem la utilitat de Linux i mirem si el valor és igual.
 
 ![Imatge3: Comprovació amb sha256sum](png/sha256sum.png)
@@ -138,7 +140,7 @@ Una vegada instal·lat, només cal que copieu les imatges ISO (Windows, Linux, e
 \newpage
 
 
-# 3. Guia per instal·lar Ventoy en un USB des de Windows 11  
+# 3. Preparar Ventoy en un pendrive des de Windows 11  
 
 ## 3.0 Formatar el pendrive
 
