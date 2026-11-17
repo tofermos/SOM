@@ -5,15 +5,15 @@ subtitle: |
   | Aproximació al VirtualBox (instal·lació mínima)
 Author: "Tomàs Ferrandis Moscardó"
 output:
+  pdf_document: 
+    toc: false
+    keep_tex: true
   html_document:
     toc: true
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
-  pdf_document: 
-    toc: false
-    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
@@ -97,7 +97,7 @@ Hi ha més tipus de virutalització que podeu investigar però no és objecte de
 
 [Video Tutorial Windows 1x]()
 
-[Video Tutorial Linux ]()
+[Video Tutorial Linux ](https://www.youtube.com/watch?v=qH9JuCjCKow)
 
 ## 4.2 Entorn i barres dels VirtualBox 
 

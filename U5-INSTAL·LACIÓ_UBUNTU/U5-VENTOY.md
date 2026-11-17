@@ -1,7 +1,7 @@
 ---
-title: U5. LUBUNTU. INSTAL·LACIÓ I ESTRUCTURA
-subtitle: Preparar un Pendrive amb Ventoy
-author: "@tofermos 2024"
+title: U5. PREPARAR UN VENTOY DES D'UBUNTU
+subtitle: Preparar un Pendrive amb Ventoy des d'Ubuntu
+author: "@tofermos 2026"
 lang: "ca-ES"
 papersize: A4
 linestretch: 1.5
@@ -19,12 +19,12 @@ output:
 ---
 
 El Ventoy és una utilitat per a preparar un Pendrive. Una vegada instal·lada al Pen, podrem usar-lo per instal·lar el SO que vullguem.
-Només caldrà copiar la ISO del SO al Pen (tantes com càpiguen !)
+Només caldrà copiar les ISOs dels SOs al Pen (tantes com càpiguen !) o d'altre software bootable
 
 \newpage
 \renewcommand\tablename{Tabla}
 
-# 1. Preparar un Ventoy amb una ISO.
+# 1. Preparar un Ventoy amb una ISO en Linux.
 
 ## 1.1. Descarregar Ventoy
 
@@ -107,13 +107,13 @@ Durant la instal·lació, el terminal et demanarà confirmació. Escriu `y` per 
 
 A les webs de descàrregues de fitxers grans sempre torbarem un codi com el sha256 per a fer la comporvació.
 
-![*Figura 3: buscar ala web el codi sha256](png/sha256sum1.png)
+![*Figura 3: buscar a la web el codi sha256](png/sha256sum1.png)
 
 ### Busquem a la web quin codi sha256 és el correcte
 
 En clicar sobre l'enllaç s'obrirà un fitxer amb et codi.
 
-![*Figura 4: llegir el copdi sha256*](png/sha256sum2.png)
+![*Figura 4: llegir el codi sha256*](png/sha256sum2.png)
 
 ### Els comparem
 
@@ -131,7 +131,7 @@ Ara pots copiar qualsevol **arxiu ISO** al pendrive i tindrem tots els SO dispon
 
 Ara hem de reinciar el PC i arrancar des del Pendrive.
 
-1. Entrar a la UEFI i canviar el BootoOrder: el primer disc a buscar ha de ser el Pen
+1. Entrar a la UEFI i canviar el BootOrder: el primer disc a buscar ha de ser el Pen
 2. Insertar el pendrive i arrancar.
 3. Ens treu un menú on triarem quin SO volem instal·lar.
 

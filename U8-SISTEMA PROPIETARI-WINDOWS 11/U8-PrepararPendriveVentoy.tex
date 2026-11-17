@@ -1,13 +1,15 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-%
 \documentclass[
+  spanish,
   12 pt,
   a4paper,
 ]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
-\usepackage{setspace}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -29,6 +31,7 @@
   \usepackage[]{microtype}
   \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+\usepackage{setspace}
 \makeatletter
 \@ifundefined{KOMAClassName}{% if non-KOMA class
   \IfFileExists{parskip.sty}{%
@@ -39,8 +42,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
-\usepackage[margin=1in]{geometry}
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -83,27 +84,24 @@
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
 \else
 \usepackage[bidi=default]{babel}
 \fi
-\babelprovide[main,import]{spanish}
 \ifPDFTeX
 \else
 \babelfont{rm}[]{Times New Roman}
@@ -111,9 +109,9 @@
 % get rid of language-specific shorthands (see #6817):
 \let\LanguageShortHands\languageshorthands
 \def\languageshorthands#1{}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -147,18 +145,16 @@
 
 \textbf{Ventoy} és una ferramenta lliure i de codi obert que permet
 crear un \textbf{USB bootejable} d'una manera molt més senzilla i
-eficient que els mètodes tradicionals. A diferència d'altres programes
-com Rufus o UNetbootin, Ventoy no requereix que crees un nou USB
-bootejable per a cada imatge ISO; en lloc d'això, simplement copies els
-fitxers ISO al pendrive i Ventoy els detecta automàticament en el moment
-d'arrancar.
+eficient que els mètodes tradicionals.
 
 En la \textbf{classificació del software} que vam estudiar a principi de
 curs, es tractaria d'un \textbf{software de sistema} que actua molt a
-prop del firmware (BIOS/UEFI). Concretament és un gestor d'arrancada.
+prop del firmware (BIOS/UEFI).
 
-\subsection{1.2 Característiques principals de
-Ventoy}\label{caracteruxedstiques-principals-de-ventoy}
+\subsection{1.2 Avantatges de Ventoy}\label{avantatges-de-ventoy}
+
+Els avantatges del Ventoy respecte a altres siens de creació de
+Pendrives bootable son:
 
 \begin{itemize}
 \tightlist
@@ -191,7 +187,7 @@ Windows i Linux
 
 \begin{figure}
 \centering
-\includegraphics{png/formatar.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/formatar.png}}
 \caption{Imatge1: Formatejar}
 \end{figure}
 
@@ -208,7 +204,7 @@ Descarrega el fitxer .tar.gz per a Linux. Observeru el codi
 
 \begin{figure}
 \centering
-\includegraphics{png/descarrega1.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/descarrega1.png}}
 \caption{Imatge2: Descàrrega Ventoy per a Ubuntu}
 \end{figure}
 
@@ -216,7 +212,7 @@ Ens obri una segona pàgina des d'on descarregar ja.
 
 \begin{figure}
 \centering
-\includegraphics{png/descarrega2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/descarrega2.png}}
 \caption{Imatge3: Descàrrega Ventoy per a Ubuntu}
 \end{figure}
 
@@ -224,12 +220,12 @@ Ens obri una segona pàgina des d'on descarregar ja.
 sha256sum}\label{comprovaciuxf3-sha256sum}
 
 Opcionalment podem comprovar si s'ha descarregat bé el fitxer. A la web
-de descàrrega esn faciliten el codi sha256 per a comprovar. Executem la
+de descàrrega ens faciliten el codi sha256 per a comprovar. Executem la
 utilitat de Linux i mirem si el valor és igual.
 
 \begin{figure}
 \centering
-\includegraphics{png/sha256sum.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/sha256sum.png}}
 \caption{Imatge3: Comprovació amb sha256sum}
 \end{figure}
 
@@ -331,8 +327,8 @@ particions ni fer res més.
 
 \newpage
 
-\section{3. Guia per instal·lar Ventoy en un USB des de Windows
-11}\label{guia-per-installar-ventoy-en-un-usb-des-de-windows-11}
+\section{3. Preparar Ventoy en un pendrive des de Windows
+11}\label{preparar-ventoy-en-un-pendrive-des-de-windows-11}
 
 \subsection{3.0 Formatar el pendrive}\label{formatar-el-pendrive}
 
@@ -340,7 +336,7 @@ Seleccionem el PenDrive
 
 \begin{figure}
 \centering
-\includegraphics{png/formatWindows.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/formatWindows.png}}
 \caption{Imatge 4:Formatejar un Pendrive}
 \end{figure}
 
@@ -348,7 +344,7 @@ Indiquem el tipus de Sistema de Fitxers (File System, SF): NTFS
 
 \begin{figure}
 \centering
-\includegraphics{png/formatWindows2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/formatWindows2.png}}
 \caption{Imatge 5:Formatejar un Pendrive:NTFS}
 \end{figure}
 
@@ -365,7 +361,7 @@ Windows}\label{descarregar-ventoy-per-a-windows}
 
 \begin{figure}
 \centering
-\includegraphics{png/zipDownload.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/zipDownload.png}}
 \caption{Imatge 6:Formatejar un Pendrive:NTFS}
 \end{figure}
 
@@ -404,7 +400,7 @@ verificant el \textbf{SHA256} del fitxer descarregat.
 
 \begin{figure}
 \centering
-\includegraphics{png/Get-FileHash.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/Get-FileHash.png}}
 \caption{Imatge 6: Get-FileHash}
 \end{figure}
 
@@ -437,7 +433,7 @@ verificant el \textbf{SHA256} del fitxer descarregat.
 
 \begin{figure}
 \centering
-\includegraphics{png/certutil.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/certutil.png}}
 \caption{Figura 7: certutil}
 \end{figure}
 
@@ -456,7 +452,7 @@ verificant el \textbf{SHA256} del fitxer descarregat.
 
 \begin{figure}
 \centering
-\includegraphics{png/extraerZip.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/extraerZip.png}}
 \caption{Imatge 8:Descomprimir ZIP}
 \end{figure}
 
@@ -467,7 +463,7 @@ A la carpeta extreta, \textbf{executa com a Administrador} l'executable
 
 \begin{figure}
 \centering
-\includegraphics{png/Executar.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/Executar.png}}
 \caption{Imatge 9: Instal·lar Ventoy des de Windows}
 \end{figure}
 
@@ -501,13 +497,13 @@ Ventoy}\label{seleccionar-el-pendrive-i-installar-ventoy}
 
 \begin{figure}
 \centering
-\includegraphics{png/executar2.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/executar2.png}}
 \caption{Imatge 19: Elegir unitat destí (Pendrive)}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics{png/executar3.png}
+\pandocbounded{\includegraphics[keepaspectratio]{png/executar3.png}}
 \caption{Imatge 11: Confirmar instal·lació}
 \end{figure}
 

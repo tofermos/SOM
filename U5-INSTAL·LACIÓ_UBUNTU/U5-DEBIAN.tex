@@ -1,0 +1,508 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+  catalan,
+  a4paper,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{setspace}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={U5. DEBIAN. INSTAL·LACIÓ MÍNIMA},
+  pdfauthor={@tofermos 2026},
+  pdflang={ca-ES},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{U5. DEBIAN. INSTAL·LACIÓ MÍNIMA}
+\author{@tofermos 2026}
+\date{}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
+\setstretch{1.5}
+\newpage
+\renewcommand\tablename{Tabla}
+
+\section{1. Instal·lar Debian sense entorn
+gràfic}\label{installar-debian-sense-entorn-gruxe0fic}
+
+Triem l'opció d'instal·lador gràfic (no instal·larem el GUI)
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian1.png}}
+\caption{\emph{Figura 1: Instal·lació gràfica}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian03nommaquina.png}}
+\caption{\emph{Figura 2: Nom del PC}}
+\end{figure}
+
+Les instal·lacions d'Ubuntu deixen, per defecte, l'usuari root
+inhabilitat i no apareix esta opció. La de Debian, ens dóna l'opció
+d'habilitar-lo. No obstant, de moment no ho farem i, per a aixó,
+deixarem en blanc els camps de contrassenya.
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian04rootenblanc.png}}
+\caption{\emph{Figura 2: root en blanc}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian05utilitzadiscsencer.png}}
+\caption{\emph{Figura 3: elegim un disc físic}}
+\end{figure}
+
+Compte! Trieu correctament el disc on instal·lar. Apareixeran tots els
+dispositius de magatzenament secundari: discos durs interns, externs,
+pendrives\ldots{} (sdX, nvmeX, hdX\ldots)
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian06seleccionadisc.png}}
+\caption{\emph{Figura 3: Seleccionem el disc on instal·larem}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian07confirmadisc.png}}
+\caption{\emph{Figura 4: Seleccionem el disc on instal·larem}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian07paricions.png}}
+\caption{\emph{Figura 5: Seleccionem particions}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian10confirmacanvis.png}}
+\caption{\emph{Figura 6: Confirma}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian12replica.png}}
+\caption{\emph{Figura 7: Replica}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian12replica1.png}}
+\caption{\emph{Figura 8: Replica}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian13escriptori.png}}
+\caption{\emph{Figura 9: Replica}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian13http.png}}
+\caption{\emph{Figura 10: Sense http}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian14grub.png}}
+\caption{\emph{Figura 11: Replica}}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/debian/Debian15grub2.png}}
+\caption{\emph{Figura 12: Replica}}
+\end{figure}
+
+\section{2. Afegir GUI Mínim}\label{afegir-gui-muxednim}
+
+\section{3. Entorn gràfic}\label{entorn-gruxe0fic}
+
+\subsection{3.1 Característiques dels gestors de finestres GNOME i
+KDE}\label{caracteruxedstiques-dels-gestors-de-finestres-gnome-i-kde}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2875}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3625}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Característica}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{GNOME}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{KDE}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Disseny} & Minimalista i senzill & Personalitzable \\
+\textbf{Consum de recursos} & Relatiu alt & Relatiu moderat \\
+\textbf{Eines pròpies} & Nautilus, GNOME Terminal & Dolphin, Konsole \\
+\end{longtable}
+
+\subsection{3.2 Altres gestors de
+finestres}\label{altres-gestors-de-finestres}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+\textbf{Gestor} & \textbf{Característica} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Fluxbox} & Lleuger i ràpid, minimalista. \\
+\textbf{LXDE} & Lleuger, ideal per a equips antics. \\
+\textbf{Xfce} & Equilibri entre lleugeresa i funcionalitat. \\
+\end{longtable}
+
+\subsection{3.3 Exploradors de fitxers}\label{exploradors-de-fitxers}
+
+Un explorador de fitxers és l'eina gràfica que permet navegar pel
+sistema d'arxius. Cada entorn gràfic sol utilitzar un explorador
+diferent.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1301}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1789}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3415}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3496}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Explorador}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Entorn associat}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Característiques}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Com instal·lar-lo}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Nautilus} & GNOME & Senzill i integrat amb GNOME. &
+\texttt{sudo\ apt\ install\ nautilus} \\
+\textbf{Thunar} & Xfce & Lleuger i ràpid. &
+\texttt{sudo\ apt\ install\ thunar} \\
+\textbf{Dolphin} & KDE & Altament personalitzable i complet. &
+\texttt{sudo\ apt\ install\ dolphin} \\
+\textbf{Caja} & MATE & Similar a Nautilus, però amb opcions clàssiques.
+& \texttt{sudo\ apt\ install\ caja} \\
+\textbf{PCManFM} & LXDE & Lleuger i senzill. &
+\texttt{sudo\ apt\ install\ pcmanfm} \\
+\end{longtable}
+
+\subsubsection{Seleccionar i canviar
+d'explorador}\label{seleccionar-i-canviar-dexplorador}
+
+Pots instal·lar diversos exploradors i executar-los independentment, per
+exemple:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{nautilus} \KeywordTok{\&}
+\ExtensionTok{thunar} \KeywordTok{\&}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Configura el predeterminat editant la configuració del sistema o
+  utilitzant eines com \textbf{xdg-mime}.
+\end{itemize}
+
+\subsubsection{Desinstal·lació
+d'exploradors}\label{desinstallaciuxf3-dexploradors}
+
+Si desitges eliminar un explorador de fitxers:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove }\OperatorTok{\textless{}}\NormalTok{nom\_explorador}\OperatorTok{\textgreater{}}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\end{Highlighting}
+\end{Shaded}
+
+Per exemple, per eliminar \textbf{Caja}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove caja}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{5.6 Preferències}\label{preferuxe8ncies}
+
+\begin{itemize}
+\item
+  \textbf{Pantalla}: Resolució i configuració de monitors.
+\item
+  \textbf{Ratolí i teclat}: Velocitat, mapes de tecles.
+\item
+  Comanda per accedir:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{lxappearance}
+\end{Highlighting}
+\end{Shaded}
+
+  \subsection{5.8 Instal·lació i desinstal·lació de diferents
+  escriptoris}\label{installaciuxf3-i-desinstallaciuxf3-de-diferents-escriptoris}
+\end{itemize}
+
+\subsubsection{Instal·lació
+d'escriptoris}\label{installaciuxf3-descriptoris}
+
+Pots instal·lar escriptoris alternatius en Ubuntu utilitzant el gestor
+de paquets \textbf{apt}. Després d'instal·lar-los, pots seleccionar quin
+entorn utilitzar en la pantalla d'inici de sessió.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.1545}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3909}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.4545}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Escriptori}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Com instal·lar-lo}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Com accedir després d'instal·lar}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{GNOME} & \texttt{sudo\ apt\ install\ ubuntu-desktop} & Tria
+\textbf{GNOME} a la pantalla d'inici de sessió. \\
+\textbf{LXDE} & \texttt{sudo\ apt\ install\ lubuntu-desktop} & Tria
+\textbf{LXDE} a la pantalla d'inici de sessió. \\
+\textbf{Xfce} & \texttt{sudo\ apt\ install\ xubuntu-desktop} & Tria
+\textbf{Xfce} a la pantalla d'inici de sessió. \\
+\textbf{KDE/Plasma} & \texttt{sudo\ apt\ install\ kubuntu-desktop} &
+Tria \textbf{Plasma} a la pantalla d'inici de sessió. \\
+\textbf{Fluxbox} & \texttt{sudo\ apt\ install\ fluxbox} & Tria
+\textbf{Fluxbox} a la pantalla d'inici de sessió. \\
+\end{longtable}
+
+\subsubsection{Desinstal·lació
+d'escriptoris}\label{desinstallaciuxf3-descriptoris}
+
+Per desinstal·lar un escriptori, elimina els paquets associats.
+Assegura't de no eliminar dependències crítiques del sistema.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \textbf{GNOME}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove ubuntu{-}desktop}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{LXDE}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove lubuntu{-}desktop}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Xfce}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove xubuntu{-}desktop}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{KDE/Plasma}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove kubuntu{-}desktop}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Fluxbox}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt remove fluxbox}
+\FunctionTok{sudo}\NormalTok{ apt autoremove}
+\end{Highlighting}
+\end{Shaded}
+\end{enumerate}
+
+\subsubsection{Comprovar escriptoris
+instal·lats}\label{comprovar-escriptoris-installats}
+
+\begin{itemize}
+\tightlist
+\item
+  Llista els paquets instal·lats relacionats amb els entorns
+  d'escriptori
+\end{itemize}
+
+: \texttt{bash\ \ \ dpkg\ -l\ \textbar{}\ grep\ desktop}
+
+\subsubsection{Selecció de l'escriptori
+predeterminat}\label{selecciuxf3-de-lescriptori-predeterminat}
+
+\begin{itemize}
+\tightlist
+\item
+  Si vols canviar l'escriptori predeterminat:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    Modifica la configuració de la pantalla d'inici de sessió.
+  \item
+    O selecciona'l manualment al moment d'iniciar sessió. ```
+  \end{enumerate}
+\end{itemize}
+
+Aquesta versió completada integra tot el que necessites sobre
+instal·lació i desinstal·lació d'escriptoris i exploradors de fitxers,
+amb els passos corresponents per a un entorn Ubuntu. També he inclòs
+exemples per a cada acció amb les ordres necessàries.
+
+\end{document}
