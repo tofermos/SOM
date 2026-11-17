@@ -2824,8 +2824,16 @@ instal·larem</em></div>
 <div class="figcaption"><em>Figura 12: Replica</em></div>
 </div>
 </div>
+<div id="treballar-amb-els-terminals" class="section level1">
+<h1>2. Treballar amb els terminals</h1>
+<p>Ara podem accedir als diferents terminals amb <em>Alt Fn</em></p>
+<p>Podem fer proves creant usuaris:</p>
+<pre><code>sudo useradd joana -s /bin/bash
+sudo passwd</code></pre>
+<p>I iniciant en cada terminal una sessió amb un usuari distint</p>
+</div>
 <div id="afegir-gui-mínim" class="section level1">
-<h1>2. Afegir GUI Mínim</h1>
+<h1>3. Afegir GUI Mínim</h1>
 <table>
 <colgroup>
 <col width="33%" />
@@ -2865,23 +2873,35 @@ sessions, innecessària per a aquesta pràctica.</td>
 </tr>
 </tbody>
 </table>
-<p>Instal·lem els tres paquets al mateix temps.</p>
+<div id="installem-els-tres-paquets-al-mateix-temps." class="section level2">
+<h2>3.1 Instal·lem els tres paquets al mateix temps.</h2>
+<ol style="list-style-type: decimal">
+<li>Abans actualitzame els repositoris (update)</li>
+<li>Desactivem les opcions recomanades perquè volem instal·lar el mínim
+GUI (–no-install-recommends).</li>
+</ol>
 <pre><code>sudo apt update
 sudo apt install --no-install-recommends xorg openbox xinit xterm</code></pre>
-<p>Preparem com iniciar el GUI des del CLI.</p>
-<p>Creant un fitxer</p>
+</div>
+<div id="preparem-com-iniciar-el-gui-des-del-cli." class="section level2">
+<h2>3.2 Preparem com iniciar el GUI des del CLI.</h2>
+<p>Creem un fitxer ocult amb una línia usant l’editor <em>nano</em></p>
 <pre><code>nano ~/.xinitrc</code></pre>
 <ol style="list-style-type: decimal">
-<li>Escriure <strong>openbox-session</strong></li>
-<li>Guardar amb Control X</li>
+<li>Escrivim a línia: <strong>openbox-session</strong></li>
+<li>Guardem el fitxer amb Control X i reponent Sí</li>
 </ol>
-<p>Ja podem inicar el CLI amb</p>
+<p>Ja podem iniciar el GUI amb</p>
 <pre><code>startx</code></pre>
 </div>
+</div>
 <div id="installar-un-navegador" class="section level1">
-<h1>3 Instal·lar un navegador</h1>
-<p>Instal·lem el Firefox</p>
+<h1>4 Instal·lar un navegador</h1>
+<p>Un possible ús d’un Linux sense GUI és reciclar màquines obsoletes
+per navegar o usar aplicacions web. Per això instal·larem un navegador
+com el Firefox</p>
 <pre><code>sudo apt install firefox-esr</code></pre>
+<p>Ara ja el tenim disponible des del GUI en Brownser.</p>
 </div>
 
 

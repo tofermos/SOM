@@ -199,7 +199,21 @@ pendrives\ldots{} (sdX, nvmeX, hdX\ldots)
 \caption{\emph{Figura 12: Replica}}
 \end{figure}
 
-\section{2. Afegir GUI Mínim}\label{afegir-gui-muxednim}
+\section{2. Treballar amb els
+terminals}\label{treballar-amb-els-terminals}
+
+Ara podem accedir als diferents terminals amb \emph{Alt Fn}
+
+Podem fer proves creant usuaris:
+
+\begin{verbatim}
+sudo useradd joana -s /bin/bash
+sudo passwd
+\end{verbatim}
+
+I iniciant en cada terminal una sessió amb un usuari distint
+
+\section{3. Afegir GUI Mínim}\label{afegir-gui-muxednim}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.3333}}
@@ -226,16 +240,28 @@ LightDM (no instal·lat) & Alternativa gràfica per autenticar-se i
 iniciar sessions, innecessària per a aquesta pràctica. \\
 \end{longtable}
 
-Instal·lem els tres paquets al mateix temps.
+\subsection{3.1 Instal·lem els tres paquets al mateix
+temps.}\label{installem-els-tres-paquets-al-mateix-temps.}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Abans actualitzame els repositoris (update)
+\item
+  Desactivem les opcions recomanades perquè volem instal·lar el mínim
+  GUI (--no-install-recommends).
+\end{enumerate}
 
 \begin{verbatim}
 sudo apt update
 sudo apt install --no-install-recommends xorg openbox xinit xterm
 \end{verbatim}
 
-Preparem com iniciar el GUI des del CLI.
+\subsection{3.2 Preparem com iniciar el GUI des del
+CLI.}\label{preparem-com-iniciar-el-gui-des-del-cli.}
 
-Creant un fitxer
+Creem un fitxer ocult amb una línia usant l'editor \emph{nano}
 
 \begin{verbatim}
 nano ~/.xinitrc
@@ -245,23 +271,27 @@ nano ~/.xinitrc
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Escriure \textbf{openbox-session}
+  Escrivim a línia: \textbf{openbox-session}
 \item
-  Guardar amb Control X
+  Guardem el fitxer amb Control X i reponent Sí
 \end{enumerate}
 
-Ja podem inicar el CLI amb
+Ja podem iniciar el GUI amb
 
 \begin{verbatim}
 startx
 \end{verbatim}
 
-\section{3 Instal·lar un navegador}\label{installar-un-navegador}
+\section{4 Instal·lar un navegador}\label{installar-un-navegador}
 
-Instal·lem el Firefox
+Un possible ús d'un Linux sense GUI és reciclar màquines obsoletes per
+navegar o usar aplicacions web. Per això instal·larem un navegador com
+el Firefox
 
 \begin{verbatim}
 sudo apt install firefox-esr
 \end{verbatim}
+
+Ara ja el tenim disponible des del GUI en Brownser.
 
 \end{document}

@@ -122,5 +122,5 @@ sudo apt install firefox-esr
 ```
 
 
-Ara ja el tenim disponible des del GUI en Browser.
+Ara ja el tenim disponible des del GUI en Brownser.
 
