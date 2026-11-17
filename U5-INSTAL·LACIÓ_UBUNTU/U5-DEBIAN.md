@@ -63,9 +63,20 @@ discos durs interns, externs, pendrives... (sdX, nvmeX, hdX...)
 
 
 
+# 2. Treballar amb els terminals
+
+Ara podem accedir als diferents terminals amb *Alt Fn* 
+
+Podem fer proves creant usuaris:
+
+```
+sudo useradd joana -s /bin/bash
+sudo passwd
+```
+I iniciant en cada terminal una sessió amb un usuari distint
 
 
-# 2. Afegir GUI Mínim
+# 3. Afegir GUI Mínim
 
 |Paquet|Descripció|
 |:--|:-----|
@@ -75,32 +86,41 @@ discos durs interns, externs, pendrives... (sdX, nvmeX, hdX...)
 |Firefox / xterm|Aplicacions gràfiques: són clients X11; Openbox administra les seues finestres.|
 |LightDM (no instal·lat)|Alternativa gràfica per autenticar-se i iniciar sessions, innecessària per a aquesta pràctica.|
 
-Instal·lem els tres paquets al mateix temps.
+
+## 3.1 Instal·lem els tres paquets al mateix temps.
+
+1. Abans actualitzame els repositoris (update)
+2. Desactivem les opcions recomanades perquè volem instal·lar el mínim GUI (--no-install-recommends).
 
 ```
 sudo apt update
 sudo apt install --no-install-recommends xorg openbox xinit xterm
 ```
-Preparem com iniciar el GUI des del CLI. 
 
-Creant un fitxer
+## 3.2 Preparem com iniciar el GUI des del CLI. 
+
+Creem un fitxer ocult amb una línia usant l'editor _nano_
 
 ```
 nano ~/.xinitrc
 ```
-1. Escriure **openbox-session**
-2. Guardar amb Control X
 
-Ja podem inicar el CLI amb
+1. Escrivim a línia: **openbox-session**
+2. Guardem el fitxer amb Control X i reponent Sí
+
+Ja podem iniciar el GUI amb
 ```
 startx
 ```
 
-# 3 Instal·lar un navegador
+# 4 Instal·lar un navegador
 
-Instal·lem el Firefox
+Un possible ús d'un Linux sense GUI és reciclar màquines obsoletes per navegar o usar aplicacions web. Per això instal·larem un navegador com el Firefox
 
 ```
 sudo apt install firefox-esr
 ```
+
+
+Ara ja el tenim disponible des del GUI en Browser.
 
