@@ -2826,246 +2826,62 @@ instal·larem</em></div>
 </div>
 <div id="afegir-gui-mínim" class="section level1">
 <h1>2. Afegir GUI Mínim</h1>
-</div>
-<div id="entorn-gràfic" class="section level1">
-<h1>3. Entorn gràfic</h1>
-<div id="característiques-dels-gestors-de-finestres-gnome-i-kde" class="section level2">
-<h2>3.1 Característiques dels gestors de finestres GNOME i KDE</h2>
 <table>
 <colgroup>
-<col width="28%" />
-<col width="35%" />
-<col width="36%" />
+<col width="33%" />
+<col width="66%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th><strong>Característica</strong></th>
-<th><strong>GNOME</strong></th>
-<th><strong>KDE</strong></th>
+<th align="left">Paquet</th>
+<th align="left">Descripció</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Disseny</strong></td>
-<td>Minimalista i senzill</td>
-<td>Personalitzable</td>
+<td align="left">Xorg</td>
+<td align="left">Procés del servidor gràfic X11; permet la comunicació
+amb pantalla i dispositius d’entrada</td>
 </tr>
 <tr class="even">
-<td><strong>Consum de recursos</strong></td>
-<td>Relatiu alt</td>
-<td>Relatiu moderat</td>
+<td align="left">Openbox</td>
+<td align="left">Gestor de finestres: disposició, vores, moviment, menús
+i escriptoris.</td>
 </tr>
 <tr class="odd">
-<td><strong>Eines pròpies</strong></td>
-<td>Nautilus, GNOME Terminal</td>
-<td>Dolphin, Konsole</td>
+<td align="left">startx / xinit</td>
+<td align="left">Mecanisme que arranca Xorg i la sessió indicada a
+~/.xinitrc; no és un escriptori.</td>
+</tr>
+<tr class="even">
+<td align="left">Firefox / xterm</td>
+<td align="left">Aplicacions gràfiques: són clients X11; Openbox
+administra les seues finestres.</td>
+</tr>
+<tr class="odd">
+<td align="left">LightDM (no instal·lat)</td>
+<td align="left">Alternativa gràfica per autenticar-se i iniciar
+sessions, innecessària per a aquesta pràctica.</td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="altres-gestors-de-finestres" class="section level2">
-<h2>3.2 Altres gestors de finestres</h2>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Gestor</strong></th>
-<th><strong>Característica</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Fluxbox</strong></td>
-<td>Lleuger i ràpid, minimalista.</td>
-</tr>
-<tr class="even">
-<td><strong>LXDE</strong></td>
-<td>Lleuger, ideal per a equips antics.</td>
-</tr>
-<tr class="odd">
-<td><strong>Xfce</strong></td>
-<td>Equilibri entre lleugeresa i funcionalitat.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="exploradors-de-fitxers" class="section level2">
-<h2>3.3 Exploradors de fitxers</h2>
-<p>Un explorador de fitxers és l’eina gràfica que permet navegar pel
-sistema d’arxius. Cada entorn gràfic sol utilitzar un explorador
-diferent.</p>
-<table>
-<colgroup>
-<col width="13%" />
-<col width="17%" />
-<col width="34%" />
-<col width="34%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Explorador</strong></th>
-<th><strong>Entorn associat</strong></th>
-<th><strong>Característiques</strong></th>
-<th><strong>Com instal·lar-lo</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Nautilus</strong></td>
-<td>GNOME</td>
-<td>Senzill i integrat amb GNOME.</td>
-<td><code>sudo apt install nautilus</code></td>
-</tr>
-<tr class="even">
-<td><strong>Thunar</strong></td>
-<td>Xfce</td>
-<td>Lleuger i ràpid.</td>
-<td><code>sudo apt install thunar</code></td>
-</tr>
-<tr class="odd">
-<td><strong>Dolphin</strong></td>
-<td>KDE</td>
-<td>Altament personalitzable i complet.</td>
-<td><code>sudo apt install dolphin</code></td>
-</tr>
-<tr class="even">
-<td><strong>Caja</strong></td>
-<td>MATE</td>
-<td>Similar a Nautilus, però amb opcions clàssiques.</td>
-<td><code>sudo apt install caja</code></td>
-</tr>
-<tr class="odd">
-<td><strong>PCManFM</strong></td>
-<td>LXDE</td>
-<td>Lleuger i senzill.</td>
-<td><code>sudo apt install pcmanfm</code></td>
-</tr>
-</tbody>
-</table>
-<div id="seleccionar-i-canviar-dexplorador" class="section level3">
-<h3>Seleccionar i canviar d’explorador</h3>
-<p>Pots instal·lar diversos exploradors i executar-los independentment,
-per exemple:</p>
-<pre class="bash"><code>nautilus &amp;
-thunar &amp;</code></pre>
-<ul>
-<li>Configura el predeterminat editant la configuració del sistema o
-utilitzant eines com <strong>xdg-mime</strong>.</li>
-</ul>
-</div>
-<div id="desinstallació-dexploradors" class="section level3">
-<h3>Desinstal·lació d’exploradors</h3>
-<p>Si desitges eliminar un explorador de fitxers:</p>
-<pre class="bash"><code>sudo apt remove &lt;nom_explorador&gt;
-sudo apt autoremove</code></pre>
-<p>Per exemple, per eliminar <strong>Caja</strong>:</p>
-<pre class="bash"><code>sudo apt remove caja
-sudo apt autoremove</code></pre>
-</div>
-</div>
-<div id="preferències" class="section level2">
-<h2>5.6 Preferències</h2>
-<ul>
-<li><p><strong>Pantalla</strong>: Resolució i configuració de
-monitors.</p></li>
-<li><p><strong>Ratolí i teclat</strong>: Velocitat, mapes de
-tecles.</p></li>
-<li><p>Comanda per accedir:</p>
-<pre class="bash"><code>lxappearance</code></pre>
-<h2 id="installació-i-desinstallació-de-diferents-escriptoris">5.8
-Instal·lació i desinstal·lació de diferents escriptoris</h2></li>
-</ul>
-<div id="installació-descriptoris" class="section level3">
-<h3>Instal·lació d’escriptoris</h3>
-<p>Pots instal·lar escriptoris alternatius en Ubuntu utilitzant el
-gestor de paquets <strong>apt</strong>. Després d’instal·lar-los, pots
-seleccionar quin entorn utilitzar en la pantalla d’inici de sessió.</p>
-<table>
-<colgroup>
-<col width="15%" />
-<col width="39%" />
-<col width="45%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Escriptori</strong></th>
-<th><strong>Com instal·lar-lo</strong></th>
-<th><strong>Com accedir després d’instal·lar</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>GNOME</strong></td>
-<td><code>sudo apt install ubuntu-desktop</code></td>
-<td>Tria <strong>GNOME</strong> a la pantalla d’inici de sessió.</td>
-</tr>
-<tr class="even">
-<td><strong>LXDE</strong></td>
-<td><code>sudo apt install lubuntu-desktop</code></td>
-<td>Tria <strong>LXDE</strong> a la pantalla d’inici de sessió.</td>
-</tr>
-<tr class="odd">
-<td><strong>Xfce</strong></td>
-<td><code>sudo apt install xubuntu-desktop</code></td>
-<td>Tria <strong>Xfce</strong> a la pantalla d’inici de sessió.</td>
-</tr>
-<tr class="even">
-<td><strong>KDE/Plasma</strong></td>
-<td><code>sudo apt install kubuntu-desktop</code></td>
-<td>Tria <strong>Plasma</strong> a la pantalla d’inici de sessió.</td>
-</tr>
-<tr class="odd">
-<td><strong>Fluxbox</strong></td>
-<td><code>sudo apt install fluxbox</code></td>
-<td>Tria <strong>Fluxbox</strong> a la pantalla d’inici de sessió.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="desinstallació-descriptoris" class="section level3">
-<h3>Desinstal·lació d’escriptoris</h3>
-<p>Per desinstal·lar un escriptori, elimina els paquets associats.
-Assegura’t de no eliminar dependències crítiques del sistema.</p>
+<p>Instal·lem els tres paquets al mateix temps.</p>
+<pre><code>sudo apt update
+sudo apt install --no-install-recommends xorg openbox xinit xterm</code></pre>
+<p>Preparem com iniciar el GUI des del CLI.</p>
+<p>Creant un fitxer</p>
+<pre><code>nano ~/.xinitrc</code></pre>
 <ol style="list-style-type: decimal">
-<li><p><strong>GNOME</strong>:</p>
-<pre class="bash"><code>sudo apt remove ubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>LXDE</strong>:</p>
-<pre class="bash"><code>sudo apt remove lubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>Xfce</strong>:</p>
-<pre class="bash"><code>sudo apt remove xubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>KDE/Plasma</strong>:</p>
-<pre class="bash"><code>sudo apt remove kubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>Fluxbox</strong>:</p>
-<pre class="bash"><code>sudo apt remove fluxbox
-sudo apt autoremove</code></pre></li>
+<li>Escriure <strong>openbox-session</strong></li>
+<li>Guardar amb Control X</li>
 </ol>
+<p>Ja podem inicar el CLI amb</p>
+<pre><code>startx</code></pre>
 </div>
-<div id="comprovar-escriptoris-installats" class="section level3">
-<h3>Comprovar escriptoris instal·lats</h3>
-<ul>
-<li>Llista els paquets instal·lats relacionats amb els entorns
-d’escriptori</li>
-</ul>
-<p>: <code>bash   dpkg -l | grep desktop</code></p>
-</div>
-<div id="selecció-de-lescriptori-predeterminat" class="section level3">
-<h3>Selecció de l’escriptori predeterminat</h3>
-<ul>
-<li>Si vols canviar l’escriptori predeterminat:
-<ol style="list-style-type: decimal">
-<li>Modifica la configuració de la pantalla d’inici de sessió.</li>
-<li>O selecciona’l manualment al moment d’iniciar sessió. ```</li>
-</ol></li>
-</ul>
-<p>Aquesta versió completada integra tot el que necessites sobre
-instal·lació i desinstal·lació d’escriptoris i exploradors de fitxers,
-amb els passos corresponents per a un entorn Ubuntu. També he inclòs
-exemples per a cada acció amb les ordres necessàries.</p>
-</div>
-</div>
+<div id="installar-un-navegador" class="section level1">
+<h1>3 Instal·lar un navegador</h1>
+<p>Instal·lem el Firefox</p>
+<pre><code>sudo apt install firefox-esr</code></pre>
 </div>
 
 
