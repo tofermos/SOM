@@ -121,13 +121,13 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={U5. LUBUNTU. INSTAL·LACIÓ I ESTRUCTURA},
-  pdfauthor={@tofermos 2024},
+  pdfauthor={@tofermos 2026},
   pdflang={ca-ES},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{U5. LUBUNTU. INSTAL·LACIÓ I ESTRUCTURA}
-\author{@tofermos 2024}
+\author{@tofermos 2026}
 \date{}
 
 \begin{document}
@@ -177,7 +177,7 @@ GNU/Linux}\label{el-sistema-operatiu-gnulinux}
 \end{Highlighting}
 \end{Shaded}
   \item
-    Exemple de resultat: \texttt{5.15.0-83-generic}.
+    Exemple de resultat: \texttt{6.8.0-149-generic}
   \end{itemize}
 \item
   \textbf{Shell}:
@@ -191,7 +191,7 @@ GNU/Linux}\label{el-sistema-operatiu-gnulinux}
   \end{itemize}
 \end{enumerate}
 
-Els shells diponible els tenim al fitxer /etc/shells
+Els shells disponibles els tenim al fitxer /etc/shells
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -217,7 +217,9 @@ Els shells diponible els tenim al fitxer /etc/shells
   \begin{itemize}
   \tightlist
   \item
-    Programes per a usuaris finals, com navegadors o editors.
+    Programes per a usuaris finals, com navegadors, editors; usuaris
+    administradors com net-tools, apt o usuaris programadors com
+    Visual-Studio
   \end{itemize}
 \item
   \textbf{Sistema d'arxius}:
@@ -276,7 +278,7 @@ Els shells diponible els tenim al fitxer /etc/shells
   \bottomrule\noalign{}
   \endlastfoot
   Ubuntu & Usuaris nous, suport comunitari. \\
-  Debian & Estable, per servidors. \\
+  Debian & Estable, molt usada en servidors. \\
   Arch Linux & Personalitzable, usuaris experts. \\
   \end{longtable}
 \end{itemize}
@@ -333,12 +335,56 @@ del sistema. En este cas:
   Versió
 \end{itemize}
 
-I el fitxer le manté una ordre: lsb\_release
+\section{5. ENTORN GRÀFIC.}\label{entorn-gruxe0fic.}
 
-\section{5. Entorn gràfic}\label{entorn-gruxe0fic}
+\subsection{5.1 Capes o components}\label{capes-o-components}
 
-\subsection{5.1 Instal·lació i desinstal·lació de diferents
-escriptoris}\label{installaciuxf3-i-desinstallaciuxf3-de-diferents-escriptoris}
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{png/GUI.png}}
+\caption{Capes GUI}
+\end{figure}
+
+\subsection{5.2 Sistema gràfic i Gestor de
+finestres}\label{sistema-gruxe0fic-i-gestor-de-finestres}
+
+\subsubsection{Sistema gràfic (xorg)}\label{sistema-gruxe0fic-xorg}
+
+Com infraestructura per crear entorn gràfic (sistema gràfic) usem
+**xorg* Per inicar-lo des del CLI usem el paquet \textbf{xinti} que ens
+proporciona el \textbf{startx}
+
+\begin{verbatim}
+startx /usr/bin/openbox-session
+\end{verbatim}
+
+En el tema de Debian has vist com automatizar-ho en el .xinitrc
+
+\subsubsection{Gestor de finestres}\label{gestor-de-finestres}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.4444}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5556}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Gestor de finestres}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Instal·lar: Sistema gràfic + Gestor de finestres + startx
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Openbox & \texttt{sudo\ apt\ install\ xorg\ openbox\ xinit} \\
+IceWM & \texttt{sudo\ apt\ install\ xorg\ xinit\ icewn} \\
+Fluxbox & \texttt{sudo\ apt\ install\ xorg\ xinit\ fluxbox} \\
+i3 & \texttt{sudo\ apt\ install\ xorg\ xinit\ i3-wm} \\
+\end{longtable}
+
+\subsection{5.3 Escriptoris}\label{escriptoris}
+
+A diferència de Windows, el Linux en tenim més d'un i, a més, en una
+mateixa màquina podem tindre'n instal·lat més dun i escollir en iniciar.
 
 \subsubsection{Instal·lació
 d'escriptoris}\label{installaciuxf3-descriptoris}
@@ -347,35 +393,115 @@ Pots instal·lar escriptoris alternatius en Ubuntu utilitzant el gestor
 de paquets \textbf{apt}. Després d'instal·lar-los, pots seleccionar quin
 entorn utilitzar en la pantalla d'inici de sessió.
 
-\begin{longtable}[]{@{}ll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \toprule\noalign{}
-\textbf{Escriptori} & \textbf{Com instal·lar-lo} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Escriptori
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Debian
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Ubuntu
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\textbf{GNOME} & \texttt{sudo\ apt\ install\ task-gnome-desktop} \\
-\textbf{LXQt} & \texttt{sudo\ apt\ install\ task-lxqt-desktop} \\
-\textbf{Xfce} & \texttt{sudo\ apt\ install\ task-xfce-desktop} \\
-\textbf{KDE/Plasma} & \texttt{sudo\ apt\ install\ task-kfce-desktop} \\
-\textbf{Cinnamon} &
-\texttt{sudo\ apt\ install\ task-cinnamon-desktop} \\
-\textbf{MATE} & \texttt{sudo\ apt\ install\ task-mate-desktop} \\
-\textbf{LXDE} & \texttt{sudo\ apt\ install\ task-lxde-desktop} \\
+\textbf{GNOME} & \texttt{sudo\ apt\ install\ task-gnome-desktop} &
+\texttt{sudo\ apt\ install\ ubuntu-desktop} \\
+\textbf{LXQt} & \texttt{sudo\ apt\ install\ task-lxqt-desktop} &
+\texttt{sudo\ apt\ install\ lubuntu-desktop} \\
+\textbf{Xfce} & \texttt{sudo\ apt\ install\ task-xfce-desktop} &
+\texttt{sudo\ apt\ install\ xubuntu-desktop} \\
+\textbf{KDE Plasma} & \texttt{sudo\ apt\ install\ task-kde-desktop} &
+\texttt{sudo\ apt\ install\ kubuntu-desktop} \\
+\textbf{Cinnamon} & \texttt{sudo\ apt\ install\ task-cinnamon-desktop} &
+\texttt{sudo\ apt\ install\ ubuntucinnamon-desktop} \\
+\textbf{MATE} & \texttt{sudo\ apt\ install\ task-mate-desktop} &
+\texttt{sudo\ apt\ install\ ubuntu-mate-desktop} \\
+\textbf{LXDE} & \texttt{sudo\ apt\ install\ task-lxde-desktop} &
+\texttt{sudo\ apt\ install\ lxde-desktop} \\
 \end{longtable}
 
-\subsubsection{Comprovar escriptoris
-instal·lats}\label{comprovar-escriptoris-installats}
+\subsubsection{Com cnsultar els que tenim
+instal·lats?}\label{com-cnsultar-els-que-tenim-installats}
 
-Llista els paquets instal·lats relacionats amb els entorns d'escriptori
+Si estem usant la infraestructura gràfica Xorg
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\ExtensionTok{dpkg} \AttributeTok{{-}l} \KeywordTok{|} \FunctionTok{grep}\NormalTok{ desktop}
-\end{Highlighting}
-\end{Shaded}
+\begin{verbatim}
+ls /usr/share/xsessions/
+\end{verbatim}
 
-\subsubsection{Desinstal·lació
+Si usarem la infraestructura Wayland
+
+\texttt{ls\ /usr/share/wayland-sessions/}
+
+Per saber quin escriptori estem usant:
+
+\begin{verbatim}
+echo $DG_CURRENT_DESKTOP
+\end{verbatim}
+
+o també
+
+\texttt{echo\ \$DESKTOP\_SESSION}
+
+\subsection{5.4 Configurar Gestor
+d'inici.}\label{configurar-gestor-dinici.}
+
+Com hem dit podem tindre més d'un escriptori instal·lat al PC. El
+\textbf{Gestor d'inici} és el software que ens permet triar amb quin
+Esciptori iniciar.
+
+Per saber si ja en tenim un instal·lat:
+
+\begin{verbatim}
+cat /etc/X11/default-display-manager
+\end{verbatim}
+
+Si no en tenim cap instal·lat cal fer-ho ( instal·lem el \emph{sddm})
+
+\begin{verbatim}
+sudo apt update
+sudo apt install sddm
+\end{verbatim}
+
+o un altre (el \emph{LigthDM})
+
+\begin{verbatim}
+sudo update
+sudo apt install LightDM
+\end{verbatim}
+
+Si hem instal·lat els dos, hem d'inicar quin s'iniciarà per defecte:
+
+\begin{verbatim}
+sudo dpkg-reconfigure sddm
+\end{verbatim}
+
+Imatge del sddm
+\pandocbounded{\includegraphics[keepaspectratio]{png/sddm.png}}
+
+\subsection{5.5 Arrencar amb i sense
+GUI}\label{arrencar-amb-i-sense-gui}
+
+Si volem iniciar sense GUI, podem configurar-ho i reiniciar (reboot)
+
+\begin{verbatim}
+sudo systemctl set-default multi-user.target
+sudo reboot
+\end{verbatim}
+
+Per inicar amb el GUI, farem l'equivalent:
+
+\begin{verbatim}
+sudo systemctl set-graphical.target
+sudo reboot
+\end{verbatim}
+
+\subsubsection{5.7 Desinstal·lació
 d'escriptoris}\label{desinstallaciuxf3-descriptoris}
 
 Per desinstal·lar un escriptori, elimina els paquets associats.
@@ -390,7 +516,10 @@ Assegura't de no eliminar dependències crítiques del sistema.
 \end{Highlighting}
 \end{Shaded}
 
-\subsection{5.2 Exploradors de fitxers}\label{exploradors-de-fitxers}
+\textbf{Si és el Escriptori en ús (o l'últim que queda), has d'iniciar
+prèviament sense GUI com hem vist}
+
+\subsection{5.8 Exploradors de fitxers}\label{exploradors-de-fitxers}
 
 Un explorador de fitxers és l'eina gràfica que permet navegar pel
 sistema d'arxius. Cada entorn gràfic sol utilitzar un explorador que té
@@ -439,19 +568,5 @@ Per exemple, per eliminar \textbf{Caja}:
 \end{Highlighting}
 \end{Shaded}
 
-\section{5.3 Gestor de finestres}\label{gestor-de-finestres}
-
-\begin{longtable}[]{@{}ll@{}}
-\toprule\noalign{}
-\textbf{Gestor de finestres} & \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-Openbox & \texttt{sudo\ apt\ install\ xorg\ openbox\ xinit} \\
-IceWM & \texttt{sudo\ apt\ install\ xorg\ xinit\ icewn} \\
-Fluxbox & \texttt{sudo\ apt\ install\ xorg\ xinit\ fluxbox} \\
-i3 & \texttt{sudo\ apt\ install\ xorg\ xinit\ i3-wm} \\
-\end{longtable}
 
 \end{document}

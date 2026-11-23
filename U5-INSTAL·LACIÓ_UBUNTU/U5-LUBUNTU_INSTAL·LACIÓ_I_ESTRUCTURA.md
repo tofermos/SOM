@@ -1,6 +1,6 @@
 ---
 title: U5. LUBUNTU. INSTAL·LACIÓ I ESTRUCTURA
-author: "@tofermos 2024"
+author: "@tofermos 2026"
 lang: "ca-ES"
 papersize: A4
 linestretch: 1.5
@@ -35,13 +35,13 @@ output:
      ```bash
      uname -r
      ```
-   - Exemple de resultat: `5.15.0-83-generic`.
+   - Exemple de resultat: `6.8.0-149-generic`
 
 2. **Shell**:
    - Interfície que permet interactuar amb el sistema.
    - Exemples: **bash**, **sh**, **dash**.
   
-  Els shells diponible els tenim al fitxer /etc/shells
+  Els shells disponibles els tenim al fitxer /etc/shells
   
   ```bash
   cat /etc/shells
@@ -51,7 +51,7 @@ output:
    - Comandes bàsiques: `ls`, `cp`, `mv`.
 
 4. **Aplicacions**:
-   - Programes per a usuaris finals, com navegadors o editors.
+   - Programes per a usuaris finals, com navegadors, editors; usuaris administradors com net-tools, apt o usuaris programadors com Visual-Studio
 
 5. **Sistema d’arxius**:
    - Estructura jeràrquica que comença a `/`.
@@ -76,7 +76,7 @@ output:
   | **Distribució** | **Orientació**                      |
   |------------------|------------------------------------|
   | Ubuntu           | Usuaris nous, suport comunitari.  |
-  | Debian           | Estable, per servidors.           |
+  | Debian           | Estable, molt usada en servidors.|           |
   | Arch Linux       | Personalitzable, usuaris experts. |
 
 # 4. Instal·lació de Ubuntu
@@ -96,41 +96,132 @@ o llegint el fitxer de configuració
 ```bash
 cat /etc/os-release
 ```
-
 Una vegada més veiem com en un fitxer de text pla es guarda informació del sistema. En este cas:
 
 * Nom del SO
 * Distribució
 * Versió
 
-I el fitxer le manté una ordre: lsb_release
 
-# 5. Entorn gràfic
-## 5.1 Instal·lació i desinstal·lació de diferents escriptoris
+
+# 5. ENTORN GRÀFIC. 
+
+## 5.1 Capes o components
+
+![Capes GUI](png/GUI.png)
+
+
+## 5.2 Sistema gràfic i Gestor de finestres
+
+### Sistema gràfic (xorg)
+
+
+Com infraestructura per crear entorn gràfic (sistema gràfic) usem **xorg*
+Per inicar-lo des del CLI usem el paquet **xinti** que ens proporciona el **startx**
+```
+startx /usr/bin/openbox-session
+```
+En el tema de Debian has vist com automatizar-ho en el .xinitrc
+
+### Gestor de finestres
+
+|**Gestor de finestres**|Instal·lar: Sistema gràfic + Gestor de finestres + startx|
+|:---|-----|
+|Openbox|`sudo apt install xorg openbox xinit`|
+|IceWM|`sudo apt install xorg xinit icewn`|
+|Fluxbox|`sudo apt install xorg xinit fluxbox`|
+|i3|`sudo apt install xorg xinit i3-wm`|
+
+
+## 5.3 Escriptoris
+
+A diferència de Windows, el Linux en tenim més d'un i, a més, en una mateixa màquina podem tindre'n instal·lat més dun i escollir en iniciar.
 
 ### Instal·lació d'escriptoris
 Pots instal·lar escriptoris alternatius en Ubuntu utilitzant el gestor de paquets **apt**. Després d'instal·lar-los, pots seleccionar quin entorn utilitzar en la pantalla d'inici de sessió.
 
-| **Escriptori** | **Com instal·lar-lo**                     | 
-|-----------------|-------------------------------------------|
-| **GNOME**       | `sudo apt install task-gnome-desktop`      |
-| **LXQt**        | `sudo apt install task-lxqt-desktop`       |
-| **Xfce**        | `sudo apt install task-xfce-desktop`       |
-| **KDE/Plasma**  | `sudo apt install task-kfce-desktop`       |
-| **Cinnamon**   | `sudo apt install task-cinnamon-desktop`  | 
-| **MATE**   | `sudo apt install task-mate-desktop`  | 
-| **LXDE**   | `sudo apt install task-lxde-desktop`  |
+
+| Escriptori | Debian | Ubuntu |
+|---|---|---|
+| **GNOME** | `sudo apt install task-gnome-desktop` | `sudo apt install ubuntu-desktop` |
+| **LXQt** | `sudo apt install task-lxqt-desktop` | `sudo apt install lubuntu-desktop` |
+| **Xfce** | `sudo apt install task-xfce-desktop` | `sudo apt install xubuntu-desktop` |
+| **KDE Plasma** | `sudo apt install task-kde-desktop` | `sudo apt install kubuntu-desktop` |
+| **Cinnamon** | `sudo apt install task-cinnamon-desktop` | `sudo apt install ubuntucinnamon-desktop` |
+| **MATE** | `sudo apt install task-mate-desktop` | `sudo apt install ubuntu-mate-desktop` |
+| **LXDE** | `sudo apt install task-lxde-desktop` | `sudo apt install lxde-desktop` |
 
 
-### Comprovar escriptoris instal·lats
+### Com cnsultar els que tenim instal·lats?
 
-Llista els paquets instal·lats relacionats amb els entorns d'escriptori
+Si estem usant la infraestructura gràfica Xorg
 
-  ```bash
-  dpkg -l | grep desktop
-  ```
+```
+ls /usr/share/xsessions/
+```
 
-### Desinstal·lació d'escriptoris
+Si usarem la infraestructura Wayland
+
+```ls /usr/share/wayland-sessions/
+```
+
+Per saber quin escriptori estem usant:
+
+```
+echo $DG_CURRENT_DESKTOP
+```
+o també
+
+```echo $DESKTOP_SESSION
+```
+
+  
+## 5.4 Configurar Gestor d'inici.
+
+Com hem dit podem tindre més d'un escriptori instal·lat al PC. El **Gestor d'inici** és el software que ens permet triar amb quin Esciptori iniciar.
+
+Per saber si ja en tenim un instal·lat:
+```
+cat /etc/X11/default-display-manager
+```
+
+Si no en tenim cap instal·lat cal fer-ho ( instal·lem el *sddm*)
+
+```
+sudo apt update
+sudo apt install sddm
+```
+
+o un altre (el *LigthDM*)
+
+```
+sudo update
+sudo apt install LightDM
+```
+
+Si hem instal·lat els dos, hem d'inicar quin s'iniciarà per defecte:
+```
+sudo dpkg-reconfigure sddm
+```
+Imatge del sddm
+![Imatge 4](png/sddm.png)
+
+## 5.5 Arrencar amb i sense GUI
+
+Si volem iniciar sense GUI, podem configurar-ho i reiniciar (reboot)
+```
+sudo systemctl set-default multi-user.target
+sudo reboot
+```
+
+Per inicar amb el GUI, farem l'equivalent:
+
+```
+sudo systemctl set-graphical.target
+sudo reboot
+```
+
+### 5.7 Desinstal·lació d'escriptoris
 
 Per desinstal·lar un escriptori, elimina els paquets associats. Assegura’t de no eliminar dependències crítiques del sistema.
 
@@ -140,8 +231,10 @@ Per desinstal·lar un escriptori, elimina els paquets associats. Assegura’t de
    sudo apt remove task-gnome-desktop
    sudo apt autoremove
    ```
+**Si és el Escriptori en ús (o l'últim que queda), has d'iniciar prèviament sense GUI com hem vist**
 
-## 5.2 Exploradors de fitxers
+   
+## 5.8 Exploradors de fitxers
 Un explorador de fitxers és l'eina gràfica que permet navegar pel sistema d'arxius. Cada entorn gràfic sol utilitzar un 
 explorador que té associat però podem instal·lar altres, desinstal·lar i canviar.
 
@@ -161,12 +254,5 @@ sudo apt remove caja
 sudo apt autoremove
 ```
 
-# 5.3 Gestor de finestres
 
-|**Gestor de finestres**||
-|:--|-----|
-|Openbox|`sudo apt install xorg openbox xinit`|
-|IceWM|`sudo apt install xorg xinit icewn`|
-|Fluxbox|`sudo apt install xorg xinit fluxbox`|
-|i3|`sudo apt install xorg xinit i3-wm`|
 
