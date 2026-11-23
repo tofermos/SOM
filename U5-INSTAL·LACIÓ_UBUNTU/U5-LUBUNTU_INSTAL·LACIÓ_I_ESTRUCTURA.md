@@ -41,7 +41,7 @@ output:
    - Interfície que permet interactuar amb el sistema.
    - Exemples: **bash**, **sh**, **dash**.
   
-  Els shells disponibles els tenim al fitxer /etc/shells
+  Els shells disponibles els tenim al fitxer */etc/shells*
   
   ```bash
   cat /etc/shells
