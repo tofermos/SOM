@@ -21,7 +21,7 @@ output:
 \renewcommand\tablename{Tabla}
 
 
-# 1. El sistema operatiu GNU/Linux. Estructura i característiques
+# 1. El Sistema Operatiu GNU/Linux. Estructura i característiques
 
 ## 1.1 El sistema operatiu GNU/Linux
 - **GNU/Linux** és un sistema operatiu lliure i de codi obert.
