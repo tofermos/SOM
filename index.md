@@ -6,15 +6,15 @@ subtitle: |
   | IES MARIA ENRÍQUEZ
 author: "Tomàs Ferrandis Moscardó"
 output:
+  pdf_document: 
+    toc: false
+    keep_tex: true
   html_document:
     toc: false
     toc_float: true
     toc_depth: 2
     df_print: paged
     number_sections: false
-  pdf_document: 
-    toc: false
-    keep_tex: true
   word_document:
     toc: true
     toc_depth: '3'
