@@ -66,7 +66,7 @@ linestretch: 1.5
 
 ||||
 |:----|:--|:--|
-|Instal·lació i estructura d'un Lubuntu|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_ESTRUCTURA.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_ESTRUCTURA.pdf)|
+|Instal·lació i estructura d'un Lubuntu|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.pdf)|
 |Instal·lació i estructura d'un Debian (sense GUI)|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-DEBIAN.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-DEBIAN.pdf)|
 |Preparar un PenDrive amb el Ventoy|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-PrepararPendriveVentoy.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-PrepararPendriveVentoy.pdf)|
 |Comprovar ISO (sha256sum)|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-SHA256SUM.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-SHA256SUM.pdf)|

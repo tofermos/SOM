@@ -2872,7 +2872,7 @@ Etcher).</li>
 <h1>4.1 Versió d’Ubuntu</h1>
 <p>Amb l’ordre:</p>
 <pre class="bash"><code>lsb_release -a</code></pre>
-<p>o llegintel fitxer de configuració</p>
+<p>o llegint el fitxer de configuració</p>
 <pre class="bash"><code>cat /etc/os-release</code></pre>
 <p>Una vegada més veiem com en un fitxer de text pla es guarda
 informació del sistema. En este cas:</p>
@@ -2885,202 +2885,8 @@ informació del sistema. En este cas:</p>
 </div>
 <div id="entorn-gràfic" class="section level1">
 <h1>5. Entorn gràfic</h1>
-<div id="característiques-dels-gestors-de-finestres-gnome-i-kde" class="section level2">
-<h2>5.1 Característiques dels gestors de finestres GNOME i KDE</h2>
-<table>
-<colgroup>
-<col width="28%" />
-<col width="35%" />
-<col width="36%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Característica</strong></th>
-<th><strong>GNOME</strong></th>
-<th><strong>KDE</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Disseny</strong></td>
-<td>Minimalista i senzill</td>
-<td>Personalitzable</td>
-</tr>
-<tr class="even">
-<td><strong>Consum de recursos</strong></td>
-<td>Relatiu alt</td>
-<td>Relatiu moderat</td>
-</tr>
-<tr class="odd">
-<td><strong>Eines pròpies</strong></td>
-<td>Nautilus, GNOME Terminal</td>
-<td>Dolphin, Konsole</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="altres-gestors-de-finestres" class="section level2">
-<h2>5.2 Altres gestors de finestres</h2>
-<table>
-<thead>
-<tr class="header">
-<th><strong>Gestor</strong></th>
-<th><strong>Característica</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Fluxbox</strong></td>
-<td>Lleuger i ràpid, minimalista.</td>
-</tr>
-<tr class="even">
-<td><strong>LXDE</strong></td>
-<td>Lleuger, ideal per a equips antics.</td>
-</tr>
-<tr class="odd">
-<td><strong>Xfce</strong></td>
-<td>Equilibri entre lleugeresa i funcionalitat.</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="personalització-de-lescriptori" class="section level2">
-<h2>5.3 Personalització de l’escriptori</h2>
-<ul>
-<li><strong>Canviar fons de pantalla</strong>:
-<ul>
-<li>Botó dret a l’escriptori → <strong>Configuració del
-fons</strong>.</li>
-</ul></li>
-<li><strong>Afegir ginys</strong>:
-<ul>
-<li>Menú → <strong>Ginys</strong> o <strong>Accessoris</strong>.</li>
-</ul></li>
-</ul>
-</div>
-<div id="aplicacions" class="section level2">
-<h2>5.4 Aplicacions</h2>
-<ul>
-<li>Navegador web: <strong>Firefox</strong>.</li>
-<li>Suite ofimàtica: <strong>LibreOffice</strong>.</li>
-<li>Reproductor multimèdia: <strong>VLC</strong>.</li>
-</ul>
-<p>Habitualment entenem per aplciacions les que són gràfiques però no
-hem d’oblidar que hi ha moltes eines que són aplicacions que s’executen
-en modeu CLI. ( apt, net-tools, nano, mdadm…).</p>
-</div>
-<div id="llocs" class="section level2">
-<h2>5.5 Llocs</h2>
-<div id="exploradors-de-fitxers" class="section level3">
-<h3>Exploradors de fitxers</h3>
-<p>Un explorador de fitxers és l’eina gràfica que permet navegar pel
-sistema d’arxius. Cada entorn gràfic sol utilitzar un explorador
-diferent.</p>
-<table>
-<colgroup>
-<col width="13%" />
-<col width="17%" />
-<col width="34%" />
-<col width="34%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Explorador</strong></th>
-<th><strong>Entorn associat</strong></th>
-<th><strong>Característiques</strong></th>
-<th><strong>Com instal·lar-lo</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Nautilus</strong></td>
-<td>GNOME</td>
-<td>Senzill i integrat amb GNOME.</td>
-<td><code>sudo apt install nautilus</code></td>
-</tr>
-<tr class="even">
-<td><strong>Thunar</strong></td>
-<td>Xfce</td>
-<td>Lleuger i ràpid.</td>
-<td><code>sudo apt install thunar</code></td>
-</tr>
-<tr class="odd">
-<td><strong>Dolphin</strong></td>
-<td>KDE</td>
-<td>Altament personalitzable i complet.</td>
-<td><code>sudo apt install dolphin</code></td>
-</tr>
-<tr class="even">
-<td><strong>Caja</strong></td>
-<td>MATE</td>
-<td>Similar a Nautilus, però amb opcions clàssiques.</td>
-<td><code>sudo apt install caja</code></td>
-</tr>
-<tr class="odd">
-<td><strong>PCManFM</strong></td>
-<td>LXDE</td>
-<td>Lleuger i senzill.</td>
-<td><code>sudo apt install pcmanfm</code></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="seleccionar-i-canviar-dexplorador" class="section level3">
-<h3>Seleccionar i canviar d’explorador</h3>
-<p>Pots instal·lar diversos exploradors i executar-los independentment,
-per exemple:</p>
-<pre class="bash"><code>nautilus &amp;
-thunar &amp;</code></pre>
-<ul>
-<li>Configura el predeterminat editant la configuració del sistema o
-utilitzant eines com <strong>xdg-mime</strong>.</li>
-</ul>
-</div>
-<div id="desinstallació-dexploradors" class="section level3">
-<h3>Desinstal·lació d’exploradors</h3>
-<p>Si desitges eliminar un explorador de fitxers:</p>
-<pre class="bash"><code>sudo apt remove &lt;nom_explorador&gt;
-sudo apt autoremove</code></pre>
-<p>Per exemple, per eliminar <strong>Caja</strong>:</p>
-<pre class="bash"><code>sudo apt remove caja
-sudo apt autoremove</code></pre>
-</div>
-</div>
-<div id="preferències" class="section level2">
-<h2>5.6 Preferències</h2>
-<ul>
-<li><p><strong>Pantalla</strong>: Resolució i configuració de
-monitors.</p></li>
-<li><p><strong>Ratolí i teclat</strong>: Velocitat, mapes de
-tecles.</p></li>
-<li><p>Comanda per accedir:</p>
-<pre class="bash"><code>lxappearance</code></pre></li>
-</ul>
-</div>
-<div id="administració" class="section level2">
-<h2>5.7 Administració</h2>
-<ul>
-<li>Gestió d’usuaris:
-<ul>
-<li><p>Afegir un usuari:</p>
-<pre class="bash"><code>sudo adduser nom_usuari</code></pre></li>
-<li><p>Veure usuaris:</p>
-<pre class="bash"><code>cat /etc/passwd</code></pre></li>
-</ul></li>
-<li>Gestió de processos:
-<ul>
-<li><p>Veure processos actius:</p>
-<pre class="bash"><code>top</code></pre></li>
-</ul></li>
-<li>Gestió de paquets:
-<ul>
-<li><p>Actualitzar el sistema:</p>
-<pre class="bash"><code>sudo apt update &amp;&amp; sudo apt upgrade</code></pre></li>
-</ul></li>
-</ul>
-</div>
 <div id="installació-i-desinstallació-de-diferents-escriptoris" class="section level2">
-<h2>5.8 Instal·lació i desinstal·lació de diferents escriptoris</h2>
+<h2>5.1 Instal·lació i desinstal·lació de diferents escriptoris</h2>
 <div id="installació-descriptoris" class="section level3">
 <h3>Instal·lació d’escriptoris</h3>
 <p>Pots instal·lar escriptoris alternatius en Ubuntu utilitzant el
@@ -3140,6 +2946,95 @@ Assegura’t de no eliminar dependències crítiques del sistema.</p>
    sudo apt autoremove</code></pre>
 </div>
 </div>
+<div id="exploradors-de-fitxers" class="section level2">
+<h2>5.2 Exploradors de fitxers</h2>
+<p>Un explorador de fitxers és l’eina gràfica que permet navegar pel
+sistema d’arxius. Cada entorn gràfic sol utilitzar un explorador que té
+associat però podem instal·lar altres, desinstal·lar i canviar.</p>
+<table>
+<colgroup>
+<col width="13%" />
+<col width="17%" />
+<col width="34%" />
+<col width="34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Explorador</strong></th>
+<th><strong>Entorn associat</strong></th>
+<th><strong>Característiques</strong></th>
+<th><strong>Com instal·lar-lo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Nautilus</strong></td>
+<td>GNOME</td>
+<td>Senzill i integrat amb GNOME.</td>
+<td><code>sudo apt install nautilus</code></td>
+</tr>
+<tr class="even">
+<td><strong>Thunar</strong></td>
+<td>Xfce</td>
+<td>Lleuger i ràpid.</td>
+<td><code>sudo apt install thunar</code></td>
+</tr>
+<tr class="odd">
+<td><strong>Dolphin</strong></td>
+<td>KDE</td>
+<td>Altament personalitzable i complet.</td>
+<td><code>sudo apt install dolphin</code></td>
+</tr>
+<tr class="even">
+<td><strong>Caja</strong></td>
+<td>MATE</td>
+<td>Similar a Nautilus, però amb opcions clàssiques.</td>
+<td><code>sudo apt install caja</code></td>
+</tr>
+<tr class="odd">
+<td><strong>PCManFM</strong></td>
+<td>LXDE</td>
+<td>Lleuger i senzill.</td>
+<td><code>sudo apt install pcmanfm</code></td>
+</tr>
+</tbody>
+</table>
+<div id="desinstallació-dexploradors" class="section level3">
+<h3>Desinstal·lació d’exploradors</h3>
+<p>Per exemple, per eliminar <strong>Caja</strong>:</p>
+<pre class="bash"><code>sudo apt remove caja
+sudo apt autoremove</code></pre>
+</div>
+</div>
+</div>
+<div id="gestor-de-finestres" class="section level1">
+<h1>5.3 Gestor de finestres</h1>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Gestor de finestres</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Openbox</td>
+<td><code>sudo apt install xorg openbox xinit</code></td>
+</tr>
+<tr class="even">
+<td align="left">IceWM</td>
+<td><code>sudo apt install xorg xinit icewn</code></td>
+</tr>
+<tr class="odd">
+<td align="left">Fluxbox</td>
+<td><code>sudo apt install xorg xinit fluxbox</code></td>
+</tr>
+<tr class="even">
+<td align="left">i3</td>
+<td><code>sudo apt install xorg xinit i3-wm</code></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 
