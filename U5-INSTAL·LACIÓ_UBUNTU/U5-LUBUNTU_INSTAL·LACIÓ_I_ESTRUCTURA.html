@@ -2785,7 +2785,7 @@ servidors.</li>
 <strong>dash</strong>.</li>
 </ul></li>
 </ol>
-<p>Els shells diponible sels tenim al fitxer /etc/shells</p>
+<p>Els shells diponible els tenim al fitxer /etc/shells</p>
 <pre class="bash"><code>cat /etc/shells</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>Utilitats</strong>:
@@ -3087,90 +3087,57 @@ tecles.</p></li>
 gestor de paquets <strong>apt</strong>. Després d’instal·lar-los, pots
 seleccionar quin entorn utilitzar en la pantalla d’inici de sessió.</p>
 <table>
-<colgroup>
-<col width="15%" />
-<col width="39%" />
-<col width="45%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Escriptori</strong></th>
 <th><strong>Com instal·lar-lo</strong></th>
-<th><strong>Com accedir després d’instal·lar</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><strong>GNOME</strong></td>
-<td><code>sudo apt install ubuntu-desktop</code></td>
-<td>Tria <strong>GNOME</strong> a la pantalla d’inici de sessió.</td>
+<td><code>sudo apt install task-gnome-desktop</code></td>
 </tr>
 <tr class="even">
-<td><strong>LXDE</strong></td>
-<td><code>sudo apt install lubuntu-desktop</code></td>
-<td>Tria <strong>LXDE</strong> a la pantalla d’inici de sessió.</td>
+<td><strong>LXQt</strong></td>
+<td><code>sudo apt install task-lxqt-desktop</code></td>
 </tr>
 <tr class="odd">
 <td><strong>Xfce</strong></td>
-<td><code>sudo apt install xubuntu-desktop</code></td>
-<td>Tria <strong>Xfce</strong> a la pantalla d’inici de sessió.</td>
+<td><code>sudo apt install task-xfce-desktop</code></td>
 </tr>
 <tr class="even">
 <td><strong>KDE/Plasma</strong></td>
-<td><code>sudo apt install kubuntu-desktop</code></td>
-<td>Tria <strong>Plasma</strong> a la pantalla d’inici de sessió.</td>
+<td><code>sudo apt install task-kfce-desktop</code></td>
 </tr>
 <tr class="odd">
-<td><strong>Fluxbox</strong></td>
-<td><code>sudo apt install fluxbox</code></td>
-<td>Tria <strong>Fluxbox</strong> a la pantalla d’inici de sessió.</td>
+<td><strong>Cinnamon</strong></td>
+<td><code>sudo apt install task-cinnamon-desktop</code></td>
+</tr>
+<tr class="even">
+<td><strong>MATE</strong></td>
+<td><code>sudo apt install task-mate-desktop</code></td>
+</tr>
+<tr class="odd">
+<td><strong>LXDE</strong></td>
+<td><code>sudo apt install task-lxde-desktop</code></td>
 </tr>
 </tbody>
 </table>
+</div>
+<div id="comprovar-escriptoris-installats" class="section level3">
+<h3>Comprovar escriptoris instal·lats</h3>
+<p>Llista els paquets instal·lats relacionats amb els entorns
+d’escriptori</p>
+<pre class="bash"><code>dpkg -l | grep desktop</code></pre>
 </div>
 <div id="desinstallació-descriptoris" class="section level3">
 <h3>Desinstal·lació d’escriptoris</h3>
 <p>Per desinstal·lar un escriptori, elimina els paquets associats.
 Assegura’t de no eliminar dependències crítiques del sistema.</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>GNOME</strong>:</p>
-<pre class="bash"><code>sudo apt remove ubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>LXDE</strong>:</p>
-<pre class="bash"><code>sudo apt remove lubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>Xfce</strong>:</p>
-<pre class="bash"><code>sudo apt remove xubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>KDE/Plasma</strong>:</p>
-<pre class="bash"><code>sudo apt remove kubuntu-desktop
-sudo apt autoremove</code></pre></li>
-<li><p><strong>Fluxbox</strong>:</p>
-<pre class="bash"><code>sudo apt remove fluxbox
-sudo apt autoremove</code></pre></li>
-</ol>
-</div>
-<div id="comprovar-escriptoris-installats" class="section level3">
-<h3>Comprovar escriptoris instal·lats</h3>
-<ul>
-<li>Llista els paquets instal·lats relacionats amb els entorns
-d’escriptori</li>
-</ul>
-<p>: <code>bash   dpkg -l | grep desktop</code></p>
-</div>
-<div id="selecció-de-lescriptori-predeterminat" class="section level3">
-<h3>Selecció de l’escriptori predeterminat</h3>
-<ul>
-<li>Si vols canviar l’escriptori predeterminat:
-<ol style="list-style-type: decimal">
-<li>Modifica la configuració de la pantalla d’inici de sessió.</li>
-<li>O selecciona’l manualment al moment d’iniciar sessió. ```</li>
-</ol></li>
-</ul>
-<p>Aquesta versió completada integra tot el que necessites sobre
-instal·lació i desinstal·lació d’escriptoris i exploradors de fitxers,
-amb els passos corresponents per a un entorn Ubuntu. També he inclòs
-exemples per a cada acció amb les ordres necessàries.</p>
+<p><strong>Exemple</strong></p>
+<pre class="bash"><code>   sudo apt remove task-gnome-desktop
+   sudo apt autoremove</code></pre>
 </div>
 </div>
 </div>
