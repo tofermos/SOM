@@ -67,7 +67,7 @@ linestretch: 1.5
 ||||
 |:----|:--|:--|
 |Instal·lació i estructura d'un Debian (sense GUI)|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-DEBIAN.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-DEBIAN.pdf)|
-|Instal·lació i estructura d'un Lubuntu|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-LUBUNTU_INSTAL·LACIÓ_I_ESTRUCTURA.pdf)|
+|Instal·lació i estructura d'un Lubuntu|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-UBUNTU_ESTRUCTURA.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-UBUNTU_ESTRUCTURA.pdf)|
 |Preparar un PenDrive amb el Ventoy|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-PrepararPendriveVentoy.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-PrepararPendriveVentoy.pdf)|
 |Comprovar ISO (sha256sum)|[![](recursos/iconohtml.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-SHA256SUM.html)|[![](recursos/iconopdf.png)](U5-INSTAL·LACIÓ_UBUNTU/U5-SHA256SUM.pdf)|
 
@@ -77,6 +77,7 @@ linestretch: 1.5
 |:----|:--|:--|
 |Usuaris i grups|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-COMPTES_LOCALS_UBUNTU.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-COMPTES_LOCALS_UBUNTU.pdf)|
 |Permisos i propietat|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-PERMISOS_I_PROPIETAT.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/U6-PERMISOS_I_ PROPIETAT.pdf)|
+|Exemple. Usuari i permisos|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ExempleComptePermisos.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ExempleComptePermisos.pdf)|
 |Activitat. Usuari i permisos|[![](recursos/iconohtml.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ActivitatPermisosBotiga.html)|[![](recursos/iconopdf.png)](U6-TASQUES_BÀSIQUES_AMB_UBUNTU/ActivitatPermisosBotiga.pdf)|
 
 

@@ -1,5 +1,5 @@
 ---
-title: U5. LUBUNTU. INSTAL·LACIÓ I ESTRUCTURA
+title: U5. UBUNTU. ESTRUCTURA
 author: "@tofermos 2026"
 lang: "ca-ES"
 papersize: A4
@@ -69,55 +69,48 @@ output:
 - **1994**: Primera versió estable (Linux 1.0).
 - **Actualitat**: Moltes distribucions basades en Linux.
 
-# 3. Distribucions
+# 3. Distribucions i versions
 - Una distribució és una combinació del nucli, utilitats GNU, i altres programes.
-- Exemples de distribucions:
 
-  | **Distribució** | **Orientació**                      |
-  |------------------|------------------------------------|
-  | Ubuntu           | Usuaris nous, suport comunitari.  |
-  | Debian           | Estable, molt usada en servidors.|           |
-  | Arch Linux       | Personalitzable, usuaris experts. |
+**Exemples de distribucions:**
 
-# 4. Instal·lació de Ubuntu
-1. Descarrega la imatge ISO des d'[ubuntu.com](https://ubuntu.com/).
-2. Grava-la en un USB amb eines com **Ventoy** ( o Rufus, Etcher).
-3. Arranca des del USB i segueix el procés d'instal·lació:
-   - Idioma, fus horari, particions.
-4. Inicia sessió després de la instal·lació.
+| **Distribució** | **Orientació**                      |
+|------------------|------------------------------------|
+| Ubuntu           | Usuaris nous, suport comunitari.  |
+| Debian           | Estable, molt usada en servidors.|           |
+| Arch Linux       | Personalitzable, usuaris experts. |
 
-# 4.1 Versió d'Ubuntu
+**Versió d'Ubuntu i de kernel**
 
-Amb l'ordre: 
-```bash
-lsb_release -a
-```
-o llegint el fitxer de configuració
-```bash
-cat /etc/os-release
-```
+| Ordre | Què mostra |
+|--------|--------|
+| `uname -r` | Versió del nucli Linux (kernel). |
+| `uname -a` | Informació del nucli, arquitectura i nom de l'equip. |
+| `lsb_release -a` | Distribució, versió i nom en clau del sistema operatiu. |
+| `lsb_release -d` | Descripció de la distribució. |
+| `cat /etc/os-release` | Informació de la distribució sense necessitar `lsb_release`\. |
+
 Una vegada més veiem com en un fitxer de text pla es guarda informació del sistema. En este cas:
 
-* Nom del SO
-* Distribució
-* Versió
+Si lsb-release no està instal·lat, podeu instal·lar-lo:
 
+```
+sudo apt install lsb-release
+```
+# 4. ENTORN GRÀFIC. 
 
-
-# 5. ENTORN GRÀFIC. 
-
-## 5.1 Capes o components
+## 4.1 Capes o components
 
 ![Capes GUI](png/GUI.png)
 
 
-## 5.2 Sistema gràfic i Gestor de finestres
+## 4.2 Sistema gràfic i Gestor de finestres
 
-### Sistema gràfic (xorg)
-
+**Sistema gràfic (xorg)**
 
 Com infraestructura per crear entorn gràfic (sistema gràfic) usem **xorg*
 Per inicar-lo des del CLI usem el paquet **xinti** que ens proporciona el **startx**
+
 ```
 startx /usr/bin/openbox-session
 ```
@@ -133,7 +126,7 @@ En el tema de Debian has vist com automatizar-ho en el .xinitrc
 |i3|`sudo apt install xorg xinit i3-wm`|
 
 
-## 5.3 Escriptoris
+## 4.3 Escriptoris
 
 A diferència de Windows, el Linux en tenim més d'un i, a més, en una mateixa màquina podem tindre'n instal·lat més dun i escollir en iniciar.
 
